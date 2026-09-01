@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mi progreso — Regala y Gana</title>
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Regala y Gana">
+<meta property="og:title" content="Mi progreso — Regala y Gana">
+<meta property="og:description" content="Sigue tu avance en Regala y Gana y descubre qué premio de cocina has desbloqueado.">
+<meta property="og:url" content="https://lettytrillo.com/regalo/mi-progreso.html">
+<meta property="og:image" content="https://lettytrillo.com/regalo/og-regala-y-gana.jpeg?v=2">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mi progreso — Regala y Gana">
+<meta name="twitter:image" content="https://lettytrillo.com/regalo/og-regala-y-gana.jpeg?v=2">
+<link rel="icon" href="../favicon-panel.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F4F4; --ink:#0C0A05; --navy:#0C0A05; --gold:#947619; --gold-text:#957A18;
+    --card:#E9E9E9; --hairline:rgba(212,175,55,0.15); --stone:#685C45; --ok:#19803C; --err:#FF8A8A;
+    --shadow:0 1px 2px rgba(0,0,0,0.16),0 8px 24px rgba(0,0,0,0.14);
+    --metal:linear-gradient(135deg,#957718 0%,#D4AF37 52%,#8C6E1F 100%);
+    --metal-silver:linear-gradient(135deg,#0E0C08 0%,#695A44 45%,#A69B8B 100%);
+    --silver:#705D3D; --silver-dim:#A69C88;
+    --ink:#0C0A05; --card:#E9E9E9; --stone:#685C45;
+    --gold:#947619; --gold-text:#957A18; --hairline:rgba(212,175,55,0.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;min-height:100dvh;overflow-x:hidden}
+  .wrap{max-width:520px;margin:0 auto;padding:0 20px 48px}
+  a{color:var(--gold-text)}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 0 4px}
+  .back{display:inline-flex;align-items:center;gap:7px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 16px;border:1px solid var(--hairline);border-radius:999px;background:var(--card);min-height:44px}
+  .brand{font-family:'Fraunces',serif;font-style:italic;color:var(--gold-text);font-size:15px}
+  .logo{width:132px;height:auto;display:block}
+  h1{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(26px,7vw,34px);letter-spacing:-.03em;line-height:1.1;color:var(--navy);margin-top:14px}
+  .who{color:var(--stone);font-size:15px;margin-top:7px}
+  .card{background:var(--card);border:1px solid var(--hairline);border-radius:20px;padding:20px;margin-top:18px;box-shadow:var(--shadow)}
+  .card h2{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--navy);margin-bottom:12px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .stat{background:rgba(0,0,0,0.04);border:1px solid var(--hairline);border-radius:14px;padding:13px 14px}
+  .stat .k{font-size:12.5px;color:var(--stone);font-weight:600}
+  .stat .v{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:20px;color:var(--navy);margin-top:3px;letter-spacing:-.02em}
+  .stat .v small{font-size:13px;font-weight:600;color:var(--stone);letter-spacing:0}
+  .badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:700}
+  .badge.on{background:rgba(25,128,60,0.13);color:var(--ok);border:1px solid rgba(25,128,60,0.3)}
+  .badge.off{background:rgba(0,0,0,0.04);color:var(--stone);border:1px solid var(--hairline)}
+  .metric{margin-top:16px}
+  .metric.first{margin-top:0}
+  .metric .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:8px}
+  .metric .lbl{font-weight:600;font-size:14.5px}
+  .metric .num{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:16px;color:var(--gold-text)}
+  .bar{height:10px;border-radius:999px;background:#332D1B;overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold),#C9A768);width:0;transition:width .6s ease}
+  .missing{margin-top:14px;background:rgba(0,0,0,0.04);border:1px dashed var(--gold);border-radius:14px;padding:13px 14px;font-size:14px;line-height:1.55;color:var(--navy)}
+  .missing b{color:var(--gold-text)}
+  .prize{display:flex;gap:14px;align-items:center}
+  .prize .ph{flex:0 0 92px;width:92px;height:92px;border-radius:14px;border:1px solid var(--hairline);background:rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .prize .ph img{width:100%;height:100%;object-fit:contain}
+  .prize .ph svg{width:34px;height:34px;opacity:.5}
+  .prize .info{min-width:0}
+  .prize .lvl{font-size:12.5px;font-weight:700;color:var(--gold-text);letter-spacing:.04em;text-transform:uppercase}
+  .prize .nm{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:19px;letter-spacing:-.02em;line-height:1.2;margin-top:3px}
+  .prize .st{font-size:13px;color:var(--stone);margin-top:6px}
+  .route{list-style:none;position:relative;margin-top:4px}
+  .route::before{content:"";position:absolute;left:15px;top:14px;bottom:14px;width:2px;background:var(--hairline)}
+  .route li{position:relative;display:flex;gap:14px;padding:11px 0;align-items:flex-start}
+  .route .dot{flex:0 0 32px;height:32px;border-radius:50%;background:var(--card);border:2px solid var(--hairline);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--stone);z-index:1;font-family:'Inter Tight',sans-serif}
+  .route li.done .dot{background:var(--metal);border-color:var(--gold);color:#000000}
+  .route li.next .dot{border-color:var(--gold);color:var(--gold-text)}
+  .route li.locked{opacity:.6}
+  .route li.locked .dot svg{width:15px;height:15px;color:var(--stone)}
+  .route li.locked .thumb img{filter:grayscale(.4)}
+  .route .txt{min-width:0;padding-top:3px}
+  .route .p{font-weight:700;font-size:14.5px;line-height:1.3;display:block}
+  .route li.done .p{color:var(--gold-text)}
+  .route .r{font-size:12.5px;color:var(--stone);margin-top:3px;display:block}
+  .route .thumb{flex:0 0 44px;width:44px;height:44px;border-radius:10px;border:1px solid var(--hairline);background:rgba(0,0,0,0.04);margin-left:auto;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .route .thumb img{width:100%;height:100%;object-fit:contain}
+  .route .thumb svg{width:20px;height:20px;opacity:.45}
+  .clist{list-style:none}
+  .clist li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--hairline)}
+  .clist li:last-child{border-bottom:0}
+  .clist .n{font-weight:600;font-size:14.5px}
+  .clist .s{font-size:12.5px;font-weight:700;border-radius:999px;padding:5px 11px;white-space:nowrap}
+  .s-ok{background:rgba(25,128,60,0.13);color:var(--ok)}
+  .s-mid{background:#1B1304;color:var(--gold-text)}
+  .s-new{background:rgba(0,0,0,0.04);color:var(--stone)}
+  .empty{color:var(--stone);font-size:14px;line-height:1.6}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border-radius:16px;padding:16px 20px;font-size:16px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-family:inherit;min-height:52px}
+  .btn-gold{background:var(--metal);color:#000000}
+  .btn-line{background:var(--card);color:var(--ink);border:1.5px solid var(--gold)}
+  .btn svg{flex:0 0 20px}
+  .actions{display:flex;flex-direction:column;gap:11px;margin-top:18px}
+  .linkbox{border:1.5px dashed var(--gold);border-radius:14px;background:rgba(0,0,0,0.04);padding:12px 14px;font-size:13.5px;word-break:break-all;font-weight:600;color:var(--navy)}
+  .msg{display:none;margin-top:12px;border-radius:14px;padding:12px 14px;font-size:14px;font-weight:500}
+  .msg.ok{display:block;background:rgba(25,128,60,0.13);border:1px solid rgba(25,128,60,0.3);color:var(--ok)}
+  .msg.err{display:block;background:rgba(255,138,138,0.12);border:1px solid rgba(255,138,138,0.3);color:var(--err)}
+  .note{color:var(--stone);font-size:12.5px;line-height:1.6;margin-top:12px}
+  .foot{color:var(--stone);text-align:center;font-size:12.5px;line-height:1.6;padding:32px 0 8px}
+  .foot a{font-weight:600;text-decoration:none}
+  .statecard{text-align:center}
+  .statecard h2{font-size:20px}
+  .statecard p{color:var(--stone);font-size:15px;line-height:1.65;margin-top:8px}
+  .pageload{display:flex;justify-content:center;padding:60px 0}
+  .pageload .dot{width:34px;height:34px;border:3px solid var(--hairline);border-top-color:var(--gold);border-radius:50%;animation:spin .9s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion: reduce){ .bar i{transition:none} .pageload .dot{animation-duration:1.8s} }
+  .hidden{display:none !important}
+
+  /* ---- Paleta morada: capa de fondo compartida con el sitio ---- */
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{position:relative;background:#F4F4F4;color:var(--ink)}
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:#F4F4F4 url('../fondo-textura.jpeg') center center / cover no-repeat;opacity:.55;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(212,175,55,0.2), transparent 60%),
+      linear-gradient(180deg, rgba(247,244,237,0.62) 0%, rgba(247,244,237,0.86) 55%, rgba(247,244,237,0.94) 100%);
+  }
+  ::selection{background:rgba(149,113,24,0.32);color:#000000}
+  /* El logotipo "Regala y Gana" tiene tipografia azul marino: se perfila en claro */
+  img[alt="Regala y Gana"], .logo, .ryg-logo, #brandLogo{
+    filter:drop-shadow(0 0 1.6px rgba(0,0,0,0.76)) drop-shadow(0 2px 12px rgba(0,0,0,0.22));
+  }
+  @media print{
+    body{background:#000000!important;color:#EFEFEE!important}
+    body::before,body::after{display:none!important}
+    *{color:#EFEFEE!important;background:transparent!important;box-shadow:none!important;
+      border-color:#302C29!important;-webkit-text-fill-color:#EFEFEE!important;filter:none!important}
+  }
+</style>
+
+<style id="tema-claro">
+  html,body{background:#FFFFFF!important;color:#151515!important;color-scheme:light}
+  body::before{opacity:1!important;background:#FFFFFF url('../fondo-textura.jpeg') center top / cover no-repeat!important}
+  body::after{background:linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.40) 55%, rgba(255,255,255,.55) 100%)!important}
+  .btn-primary,.btn-solid,.btn.primary,.cta-btn,a[class*="btn-gold"],.prc-btns a:first-child,.nav-cta,.btn-metal{color:#151515!important}
+  .eyebrow{color:#3F7A2A!important}
+  .eyebrow::before{background:linear-gradient(90deg,#3F7A2A,transparent)!important}
+  .badge .dot,.t-dot,.hero .dot,.live-dot{background:#5A9E3A!important}
+  ::selection{background:rgba(212,175,55,.35);color:#111}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <a class="back" href="crear.html">&#8592; Volver</a>
+    <img class="logo" id="brandLogo" src="" alt="Regala y Gana" width="933" height="592">
+  </div>
+
+  <div class="pageload" id="loadingView"><div class="dot" aria-label="Cargando"></div></div>
+
+  <div id="panelView" class="hidden">
+    <h1>Mi progreso</h1>
+    <p class="who" id="whoLine"></p>
+
+    <section class="card" aria-label="Mi campaña">
+      <h2>Mi campaña</h2>
+      <div class="grid2">
+        <div class="stat"><div class="k">Inicio</div><div class="v" id="sStart">&#8212;</div></div>
+        <div class="stat"><div class="k">Vencimiento</div><div class="v" id="sEnd">&#8212;</div></div>
+        <div class="stat"><div class="k">Días restantes</div><div class="v" id="sDays">&#8212;</div></div>
+        <div class="stat"><div class="k">Estado</div><div class="v" id="sStatus">&#8212;</div></div>
+      </div>
+      <div class="metric" style="margin-top:16px">
+        <div class="row"><span class="lbl">Tiempo de campaña</span><span class="num" id="tTxt"></span></div>
+        <div class="bar"><i id="tBar"></i></div>
+      </div>
+    </section>
+
+    <section class="card" aria-label="Mi avance">
+      <h2>Mi avance</h2>
+      <div class="metric first">
+        <div class="row"><span class="lbl">Obsequios entregados</span><span class="num" id="gTxt">0 de 0</span></div>
+        <div class="bar"><i id="gBar"></i></div>
+      </div>
+      <div class="metric">
+        <div class="row"><span class="lbl">Ventas confirmadas</span><span class="num" id="vTxt">0 de 0</span></div>
+        <div class="bar"><i id="vBar"></i></div>
+      </div>
+      <div class="missing" id="missingBox"></div>
+      <p class="note">Solo cuentan los obsequios entregados y las ventas confirmadas por el distribuidor.</p>
+    </section>
+
+    <section class="card" aria-label="Mi recompensa">
+      <h2>Mi recompensa</h2>
+      <div class="prize" id="prizeNow"></div>
+      <div id="prizeNext" style="margin-top:18px"></div>
+    </section>
+
+    <section class="card" aria-label="Ruta de recompensas">
+      <h2>Ruta de recompensas</h2>
+      <ul class="route" id="routeList"></ul>
+      <p class="note">Recibes únicamente la recompensa más alta que alcances. Los premios no son acumulativos.</p>
+    </section>
+
+    <section class="card" aria-label="Mis contactos">
+      <h2>Mis contactos</h2>
+      <ul class="clist" id="contactList"></ul>
+      <p class="note">Por privacidad, los datos completos de contacto solo los ve el distribuidor.</p>
+    </section>
+
+    <section class="card" aria-label="Compartir mi enlace">
+      <h2>Mi enlace personal</h2>
+      <div class="linkbox" id="linkBox"></div>
+      <div class="actions">
+        <button class="btn btn-gold" id="btnWa" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+          Volver a compartir
+        </button>
+        <button class="btn btn-line" id="btnShare" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg>
+          Compartir con otras apps
+        </button>
+        <button class="btn btn-line" id="btnCopy" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          Copiar enlace
+        </button>
+      </div>
+      <div class="msg" id="shareMsg" role="status"></div>
+    </section>
+  </div>
+
+  <section class="card statecard hidden" id="stateView">
+    <h2 id="stateTitle"></h2>
+    <p id="stateBody"></p>
+    <div class="actions"><a class="btn btn-line" href="crear.html" id="stateCta">Ir a mi enlace</a></div>
+  </section>
+
+  <p class="foot" id="footLine"></p>
+</div>
+
+<script src="../config.js"></script>
+<script src="config.js"></script>
+<script type="module">
+/* ============================================================
+   REGALA Y GANA — Panel del participante (Fase 5)
+   Solo lectura. El participante no puede cambiar estados,
+   confirmar ventas, aprobar premios ni ver teléfonos completos.
+   ============================================================ */
+const CFG = window.GIFT_CONFIG, D = CFG.distributor;
+const $ = id => document.getElementById(id);
+
+(function applyConfig(){
+  const r = document.documentElement.style, t = CFG.theme;
+  r.setProperty('--bg',t.bg); r.setProperty('--ink',t.ink); r.setProperty('--navy',t.navy);
+  r.setProperty('--gold',t.gold); r.setProperty('--gold-text',t.goldText);
+  r.setProperty('--card',t.card); r.setProperty('--hairline',t.hairline);
+  var lg = $('brandLogo');
+  lg.src = (CFG.brand && CFG.brand.logo) || '';
+  lg.onerror = function(){ if(CFG.brand && CFG.brand.logoPng && lg.src.indexOf('.png')<0) lg.src = CFG.brand.logoPng; };
+  $('footLine').innerHTML = esc(D.name)+' · Distribuidora autorizada Royal Prestige · '+esc(D.city)+
+    '<br><a href="../index.html">Página principal</a> · <a href="../privacidad.html">Privacidad</a>';
+})();
+function esc(s){ return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+const { initializeApp, getApps } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+const { getAuth, signInAnonymously, onAuthStateChanged } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js");
+const { getFirestore, doc, getDoc } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+const app = getApps().length ? getApps()[0] : initializeApp(CFG.firebase);
+const auth = getAuth(app), db = getFirestore(app);
+const authReady = new Promise(res => {
+  onAuthStateChanged(auth, u => { if(u) res(u); });
+  signInAnonymously(auth).catch(()=>{});
+});
+
+const GIFT_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="#B08D4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"></rect><path d="M3 12h18M12 8v13"></path><path d="M12 8c-1.8 0-4.5-.6-4.5-2.7C7.5 3.9 8.6 3 9.8 3 11.4 3 12 5.2 12 8zm0 0c1.8 0 4.5-.6 4.5-2.7C16.5 3.9 15.4 3 14.2 3 12.6 3 12 5.2 12 8z"></path></svg>';
+
+/* Muestra la fotografía real del premio; si aún no existe el archivo,
+   deja un marcador neutro. Nunca inventa un producto. */
+function prizeImg(src){
+  if(!src) return GIFT_SVG;
+  return '<img src="'+esc(src)+'" alt="" loading="lazy" data-fallback="1">';
+}
+document.addEventListener('error', e => {
+  const el = e.target;
+  if(el && el.tagName === 'IMG' && el.dataset.fallback){ el.parentNode.innerHTML = GIFT_SVG; }
+}, true);
+
+function show(v){ ['loadingView','panelView','stateView'].forEach(x=>$(x).classList.add('hidden')); $(v).classList.remove('hidden'); }
+function showState(t,b,c){ $('stateTitle').textContent=t; $('stateBody').textContent=b; if(c) $('stateCta').textContent=c; show('stateView'); }
+const fmt = d => d.toLocaleDateString('es-US',{day:'numeric',month:'short',year:'numeric'});
+
+let CODE = (new URLSearchParams(location.search).get('c')||'').trim().toUpperCase();
+if(!CODE){ try{ CODE = localStorage.getItem('ryg_code_'+D.id) || ''; }catch(_){} }
+
+(async function init(){
+  if(!CODE || !/^[A-Z0-9]{10,14}$/.test(CODE)){
+    showState('Aún no tienes un enlace',
+      'Crea tu enlace personal para empezar a compartir obsequios y seguir tu progreso aquí.','Crear mi enlace');
+    return;
+  }
+  await authReady;
+  let snap;
+  try{
+    snap = await getDoc(doc(db,'giftParticipants', CODE));
+  }catch(e){
+    showState('Este progreso es privado',
+      'Ábrelo desde el mismo teléfono donde creaste tu enlace. Si cambiaste de teléfono, pide al distribuidor que te ayude a recuperarlo.','Ir a mi enlace');
+    return;
+  }
+  if(!snap.exists()){
+    showState('No encontramos esta campaña',
+      'Revisa que el enlace esté completo. Si el problema continúa, crea tu enlace de nuevo.','Crear mi enlace');
+    return;
+  }
+  render(CODE, snap.data());
+})();
+
+function render(code, p){
+  const link = String(D.siteUrl).replace(/\/$/,'') + '/regalo/?ref=' + code;
+  $('whoLine').textContent = p.participantName + ' · ' + p.city;
+
+  /* Campaña */
+  const start = (p.startsAt && p.startsAt.toDate) ? p.startsAt.toDate() : new Date();
+  const end   = (p.expiresAt && p.expiresAt.toDate) ? p.expiresAt.toDate() : new Date();
+  const days  = Math.max(0, Math.ceil((end - Date.now())/86400000));
+  const vencida = Date.now() > end.getTime();
+  const estado = (vencida && p.status === 'active') ? 'expired' : p.status;
+  $('sStart').textContent = fmt(start);
+  $('sEnd').textContent   = fmt(end);
+  $('sDays').innerHTML    = vencida ? '0' : days + ' <small>días</small>';
+  $('sStatus').innerHTML  = '<span class="badge '+(estado==='active'?'on':'off')+'">' +
+    ({active:'Activa',completed:'Completada',expired:'Finalizada',cancelled:'Cancelada'}[estado] || estado) + '</span>';
+  const totalMs = Math.max(1, end - start), elapsedMs = Math.min(totalMs, Math.max(0, Date.now() - start));
+  const pct = vencida ? 100 : Math.round(elapsedMs/totalMs*100);
+  const totalDays = Math.max(1, Math.round(totalMs/86400000));
+  $('tTxt').textContent = vencida ? 'Finalizada' : (days + ' de ' + totalDays + ' días');
+  requestAnimationFrame(function(){ $('tBar').style.width = pct + '%'; });
+
+  /* Nivel alcanzado: el más alto cuyos dos requisitos se cumplen */
+  const L = CFG.levels;
+  const g = p.giftsDelivered|0, v = p.salesConfirmed|0;
+  let cur = 0;
+  for(let i=0;i<L.length;i++){ if(g >= L[i].gifts && v >= L[i].sales) cur = L[i].level; }
+  const next = L.find(x => x.level === cur+1) || null;
+  const meta = next || L[L.length-1];
+
+  $('gTxt').textContent = g + ' de ' + meta.gifts;
+  $('vTxt').textContent = v + ' de ' + meta.sales;
+  requestAnimationFrame(function(){
+    $('gBar').style.width = Math.min(100, meta.gifts ? g/meta.gifts*100 : 100) + '%';
+    $('vBar').style.width = Math.min(100, meta.sales ? v/meta.sales*100 : 100) + '%';
+  });
+
+  /* Qué falta */
+  if(!next){
+    $('missingBox').innerHTML = '<b>Alcanzaste el nivel más alto.</b> Completaste toda la ruta de recompensas.';
+  }else{
+    const fg = Math.max(0, next.gifts - g), fv = Math.max(0, next.sales - v);
+    const partes = [];
+    if(fg) partes.push('<b>'+fg+'</b> obsequio'+(fg>1?'s':'')+' entregado'+(fg>1?'s':''));
+    if(fv) partes.push('<b>'+fv+'</b> venta'+(fv>1?'s':'')+' confirmada'+(fv>1?'s':''));
+    $('missingBox').innerHTML = partes.length
+      ? 'Para tu próxima meta te falta ' + partes.join(' y ') + '.'
+      : 'Ya cumpliste los requisitos de tu próxima meta. El distribuidor validará tu recompensa.';
+  }
+
+  /* Recompensa actual y próxima */
+  const etiquetaPremio = {
+    pending_validation:'En validación', approved:'Aprobada',
+    delivered:'Entregada', rejected:'No aprobada', substituted:'Sustituida'
+  }[p.rewardStatus] || (cur ? 'En validación' : '');
+
+  if(cur){
+    const lv = L.find(x => x.level === cur);
+    $('prizeNow').innerHTML =
+      '<div class="ph">'+prizeImg(lv.img)+'</div>' +
+      '<div class="info"><div class="lvl">Nivel '+lv.level+' · alcanzado</div>' +
+      '<div class="nm">'+esc(lv.prize)+'</div>' +
+      '<div class="st">Estado: '+esc(etiquetaPremio)+'</div></div>';
+  }else{
+    $('prizeNow').innerHTML =
+      '<div class="ph">'+GIFT_SVG+'</div>' +
+      '<div class="info"><div class="lvl">Aún sin recompensa</div>' +
+      '<div class="nm">Tu primer premio te espera</div>' +
+      '<div class="st">Alcanza el Nivel 1 para desbloquearlo.</div></div>';
+  }
+  if(next){
+    $('prizeNext').innerHTML =
+      '<div style="border-top:1px solid var(--hairline);padding-top:18px"><div class="prize">' +
+      '<div class="ph">'+prizeImg(next.img)+'</div>' +
+      '<div class="info"><div class="lvl">Próxima meta · Nivel '+next.level+'</div>' +
+      '<div class="nm">'+esc(next.prize)+'</div>' +
+      '<div class="st">'+next.gifts+' obsequios entregados y '+next.sales+' venta'+(next.sales>1?'s':'')+' confirmada'+(next.sales>1?'s':'')+'</div>' +
+      '</div></div></div>';
+  }else{
+    $('prizeNext').innerHTML = '';
+  }
+
+  /* Ruta de los siete niveles */
+  const LOCK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"></rect><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"></path></svg>';
+  $('routeList').innerHTML = L.map(function(lv){
+    const done = lv.level <= cur, isNext = next && lv.level === next.level;
+    const locked = !done && !isNext;
+    return '<li class="'+(done?'done':'')+(isNext?' next':'')+(locked?' locked':'')+'">' +
+      '<span class="dot">'+(done?'&#10003;':(locked?LOCK_SVG:lv.level))+'</span>' +
+      '<span class="txt"><span class="p">'+esc(lv.prize)+'</span>' +
+      '<span class="r">'+lv.gifts+' obsequios · '+lv.sales+' venta'+(lv.sales>1?'s':'')+'</span></span>' +
+      '<span class="thumb">'+prizeImg(lv.img)+'</span></li>';
+  }).join('');
+
+  /* Contactos con nombre parcialmente oculto (los escribe el administrador) */
+  const ETQ = {
+    claimed:['Reclamado','s-new'], contacted:['Contactado','s-mid'], valid:['Válido','s-mid'],
+    scheduled:['Cita agendada','s-mid'], gift_delivered:['Obsequio entregado','s-ok'],
+    sale_confirmed:['Venta confirmada','s-ok'], invalid:['No válido','s-new'], no_response:['Sin respuesta','s-new']
+  };
+  const cs = Array.isArray(p.maskedContacts) ? p.maskedContacts : [];
+  $('contactList').innerHTML = cs.length
+    ? cs.map(function(c){
+        const e = ETQ[c.s] || ['Registrado','s-new'];
+        return '<li><span class="n">'+esc(c.n||'Contacto')+'</span><span class="s '+e[1]+'">'+e[0]+'</span></li>';
+      }).join('')
+    : '<li><span class="empty">Todavía no hay reclamos registrados. Comparte tu enlace para empezar.</span></li>';
+
+  /* Compartir de nuevo */
+  $('linkBox').textContent = link;
+  const msg = CFG.texts.shareMessage.replace('{ENLACE}', link);
+  $('btnWa').onclick = function(){ window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener'); };
+  $('btnShare').onclick = async function(){
+    if(navigator.share){
+      /* Texto y enlace por separado: asi la app muestra el mensaje y la vista previa */
+      const datos = { title: CFG.texts.programName, text: CFG.texts.shareText || '', url: link };
+      try{ await navigator.share(datos); }
+      catch(err){
+        if(err && err.name === 'AbortError') return;
+        try{ await navigator.share({ text: msg }); }catch(_){}
+      }
+    }else{
+      try{
+        await navigator.clipboard.writeText(link);
+        $('shareMsg').textContent = 'Enlace copiado. Ya puedes pegarlo donde quieras.'; $('shareMsg').className = 'msg ok';
+      }catch(_){
+        $('shareMsg').textContent = 'Mantén presionado el enlace para copiarlo.'; $('shareMsg').className = 'msg err';
+      }
+    }
+  };
+  $('btnCopy').onclick = async function(){
+    try{
+      await navigator.clipboard.writeText(link);
+      $('shareMsg').textContent = 'Enlace copiado.'; $('shareMsg').className = 'msg ok';
+    }catch(_){
+      $('shareMsg').textContent = 'Mantén presionado el enlace para copiarlo.'; $('shareMsg').className = 'msg err';
+    }
+  };
+
+  show('panelView');
+}
+</script>
+</body>
+</html>

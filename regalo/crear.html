@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Regala y Gana — Crea tu enlace personal</title>
+<meta name="description" content="Crea tu enlace personal de Regala y Gana y comparte un obsequio de cocina con tus familiares y amigos. Sin costo y sin obligación de compra.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lettytrillo.com/regalo/crear.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Regala y Gana">
+<meta property="og:title" content="Regala y Gana — Comparte un obsequio para su cocina">
+<meta property="og:description" content="Crea tu enlace personal, compártelo con familiares y amigos, y gana premios para tu cocina. Sin costo y sin obligación de compra.">
+<meta property="og:url" content="https://lettytrillo.com/regalo/crear.html">
+<meta property="og:image" content="https://lettytrillo.com/regalo/og-regala-y-gana.jpeg?v=2">
+<meta property="og:image:secure_url" content="https://lettytrillo.com/regalo/og-regala-y-gana.jpeg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Regala y Gana — premios de cocina Royal Prestige">
+<meta property="og:locale" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Regala y Gana — Comparte un obsequio para su cocina">
+<meta name="twitter:description" content="Crea tu enlace personal y gana premios para tu cocina. Sin costo y sin obligación de compra.">
+<meta name="twitter:image" content="https://lettytrillo.com/regalo/og-regala-y-gana.jpeg?v=2">
+<link rel="icon" href="../favicon-panel.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F4F4; --ink:#0C0A05; --navy:#0C0A05; --gold:#947619; --gold-text:#957A18;
+    --card:#E9E9E9; --hairline:rgba(212,175,55,0.15); --stone:#685C45; --ok:#19803C; --err:#FF8A8A;
+    --shadow:0 1px 2px rgba(0,0,0,0.16),0 8px 24px rgba(0,0,0,0.14);
+    --metal:linear-gradient(135deg,#957718 0%,#D4AF37 52%,#8C6E1F 100%);
+    --metal-silver:linear-gradient(135deg,#0E0C08 0%,#695A44 45%,#A69B8B 100%);
+    --silver:#705D3D; --silver-dim:#A69C88;
+    --ink:#0C0A05; --card:#E9E9E9; --stone:#685C45;
+    --gold:#947619; --gold-text:#957A18; --hairline:rgba(212,175,55,0.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;min-height:100dvh}
+  .wrap{max-width:520px;margin:0 auto;padding:0 20px 48px}
+  a{color:var(--gold-text)}
+  .top{display:flex;align-items:center;gap:12px;padding:16px 0 8px;flex-wrap:wrap}
+  .back{display:inline-flex;align-items:center;gap:7px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 16px;border:1px solid var(--hairline);border-radius:999px;background:var(--card);min-height:44px}
+  .top-chip{display:inline-flex;align-items:center;gap:6px;margin-left:auto;font-size:12.5px;font-weight:600;color:var(--gold-text);background:rgba(149,117,24,0.12);border:1px solid rgba(212,175,55,0.3);border-radius:999px;padding:8px 13px;min-height:36px}
+  .top-chip svg{width:15px;height:15px;flex:0 0 15px}
+  .eyebrow{font-family:'Fraunces',serif;font-style:italic;color:var(--gold-text);font-size:17px;display:block;margin:18px 0 6px}
+  .logo{display:block;width:min(250px,64%);height:auto;margin:20px 0 14px}
+  h1{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(30px,8vw,40px);letter-spacing:-.03em;line-height:1.04;color:var(--navy)}
+  .lede{color:var(--stone);font-size:16px;line-height:1.6;margin-top:12px}
+  .benefits{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+  .benefits li{display:flex;align-items:center;gap:9px;font-size:14.5px;font-weight:600;color:var(--navy)}
+  .benefits svg{width:18px;height:18px;flex:0 0 18px;color:var(--ok)}
+  .card{background:var(--card);border:1px solid var(--hairline);border-radius:20px;padding:22px;margin-top:20px;box-shadow:var(--shadow)}
+  .field{margin-top:16px}
+  .field:first-child{margin-top:0}
+  label{display:block;font-weight:600;font-size:14.5px;margin-bottom:7px}
+  input[type=text]{width:100%;border:1.5px solid var(--hairline);border-radius:14px;background:var(--card);color:var(--ink);font:inherit;font-size:16px;padding:13px 15px;min-height:48px}
+  input[type=text]:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,0.18)}
+  .hint{color:var(--stone);font-size:13px;margin-top:6px}
+  .consent{display:flex;gap:11px;align-items:flex-start;margin-top:18px}
+  .consent input{width:22px;height:22px;margin-top:2px;accent-color:var(--gold);flex:0 0 auto}
+  .consent span{font-size:14px;line-height:1.55;color:var(--stone)}
+  details{margin-top:12px;border:1px solid var(--hairline);border-radius:14px;background:#060502}
+  summary{cursor:pointer;font-weight:600;font-size:14px;padding:13px 15px;min-height:44px;display:flex;align-items:center;color:var(--gold-text);list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";margin-left:auto;font-size:18px;color:var(--gold)}
+  details[open] summary::after{content:"–"}
+  details p{font-size:13.5px;line-height:1.6;color:var(--stone);padding:0 15px 14px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border-radius:16px;padding:16px 20px;font-size:16px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-family:inherit;min-height:52px;transition:transform .08s ease,opacity .15s ease}
+  .btn:active{transform:scale(.985)}
+  .btn[disabled]{opacity:.55;cursor:default}
+  .btn-primary{background:var(--metal);color:#000000;margin-top:20px}
+  .btn-gold{background:var(--metal);color:#000000}
+  .btn-line{background:var(--card);color:var(--ink);border:1.5px solid var(--gold)}
+  .btn svg{flex:0 0 20px}
+  .msg{display:none;margin-top:14px;border-radius:14px;padding:13px 15px;font-size:14.5px;line-height:1.5;font-weight:500}
+  .msg.err{display:block;background:rgba(255,138,138,0.12);border:1px solid rgba(255,138,138,0.3);color:var(--err)}
+  .msg.ok{display:block;background:rgba(25,128,60,0.13);border:1px solid rgba(25,128,60,0.3);color:var(--ok)}
+  /* ---- Vista del enlace creado ---- */
+  .seal{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:rgba(0,0,0,0.04)}
+  .seal svg{width:30px;height:30px}
+  .giftcard{text-align:center}
+  .giftcard h2{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:24px;letter-spacing:-.02em;color:var(--navy)}
+  .giftcard .who{font-family:'Fraunces',serif;font-style:italic;color:var(--gold-text);font-size:16px;margin-top:6px}
+  .linkbox{margin-top:18px;border:1.5px dashed var(--gold);border-radius:14px;background:rgba(0,0,0,0.04);padding:13px 14px;font-size:14px;word-break:break-all;color:var(--navy);font-weight:600;text-align:left}
+  .validity{display:flex;justify-content:space-between;gap:10px;margin-top:14px;font-size:13.5px;color:var(--stone)}
+  .validity b{color:var(--navy)}
+  .actions{display:flex;flex-direction:column;gap:11px;margin-top:20px}
+  .divider{display:flex;align-items:center;gap:12px;color:var(--stone);font-size:13px;margin-top:26px}
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--hairline)}
+  .switch{margin-top:14px;text-align:center;font-size:13.5px;color:var(--stone)}
+  .switch button{background:none;border:0;color:var(--gold-text);font:inherit;font-weight:600;cursor:pointer;text-decoration:underline;padding:10px;min-height:44px}
+  .foot{color:var(--stone);text-align:center;font-size:12.5px;line-height:1.6;padding:34px 0 8px}
+  .foot a{font-weight:600;text-decoration:none}
+  .spinner{width:20px;height:20px;border:2.5px solid rgba(0,0,0,0.28);border-top-color:rgba(0,0,0,0.14);border-radius:50%;animation:spin .8s linear infinite;display:none}
+  .loading .spinner{display:inline-block}
+  .loading .btn-label{display:none}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .btn{transition:none}
+    .spinner{animation-duration:1.6s}
+  }
+  .hidden{display:none !important}
+
+  /* ---- Paleta morada: capa de fondo compartida con el sitio ---- */
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{position:relative;background:#F4F4F4;color:var(--ink)}
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:#F4F4F4 url('../fondo-textura.jpeg') center center / cover no-repeat;opacity:.55;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(212,175,55,0.2), transparent 60%),
+      linear-gradient(180deg, rgba(247,244,237,0.62) 0%, rgba(247,244,237,0.86) 55%, rgba(247,244,237,0.94) 100%);
+  }
+  ::selection{background:rgba(149,113,24,0.32);color:#000000}
+  /* El logotipo "Regala y Gana" tiene tipografia azul marino: se perfila en claro */
+  img[alt="Regala y Gana"], .logo, .ryg-logo, #brandLogo{
+    filter:drop-shadow(0 0 1.6px rgba(0,0,0,0.76)) drop-shadow(0 2px 12px rgba(0,0,0,0.22));
+  }
+  @media print{
+    body{background:#000000!important;color:#EFEFEE!important}
+    body::before,body::after{display:none!important}
+    *{color:#EFEFEE!important;background:transparent!important;box-shadow:none!important;
+      border-color:#302C29!important;-webkit-text-fill-color:#EFEFEE!important;filter:none!important}
+  }
+</style>
+
+<style id="tema-claro">
+  html,body{background:#FFFFFF!important;color:#151515!important;color-scheme:light}
+  body::before{opacity:1!important;background:#FFFFFF url('../fondo-textura.jpeg') center top / cover no-repeat!important}
+  body::after{background:linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.40) 55%, rgba(255,255,255,.55) 100%)!important}
+  .btn-primary,.btn-solid,.btn.primary,.cta-btn,a[class*="btn-gold"],.prc-btns a:first-child,.nav-cta,.btn-metal{color:#151515!important}
+  .eyebrow{color:#3F7A2A!important}
+  .eyebrow::before{background:linear-gradient(90deg,#3F7A2A,transparent)!important}
+  .badge .dot,.t-dot,.hero .dot,.live-dot{background:#5A9E3A!important}
+  ::selection{background:rgba(212,175,55,.35);color:#111}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <a class="back" href="../index.html" data-tr="RyG crear: volver al inicio">&#8592; Inicio</a>
+    <span class="top-chip" aria-label="Reto de recompensas de 30 días">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.5 7 22l5-3 5 3-1.2-8.5"/></svg>
+      Reto de recompensas &middot; 30 d&iacute;as
+    </span>
+  </div>
+
+  <img class="logo" id="programLogo" src="" alt="Regala y Gana" width="933" height="592">
+  <h1>Comparte un obsequio.<br>Gana premios para tu cocina.</h1>
+  <p class="lede" id="ledeText">Crea tu enlace personal y comp&aacute;rtelo con familiares y amigos. Ellos podr&aacute;n reclamar un obsequio sin costo y t&uacute; avanzar&aacute;s en tu ruta de recompensas.</p>
+  <ul class="benefits" aria-label="Beneficios del programa">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sin costo para quien recibe</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sin obligaci&oacute;n de compra</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Campa&ntilde;a v&aacute;lida por 30 d&iacute;as</li>
+  </ul>
+
+  <!-- ================= FORMULARIO ================= -->
+  <section class="card" id="formCard" aria-label="Crear mi enlace personal">
+    <div class="field">
+      <label for="fName">Tu nombre</label>
+      <input type="text" id="fName" autocomplete="name" maxlength="59" placeholder="Ej. María González">
+    </div>
+    <div class="field">
+      <label for="fCity">Tu ciudad</label>
+      <input type="text" id="fCity" autocomplete="address-level2" maxlength="59" placeholder="Ej. Fort Worth">
+    </div>
+
+    <div class="consent">
+      <input type="checkbox" id="fTerms">
+      <span>Acepto los términos del programa <b id="programName2">Regala y Gana</b> y entiendo que las entregas y ventas las valida el distribuidor.</span>
+    </div>
+
+    <details>
+      <summary>Ver términos del programa</summary>
+      <p id="termsText"></p>
+      <p>Consulta también los <a href="../terminos.html">términos generales</a> y el <a href="../privacidad.html">aviso de privacidad</a>.</p>
+    </details>
+
+    <button class="btn btn-primary" id="btnCreate" type="button">
+      <span class="spinner" aria-hidden="true"></span>
+      <span class="btn-label">Crear mi enlace personal</span>
+    </button>
+    <div class="msg" id="formMsg" role="alert"></div>
+  </section>
+
+  <!-- ================= ENLACE CREADO ================= -->
+  <section class="card giftcard hidden" id="doneCard" aria-label="Tu enlace personal">
+    <div class="seal" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#B08D4F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="8" width="18" height="13" rx="2"></rect>
+        <path d="M3 12h18M12 8v13"></path>
+        <path d="M12 8c-1.8 0-4.5-.6-4.5-2.7C7.5 3.9 8.6 3 9.8 3 11.4 3 12 5.2 12 8zm0 0c1.8 0 4.5-.6 4.5-2.7C16.5 3.9 15.4 3 14.2 3 12.6 3 12 5.2 12 8z"></path>
+      </svg>
+    </div>
+    <h2>Tu enlace está listo</h2>
+    <p class="who" id="whoLine"></p>
+
+    <div class="linkbox" id="linkBox" aria-label="Tu enlace personal"></div>
+
+    <div class="validity">
+      <span>Inicio: <b id="vStart"></b></span>
+      <span>Vence: <b id="vEnd"></b></span>
+    </div>
+    <div class="validity">
+      <span>Días restantes: <b id="vDays"></b></span>
+      <span>Estado: <b id="vStatus"></b></span>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-gold" id="btnWa" type="button" data-tr="RyG crear: compartir WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+        Compartir por WhatsApp
+      </button>
+      <button class="btn btn-line" id="btnShare" type="button" data-tr="RyG crear: compartir sistema">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg>
+        Compartir con otras apps
+      </button>
+      <button class="btn btn-line" id="btnCopy" type="button" data-tr="RyG crear: copiar enlace">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+        Copiar enlace
+      </button>
+      <a class="btn btn-line" id="btnProgress" href="#" data-tr="RyG crear: ver mi progreso">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
+        Ver mi progreso
+      </a>
+    </div>
+    <div class="msg" id="doneMsg" role="status"></div>
+
+    <div class="switch">
+      <button type="button" id="btnReset">¿No eres tú? Crear un enlace nuevo</button>
+    </div>
+  </section>
+
+  <p class="foot" id="footLine"></p>
+</div>
+
+<script src="../config.js"></script>
+<script src="config.js"></script>
+<script type="module">
+/* ============================================================
+   REGALA Y GANA — Crear enlace personal (Fase 3)
+   No modifica ninguna función existente del sitio.
+   ============================================================ */
+const CFG = window.GIFT_CONFIG;
+const D = CFG.distributor;
+
+/* --- Aplicar tema y textos desde la configuración central --- */
+(function applyConfig(){
+  const r = document.documentElement.style, t = CFG.theme;
+  r.setProperty('--bg', t.bg);       r.setProperty('--ink', t.ink);
+  r.setProperty('--navy', t.navy);   r.setProperty('--gold', t.gold);
+  r.setProperty('--gold-text', t.goldText);
+  r.setProperty('--card', t.card);   r.setProperty('--hairline', t.hairline);
+  var lg = document.getElementById('programLogo');
+  lg.src = (CFG.brand && CFG.brand.logo) || '';
+  lg.onerror = function(){ if(CFG.brand && CFG.brand.logoPng && lg.src.indexOf('.png')<0) lg.src = CFG.brand.logoPng; };
+  document.getElementById('programName2').textContent = CFG.texts.programName;
+  document.getElementById('termsText').textContent    = CFG.texts.termsSummary;
+  document.getElementById('footLine').innerHTML =
+    esc(D.name) + ' · Distribuidora autorizada Royal Prestige · ' + esc(D.city) +
+    '<br><a href="../index.html">Página principal</a> · <a href="../privacidad.html">Privacidad</a>';
+})();
+
+function esc(s){ return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* --- Firebase --- */
+const { initializeApp, getApps } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+const { getAuth, signInAnonymously, onAuthStateChanged } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js");
+const { getFirestore, doc, getDoc, writeBatch, serverTimestamp, Timestamp, collection, addDoc } =
+  await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+
+const app  = getApps().length ? getApps()[0] : initializeApp(CFG.firebase);
+const auth = getAuth(app);
+const db   = getFirestore(app);
+
+let uid = null;
+const authReady = new Promise(res => {
+  onAuthStateChanged(auth, u => { if(u){ uid = u.uid; res(); } });
+  signInAnonymously(auth).catch(()=>{ /* se reintenta al crear */ });
+});
+
+/* --- Analítica ligera (mismo patrón del sitio) --- */
+function track(label){
+  try{
+    addDoc(collection(db,'analytics_clicks'), {
+      label: String(label).slice(0,90), action:'click', page:'regalo-crear',
+      createdAt: serverTimestamp()
+    }).catch(()=>{});
+  }catch(_){}
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-tr]');
+  if(t) track(t.getAttribute('data-tr'));
+}, true);
+
+/* --- Utilidades --- */
+const LS_KEY = 'ryg_code_' + D.id;
+const $ = id => document.getElementById(id);
+const fmt = d => d.toLocaleDateString('es-US', { day:'numeric', month:'short', year:'numeric' });
+
+function secureCode(len){
+  const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // sin 0,O,1,I para evitar confusiones
+  const buf = new Uint32Array(len);
+  crypto.getRandomValues(buf);
+  let out = '';
+  for(let i=0;i<len;i++) out += A[buf[i] % A.length];
+  return out;
+}
+
+function personalLink(code){
+  return (D.siteUrl.replace(/\/$/,'')) + '/regalo/?ref=' + code;
+}
+
+function showMsg(el, text, kind){
+  el.textContent = text; el.className = 'msg ' + kind;
+}
+
+/* --- Vista "enlace creado" --- */
+function renderDone(code, data){
+  const link = personalLink(code);
+  $('formCard').classList.add('hidden');
+  $('doneCard').classList.remove('hidden');
+  $('whoLine').textContent = 'A nombre de ' + data.participantName + ' · ' + data.city;
+  $('linkBox').textContent = link;
+
+  const start = data.startsAt.toDate ? data.startsAt.toDate() : new Date(data.startsAt);
+  const end   = data.expiresAt.toDate ? data.expiresAt.toDate() : new Date(data.expiresAt);
+  const days  = Math.max(0, Math.ceil((end - Date.now()) / 86400000));
+  const expired = Date.now() > end.getTime() || data.status !== 'active';
+
+  $('vStart').textContent  = fmt(start);
+  $('vEnd').textContent    = fmt(end);
+  $('vDays').textContent   = expired ? '0' : String(days);
+  $('vStatus').textContent = expired ? 'Finalizada' :
+    ({active:'Activa', completed:'Completada', cancelled:'Cancelada'})[data.status] || data.status;
+
+  const msg = CFG.texts.shareMessage.replace('{ENLACE}', link);
+  $('btnWa').onclick = () => {
+    /* Se navega en la misma pestaña: window.open dejaba un about:blank abierto en iOS */
+    location.href = 'https://wa.me/?text=' + encodeURIComponent(msg);
+  };
+  $('btnShare').onclick = async () => {
+    if(navigator.share){
+      /* El texto va aparte del enlace para que la app muestre la vista previa
+         y el mensaje completo, no solo la direccion. */
+      const datos = { title: CFG.texts.programName, text: CFG.texts.shareText || '', url: link };
+      try{ await navigator.share(datos); }
+      catch(err){
+        if(err && err.name === 'AbortError') return;       /* el usuario cancelo */
+        try{ await navigator.share({ text: msg }); }catch(_){ copyLink(msg); }
+      }
+    }else{
+      copyLink(msg);
+    }
+  };
+  $('btnCopy').onclick = () => copyLink(link);
+  $('btnProgress').href = 'mi-progreso.html?c=' + code;
+
+  if(expired){
+    showMsg($('doneMsg'),
+      'Esta campaña ya finalizó. Puedes crear un enlace nuevo para empezar otra.', 'err');
+  }
+  window.scrollTo({ top: 0 });
+}
+
+async function copyLink(text){
+  try{
+    await navigator.clipboard.writeText(text);
+    showMsg($('doneMsg'), 'Enlace copiado. Ya puedes pegarlo donde quieras.', 'ok');
+  }catch(_){
+    showMsg($('doneMsg'), 'No se pudo copiar automáticamente. Mantén presionado el enlace para copiarlo.', 'err');
+  }
+  track('RyG crear: enlace copiado');
+}
+
+/* --- ¿Ya tiene un enlace este teléfono/navegador? --- */
+(async function restore(){
+  let code = '';
+  try{ code = localStorage.getItem(LS_KEY) || ''; }catch(_){}
+  if(!code) return;
+  try{
+    const snap = await getDoc(doc(db,'giftLinks', code));
+    if(snap.exists()) renderDone(code, snap.data());
+    else localStorage.removeItem(LS_KEY);
+  }catch(_){}
+})();
+
+/* --- Crear enlace --- */
+$('btnCreate').addEventListener('click', async () => {
+  const btn  = $('btnCreate');
+  const name = $('fName').value.trim().replace(/\s+/g,' ');
+  const city = $('fCity').value.trim().replace(/\s+/g,' ');
+  const ok   = $('fTerms').checked;
+  const msgEl = $('formMsg');
+  msgEl.className = 'msg';
+
+  if(name.length < 2){ showMsg(msgEl,'Escribe tu nombre (mínimo 2 letras).','err'); $('fName').focus(); return; }
+  if(city.length < 2){ showMsg(msgEl,'Escribe tu ciudad.','err'); $('fCity').focus(); return; }
+  if(!ok){ showMsg(msgEl,'Para continuar, acepta los términos del programa.','err'); return; }
+
+  btn.disabled = true; btn.classList.add('loading');
+  try{
+    await Promise.race([authReady, new Promise((_,rej)=>setTimeout(()=>rej(new Error('auth')), 12000))]);
+  }catch(_){
+    try{ await signInAnonymously(auth); }catch(e){
+      btn.disabled = false; btn.classList.remove('loading');
+      showMsg(msgEl,'No se pudo conectar. Revisa tu internet e inténtalo de nuevo.','err');
+      return;
+    }
+  }
+
+  const now   = new Date();
+  const ends  = new Date(now.getTime() + CFG.campaign.durationDays * 86400000);
+  const grace = new Date(ends.getTime() + CFG.campaign.graceDays * 86400000);
+
+  const linkData = {
+    ownerUid: uid,
+    distributorId: D.id,
+    participantName: name,
+    city: city,
+    status: 'active',
+    startsAt: Timestamp.fromDate(now),
+    expiresAt: Timestamp.fromDate(ends),
+    createdAt: serverTimestamp()
+  };
+  const partData = {
+    ...linkData,
+    consentTerms: true,
+    giftsDelivered: 0,
+    salesConfirmed: 0,
+    claimsTotal: 0,
+    currentLevel: 0,
+    rewardStatus: null,
+    maskedContacts: [],
+    graceEndsAt: Timestamp.fromDate(grace),
+    updatedAt: serverTimestamp()
+  };
+
+  let saved = false, code = '';
+  for(let attempt = 0; attempt < 5 && !saved; attempt++){
+    code = secureCode(12);
+    try{
+      const exists = await getDoc(doc(db,'giftLinks', code));
+      if(exists.exists()) continue;
+      const batch = writeBatch(db);
+      batch.set(doc(db,'giftParticipants', code), partData);
+      batch.set(doc(db,'giftLinks', code), linkData);
+      await batch.commit();
+      saved = true;
+    }catch(e){
+      if(attempt === 4){
+        btn.disabled = false; btn.classList.remove('loading');
+        showMsg(msgEl,'No se pudo crear tu enlace en este momento. Inténtalo de nuevo en unos minutos.','err');
+        return;
+      }
+    }
+  }
+
+  try{ localStorage.setItem(LS_KEY, code); }catch(_){}
+  track('RyG crear: enlace creado');
+  btn.disabled = false; btn.classList.remove('loading');
+  renderDone(code, { ...partData, startsAt: Timestamp.fromDate(now), expiresAt: Timestamp.fromDate(ends) });
+});
+
+/* --- Empezar de cero en este dispositivo --- */
+$('btnReset').addEventListener('click', () => {
+  try{ localStorage.removeItem(LS_KEY); }catch(_){}
+  $('doneCard').classList.add('hidden');
+  $('formCard').classList.remove('hidden');
+  $('fName').value = ''; $('fCity').value = ''; $('fTerms').checked = false;
+  $('formMsg').className = 'msg';
+  window.scrollTo({ top: 0 });
+  track('RyG crear: reinicio de dispositivo');
+});
+</script>
+</body>
+</html>

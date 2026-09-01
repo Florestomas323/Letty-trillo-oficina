@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Tienes un obsequio para tu cocina — Regala y Gana</title>
+<meta name="description" content="Tienes un obsequio para tu cocina. Reclámalo sin costo y sin obligación de compra.">
+<meta name="robots" content="noindex">
+<!-- Vista previa al compartir el enlace (WhatsApp, Facebook, mensajes) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Regala y Gana">
+<meta property="og:title" content="Tienes un obsequio para tu cocina">
+<meta property="og:description" content="Sin costo y sin obligación de compra. Completa tus datos para verificar disponibilidad en tu ciudad.">
+<meta property="og:image" content="https://lettytrillo.com/regalo/og-regala-y-gana.jpeg?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tienes un obsequio para tu cocina">
+<meta name="twitter:description" content="Sin costo y sin obligación de compra.">
+<meta name="twitter:image" content="https://lettytrillo.com/regalo/og-regala-y-gana.jpeg?v=2">
+<link rel="icon" href="../favicon-panel.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F4F4; --ink:#0C0A05; --navy:#0C0A05; --gold:#947619; --gold-text:#957A18;
+    --card:#E9E9E9; --hairline:rgba(212,175,55,0.15); --stone:#685C45; --ok:#19803C; --err:#FF8A8A;
+    --shadow:0 1px 2px rgba(0,0,0,0.16),0 8px 24px rgba(0,0,0,0.14);
+    --metal:linear-gradient(135deg,#957718 0%,#D4AF37 52%,#8C6E1F 100%);
+    --metal-silver:linear-gradient(135deg,#0E0C08 0%,#695A44 45%,#A69B8B 100%);
+    --silver:#705D3D; --silver-dim:#A69C88;
+    --ink:#0C0A05; --card:#E9E9E9; --stone:#685C45;
+    --gold:#947619; --gold-text:#957A18; --hairline:rgba(212,175,55,0.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;min-height:100dvh}
+  .wrap{max-width:520px;margin:0 auto;padding:0 20px 48px}
+  a{color:var(--gold-text)}
+  .topbar{display:flex;justify-content:center;padding:22px 0 4px}
+  .brand{font-family:'Fraunces',serif;font-style:italic;color:var(--gold-text);font-size:16px;letter-spacing:.02em}
+  .logo{width:min(215px,58%);height:auto;display:block;margin:0 auto}
+  /* --- Encabezado del obsequio --- */
+  .hero{text-align:center;margin-top:14px}
+  .seal{width:74px;height:74px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;background:rgba(0,0,0,0.04);box-shadow:var(--shadow)}
+  .seal svg{width:36px;height:36px}
+  h1{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(26px,7.4vw,36px);letter-spacing:-.03em;line-height:1.12;color:var(--navy)}
+  h1 .sender{color:var(--gold-text)}
+  .assure{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+  .assure span{background:var(--card);border:1px solid var(--hairline);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;color:var(--stone)}
+  .card{background:var(--card);border:1px solid var(--hairline);border-radius:20px;padding:22px;margin-top:22px;box-shadow:var(--shadow)}
+  .card h2{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:19px;letter-spacing:-.02em;color:var(--navy);margin-bottom:4px}
+  .card .sub{color:var(--stone);font-size:14px;line-height:1.55;margin-bottom:14px}
+  .field{margin-top:15px}
+  label{display:block;font-weight:600;font-size:14.5px;margin-bottom:7px}
+  label small{font-weight:500;color:var(--stone)}
+  input[type=text],input[type=tel]{width:100%;border:1.5px solid var(--hairline);border-radius:14px;background:var(--card);color:var(--ink);font:inherit;font-size:16px;padding:13px 15px;min-height:48px}
+  input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,0.18)}
+  .consent{display:flex;gap:11px;align-items:flex-start;margin-top:18px}
+  .consent input{width:22px;height:22px;margin-top:2px;accent-color:var(--gold);flex:0 0 auto}
+  .consent span{font-size:13.5px;line-height:1.55;color:var(--stone)}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border-radius:16px;padding:16px 20px;font-size:16px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-family:inherit;min-height:52px;transition:transform .08s ease,opacity .15s ease}
+  .btn:active{transform:scale(.985)}
+  .btn[disabled]{opacity:.55;cursor:default}
+  .btn-primary{background:var(--metal);color:#000000;margin-top:20px}
+  .btn-gold{background:var(--metal);color:#000000}
+  .btn-line{background:var(--card);color:var(--ink);border:1.5px solid var(--gold)}
+  .btn svg{flex:0 0 20px}
+  .msg{display:none;margin-top:14px;border-radius:14px;padding:13px 15px;font-size:14.5px;line-height:1.5;font-weight:500}
+  .msg.err{display:block;background:rgba(255,138,138,0.12);border:1px solid rgba(255,138,138,0.3);color:var(--err)}
+  .msg.ok{display:block;background:rgba(25,128,60,0.13);border:1px solid rgba(25,128,60,0.3);color:var(--ok)}
+  .fineprint{color:var(--stone);font-size:12.5px;line-height:1.6;margin-top:14px;text-align:center}
+  /* --- Confirmación --- */
+  .done{text-align:center}
+  .done h2{font-size:23px}
+  .done p{color:var(--stone);font-size:15px;line-height:1.6;margin-top:8px}
+  .actions{display:flex;flex-direction:column;gap:11px;margin-top:20px}
+  /* --- Estados sin enlace / error --- */
+  .statecard{text-align:center}
+  .statecard p{color:var(--stone);font-size:15px;line-height:1.65;margin-top:8px}
+  .foot{color:var(--stone);text-align:center;font-size:12.5px;line-height:1.6;padding:34px 0 8px}
+  .foot a{font-weight:600;text-decoration:none}
+  .spinner{width:20px;height:20px;border:2.5px solid rgba(0,0,0,0.28);border-top-color:rgba(0,0,0,0.14);border-radius:50%;animation:spin .8s linear infinite;display:none}
+  .loading .spinner{display:inline-block}
+  .loading .btn-label{display:none}
+  .pageload{display:flex;justify-content:center;padding:60px 0}
+  .pageload .dot{width:34px;height:34px;border:3px solid var(--hairline);border-top-color:var(--gold);border-radius:50%;animation:spin .9s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion: reduce){
+    .btn{transition:none}
+    .spinner,.pageload .dot{animation-duration:1.8s}
+  }
+  .hidden{display:none !important}
+
+  /* ---- Paleta morada: capa de fondo compartida con el sitio ---- */
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{position:relative;background:#F4F4F4;color:var(--ink)}
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:#F4F4F4 url('../fondo-textura.jpeg') center center / cover no-repeat;opacity:.55;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(212,175,55,0.2), transparent 60%),
+      linear-gradient(180deg, rgba(247,244,237,0.62) 0%, rgba(247,244,237,0.86) 55%, rgba(247,244,237,0.94) 100%);
+  }
+  ::selection{background:rgba(149,113,24,0.32);color:#000000}
+  /* El logotipo "Regala y Gana" tiene tipografia azul marino: se perfila en claro */
+  img[alt="Regala y Gana"], .logo, .ryg-logo, #brandLogo{
+    filter:drop-shadow(0 0 1.6px rgba(0,0,0,0.76)) drop-shadow(0 2px 12px rgba(0,0,0,0.22));
+  }
+  @media print{
+    body{background:#000000!important;color:#EFEFEE!important}
+    body::before,body::after{display:none!important}
+    *{color:#EFEFEE!important;background:transparent!important;box-shadow:none!important;
+      border-color:#302C29!important;-webkit-text-fill-color:#EFEFEE!important;filter:none!important}
+  }
+</style>
+
+<style id="tema-claro">
+  html,body{background:#FFFFFF!important;color:#151515!important;color-scheme:light}
+  body::before{opacity:1!important;background:#FFFFFF url('../fondo-textura.jpeg') center top / cover no-repeat!important}
+  body::after{background:linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.40) 55%, rgba(255,255,255,.55) 100%)!important}
+  .btn-primary,.btn-solid,.btn.primary,.cta-btn,a[class*="btn-gold"],.prc-btns a:first-child,.nav-cta,.btn-metal{color:#151515!important}
+  .eyebrow{color:#3F7A2A!important}
+  .eyebrow::before{background:linear-gradient(90deg,#3F7A2A,transparent)!important}
+  .badge .dot,.t-dot,.hero .dot,.live-dot{background:#5A9E3A!important}
+  ::selection{background:rgba(212,175,55,.35);color:#111}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar"><img class="logo" id="programLogo" src="" alt="Regala y Gana" width="933" height="592"></div>
+
+  <!-- Cargando -->
+  <div class="pageload" id="loadingView"><div class="dot" aria-label="Cargando"></div></div>
+
+  <!-- ================= OBSEQUIO ================= -->
+  <div id="giftView" class="hidden">
+    <div class="hero">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#B08D4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="8" width="18" height="13" rx="2"></rect>
+          <path d="M3 12h18M12 8v13"></path>
+          <path d="M12 8c-1.8 0-4.5-.6-4.5-2.7C7.5 3.9 8.6 3 9.8 3 11.4 3 12 5.2 12 8zm0 0c1.8 0 4.5-.6 4.5-2.7C16.5 3.9 15.4 3 14.2 3 12.6 3 12 5.2 12 8z"></path>
+        </svg>
+      </div>
+      <h1><span class="sender" id="senderName"></span> te ha enviado un obsequio para tu cocina.</h1>
+      <div class="assure">
+        <span>Sin costo</span>
+        <span>Sin obligación de compra</span>
+        <span>Sujeto a disponibilidad y zona de servicio</span>
+      </div>
+    </div>
+
+    <section class="card" id="claimCard" aria-label="Reclamar mi obsequio">
+      <h2>Reclama tu obsequio</h2>
+      <p class="sub">Completa tus datos para verificar disponibilidad en tu ciudad.</p>
+
+      <div class="field">
+        <label for="cName">Nombre completo</label>
+        <input type="text" id="cName" autocomplete="name" maxlength="79" placeholder="Ej. Ana Martínez">
+      </div>
+      <div class="field">
+        <label for="cPhone">Número telefónico</label>
+        <input type="tel" id="cPhone" autocomplete="tel" inputmode="tel" maxlength="18" placeholder="Ej. 972 555 1234">
+      </div>
+      <div class="field">
+        <label for="cCity">Ciudad</label>
+        <input type="text" id="cCity" autocomplete="address-level2" maxlength="59" placeholder="Ej. Euless">
+      </div>
+      <div class="field">
+        <label for="cZip">Código postal <small>(opcional)</small></label>
+        <input type="text" id="cZip" autocomplete="postal-code" inputmode="numeric" maxlength="10" placeholder="Ej. 75074">
+      </div>
+
+      <div class="consent">
+        <input type="checkbox" id="cConsent">
+        <span>Acepto ser contactada o contactado por llamada, SMS o WhatsApp para coordinar la entrega de mi obsequio.</span>
+      </div>
+
+      <button class="btn btn-primary" id="btnClaim" type="button">
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="btn-label" id="claimBtnLabel">Reclamar mi obsequio</span>
+      </button>
+      <div class="msg" id="claimMsg" role="alert"></div>
+      <p class="fineprint">Un obsequio por persona y por número telefónico. Consulta los <a href="../terminos.html">términos</a> y el <a href="../privacidad.html">aviso de privacidad</a>.</p>
+    </section>
+  </div>
+
+  <!-- ================= CONFIRMACIÓN ================= -->
+  <section class="card done hidden" id="doneView" aria-label="Obsequio registrado">
+    <div class="seal" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1E7A46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.6 2.6L16 9.5"></path>
+      </svg>
+    </div>
+    <h2 id="doneTitle"></h2>
+    <p id="doneBody"></p>
+    <div class="actions">
+      <button class="btn btn-gold" id="btnWaConfirm" type="button" data-tr="RyG reclamo: WhatsApp confirmar">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+        Confirmar por WhatsApp
+      </button>
+      <a class="btn btn-line" id="btnOwnLink" href="crear.html" data-tr="RyG reclamo: crear mi propio enlace">Yo también quiero regalar y ganar</a>
+    </div>
+  </section>
+
+  <!-- ================= SIN ENLACE / ERROR ================= -->
+  <section class="card statecard hidden" id="stateView">
+    <h2 id="stateTitle"></h2>
+    <p id="stateBody"></p>
+    <div class="actions">
+      <a class="btn btn-line" href="crear.html" id="stateCta">Crear mi propio enlace</a>
+    </div>
+  </section>
+
+  <p class="foot" id="footLine"></p>
+</div>
+
+<script src="../config.js"></script>
+<script src="config.js"></script>
+<script type="module">
+/* ============================================================
+   REGALA Y GANA — Reclamar obsequio (Fase 4)
+   URL: /regalo/?ref=CODIGO
+   ============================================================ */
+const CFG = window.GIFT_CONFIG;
+const D = CFG.distributor;
+const $ = id => document.getElementById(id);
+
+/* --- Tema y textos desde configuración --- */
+(function applyConfig(){
+  const r = document.documentElement.style, t = CFG.theme;
+  r.setProperty('--bg',t.bg); r.setProperty('--ink',t.ink); r.setProperty('--navy',t.navy);
+  r.setProperty('--gold',t.gold); r.setProperty('--gold-text',t.goldText);
+  r.setProperty('--card',t.card); r.setProperty('--hairline',t.hairline);
+  var lg = $('programLogo');
+  lg.src = (CFG.brand && CFG.brand.logo) || '';
+  lg.onerror = function(){ if(CFG.brand && CFG.brand.logoPng && lg.src.indexOf('.png')<0) lg.src = CFG.brand.logoPng; };
+  $('claimBtnLabel').textContent = CFG.texts.claimButton;
+  $('footLine').innerHTML = esc(D.name)+' · Distribuidora autorizada Royal Prestige · '+esc(D.city)+
+    '<br><a href="../index.html">Página principal</a> · <a href="../privacidad.html">Privacidad</a>';
+})();
+function esc(s){ return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* --- Firebase --- */
+const { initializeApp, getApps } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+const { getAuth, signInAnonymously, onAuthStateChanged } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js");
+const { getFirestore, doc, getDoc, setDoc, serverTimestamp, collection, addDoc } =
+  await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+const app  = getApps().length ? getApps()[0] : initializeApp(CFG.firebase);
+const auth = getAuth(app);
+const db   = getFirestore(app);
+
+let uid = null;
+const authReady = new Promise(res => {
+  onAuthStateChanged(auth, u => { if(u){ uid = u.uid; res(); } });
+  signInAnonymously(auth).catch(()=>{});
+});
+
+/* --- Analítica ligera (mismo patrón del sitio) --- */
+function fuente(){
+  const p = new URLSearchParams(location.search), u = (p.get('utm_source')||'').toLowerCase();
+  if(u){
+    if(u.includes('qr')) return 'QR';
+    if(u.includes('insta')||u==='ig') return 'Instagram';
+    if(u.includes('tiktok')) return 'TikTok';
+    if(u.includes('whats')||u==='wa') return 'WhatsApp';
+    return u.charAt(0).toUpperCase()+u.slice(1);
+  }
+  const r = (document.referrer||'').toLowerCase();
+  if(!r) return 'Directo';
+  if(r.includes('whatsapp')||r.includes('wa.me')) return 'WhatsApp';
+  if(r.includes('instagram')) return 'Instagram';
+  if(r.includes('tiktok')) return 'TikTok';
+  if(r.includes('facebook')||r.includes('fb.')) return 'Facebook';
+  try{ return new URL(document.referrer).hostname.replace(/^www\./,''); }catch(_){ return 'Otro'; }
+}
+const SRC = fuente();
+function track(label){
+  try{
+    addDoc(collection(db,'analytics_clicks'), {
+      label: String(label).slice(0,90), action:'click', page:'regalo-reclamo',
+      src: SRC, createdAt: serverTimestamp()
+    }).catch(()=>{});
+  }catch(_){}
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-tr]');
+  if(t) track(t.getAttribute('data-tr'));
+}, true);
+
+/* --- Vistas --- */
+function show(view){
+  ['loadingView','giftView','doneView','stateView'].forEach(v => $(v).classList.add('hidden'));
+  $(view).classList.remove('hidden');
+}
+function showState(title, body, ctaText){
+  $('stateTitle').textContent = title;
+  $('stateBody').textContent = body;
+  $('stateCta').textContent = ctaText || 'Crear mi propio enlace';
+  show('stateView');
+}
+function showDone(alreadyName){
+  $('doneTitle').textContent = CFG.texts.afterClaimTitle;
+  $('doneBody').textContent  = CFG.texts.afterClaimBody;
+  const who = alreadyName || $('cName').value.trim();
+  const msg = 'Hola ' + D.name.split(' ')[0] + ', soy ' + who +
+    '. Acabo de reclamar el obsequio de cocina que me enviaron con el código ' + CODE + '.';
+  $('btnWaConfirm').onclick = () =>
+    location.href = 'https://wa.me/' + D.whatsapp + '?text=' + encodeURIComponent(msg);
+  show('doneView');
+  window.scrollTo({ top: 0 });
+}
+
+/* --- Leer el código del enlace --- */
+const CODE = (new URLSearchParams(location.search).get('ref')||'').trim().toUpperCase();
+const LS_CLAIMED = 'ryg_claimed_' + CODE;
+let LINK = null;
+
+(async function init(){
+  if(!CODE || !/^[A-Z0-9]{10,14}$/.test(CODE)){
+    showState('Necesitas un enlace de invitación',
+      'Esta página se abre con el enlace personal que te comparte un familiar o amigo. Si quieres, tú también puedes crear el tuyo y empezar a regalar.',
+      'Crear mi propio enlace');
+    track('RyG reclamo: sin codigo');
+    return;
+  }
+  try{
+    const snap = await getDoc(doc(db,'giftLinks', CODE));
+    if(!snap.exists()){
+      showState('Este enlace no es válido',
+        'Revisa que el enlace esté completo tal como te lo enviaron. Si el problema continúa, pide a la persona que te lo comparta de nuevo.',
+        'Crear mi propio enlace');
+      track('RyG reclamo: codigo inexistente');
+      return;
+    }
+    LINK = snap.data();
+    const expired = LINK.status !== 'active'
+      || (LINK.expiresAt && LINK.expiresAt.toDate && Date.now() > LINK.expiresAt.toDate().getTime());
+    if(expired){
+      showState('Esta campaña ya finalizó',
+        (LINK.participantName||'Tu contacto') + ' compartió este obsequio, pero su campaña de ' +
+        CFG.campaign.durationDays + ' días ya terminó. Tú puedes crear tu propio enlace y compartir obsequios también.',
+        'Crear mi propio enlace');
+      track('RyG reclamo: campana finalizada');
+      return;
+    }
+    $('senderName').textContent = LINK.participantName;
+    document.title = LINK.participantName + ' te envió un obsequio — ' + CFG.texts.programName;
+
+    let claimedAs = '';
+    try{ claimedAs = localStorage.getItem(LS_CLAIMED) || ''; }catch(_){}
+    if(claimedAs){ showDone(claimedAs); track('RyG reclamo: revisita confirmada'); return; }
+
+    show('giftView');
+    track('RyG reclamo: obsequio abierto');
+  }catch(e){
+    showState('No se pudo cargar el obsequio',
+      'Revisa tu conexión a internet e intenta abrir el enlace de nuevo.',
+      'Crear mi propio enlace');
+  }
+})();
+
+/* --- Normalizar teléfono (EE. UU. por defecto) --- */
+function normalizePhone(raw){
+  let d = String(raw||'').replace(/\D/g,'');
+  if(d.length === 10) d = '1' + d;
+  if(d.length < 10 || d.length > 15) return null;
+  if(/^(\d)\1+$/.test(d)) return null;           // todos los dígitos iguales
+  return d;
+}
+
+/* --- Reclamar --- */
+$('btnClaim').addEventListener('click', async () => {
+  const btn   = $('btnClaim');
+  const msgEl = $('claimMsg');
+  msgEl.className = 'msg';
+
+  const name  = $('cName').value.trim().replace(/\s+/g,' ');
+  const city  = $('cCity').value.trim().replace(/\s+/g,' ');
+  const zip   = $('cZip').value.trim();
+  const phone = normalizePhone($('cPhone').value);
+
+  if(name.length < 2){ showErr('Escribe tu nombre completo.'); $('cName').focus(); return; }
+  if(!phone){ showErr('Escribe un número telefónico válido de 10 dígitos.'); $('cPhone').focus(); return; }
+  if(city.length < 2){ showErr('Escribe tu ciudad.'); $('cCity').focus(); return; }
+  if(zip && !/^[0-9]{4,10}$/.test(zip)){ showErr('El código postal solo lleva números, o déjalo vacío.'); $('cZip').focus(); return; }
+  if(!$('cConsent').checked){ showErr('Para coordinar tu entrega necesitamos tu autorización de contacto.'); return; }
+
+  btn.disabled = true; btn.classList.add('loading');
+  try{
+    await Promise.race([authReady, new Promise((_,rej)=>setTimeout(()=>rej(new Error('auth')),12000))]);
+  }catch(_){
+    try{ await signInAnonymously(auth); }catch(e){ return fail('No se pudo conectar. Revisa tu internet e inténtalo de nuevo.'); }
+  }
+
+  const claimId = CODE + '__' + phone;
+  const data = {
+    claimId: claimId,
+    distributorId: LINK.distributorId,
+    participantId: CODE,
+    referralCode: CODE,
+    recipientName: name,
+    normalizedPhone: phone,
+    recipientCity: city,
+    consent: true,
+    status: 'claimed',
+    source: SRC,
+    claimedAt: serverTimestamp(),
+    createdAt: serverTimestamp(),
+    updatedAt: serverTimestamp(),
+    adminNotes: ''
+  };
+  if(zip) data.zipCode = zip;
+
+  try{
+    await setDoc(doc(db,'giftClaims', claimId), data);
+  }catch(e){
+    const code = (e && e.code) || '';
+    if(code === 'permission-denied'){
+      /* Con datos válidos y campaña activa, la causa más probable es
+         que este teléfono ya reclamó en esta campaña (el ID ya existe). */
+      return fail('Este número telefónico ya reclamó un obsequio con este enlace. Un obsequio por persona y por número.');
+    }
+    return fail('No se pudo registrar tu obsequio en este momento. Inténtalo de nuevo en unos minutos.');
+  }
+
+  try{ localStorage.setItem(LS_CLAIMED, name); }catch(_){}
+  track('RyG reclamo: obsequio reclamado');
+  btn.disabled = false; btn.classList.remove('loading');
+  showDone(name);
+
+  function showErr(t){ msgEl.textContent = t; msgEl.className = 'msg err'; }
+  function fail(t){
+    btn.disabled = false; btn.classList.remove('loading');
+    msgEl.textContent = t; msgEl.className = 'msg err';
+  }
+});
+</script>
+</body>
+</html>
