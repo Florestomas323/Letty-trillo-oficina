@@ -571,9 +571,11 @@
 </style>
 
 <style id="tema-claro">
-  html,body{background:#FFFFFF!important;color:#151515!important;color-scheme:light}
+  html{background:#FFFFFF!important;color-scheme:light}
+  /* body transparente: si no, su propio fondo tapa la textura del ::before */
+  body{background:transparent!important;color:#151515!important}
   body::before{opacity:1!important;background:#FFFFFF url('fondo-textura.jpeg') center top / cover no-repeat!important}
-  body::after{background:linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.40) 55%, rgba(255,255,255,.55) 100%)!important}
+  body::after{background:linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.18) 55%, rgba(255,255,255,.24) 100%)!important}
   .btn-primary,.btn-solid,.btn.primary,.cta-btn,a[class*="btn-gold"],.prc-btns a:first-child,.nav-cta,.btn-metal{color:#151515!important}
   .eyebrow{color:#3F7A2A!important}
   .eyebrow::before{background:linear-gradient(90deg,#3F7A2A,transparent)!important}

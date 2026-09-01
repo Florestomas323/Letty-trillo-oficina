@@ -39,7 +39,7 @@ window.OFICINA = {
   redes: {
     instagram: "letty_trillodiaz",
     tiktok:    "SIN-TIKTOK",
-    facebook:  "https://www.facebook.com/share/1PYXHzLX2a/",
+    facebook:  "https://www.facebook.com/share/19C3VgjzqA/",
     threads:   "letty_trillodiaz"
   },
 
