@@ -1585,6 +1585,18 @@
   /* Si una foto tarda o falta, que no se vea el texto alternativo encima del diseño */
   img{font-size:0;color:transparent}
 </style>
+
+<style id="logo-nombre">
+  /* El h1 sigue diciendo "Letty Trillo" para buscadores y lectores de pantalla;
+     visualmente se sustituye por el logotipo. */
+  .hero h1{
+    background:url('logo-nombre-letty.png') left center / contain no-repeat!important;
+    color:transparent!important;-webkit-text-fill-color:transparent!important;
+    width:min(72vw,380px);height:calc(min(72vw,380px)*0.253);
+    text-indent:-9999px;overflow:hidden;margin-bottom:14px!important;
+  }
+  @media(min-width:768px){ .hero h1{width:min(42vw,470px);height:calc(min(42vw,470px)*0.253)} }
+</style>
 </head>
 <body>
 
