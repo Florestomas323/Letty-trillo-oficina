@@ -1,0 +1,13 @@
+{
+  "name": "oficina-digital",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node validar.js",
+    "validar": "node validar.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.7.0",
+    "web-push": "^3.6.7"
+  }
+}

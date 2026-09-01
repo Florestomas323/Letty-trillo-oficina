@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script src="config.js"></script>
+<meta name="theme-color" content="#F4F4F4">
+<title>Recetas para Inspirarte — Letty Trillo · Royal Prestige</title>
+<link rel="icon" type="image/png" href="favicon-oficina.png?v=2">
+<link rel="apple-touch-icon" href="favicon-oficina.png?v=2">
+<meta name="description" content="Recetas seleccionadas para cocinar con tus utensilios Royal Prestige. Por Letty Trillo, tu distribuidora.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Letty Trillo — Royal Prestige">
+<meta property="og:title" content="Recetas · Letty Trillo — Royal Prestige">
+<meta property="og:description" content="Recetas fáciles y deliciosas para tu Royal Prestige. Cocina saludable con tu distribuidora de confianza en DFW, Texas.">
+<meta property="og:url" content="https://lettytrillo.com/recetas.html">
+<meta property="og:image" content="https://lettytrillo.com/og-image.jpeg?v=2">
+<meta property="og:image:secure_url" content="https://lettytrillo.com/og-image.jpeg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Letty Trillo, distribuidora autorizado Royal Prestige en DFW, Texas">
+<meta property="og:locale" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Recetas · Letty Trillo — Royal Prestige">
+<meta name="twitter:description" content="Recetas fáciles y deliciosas para tu Royal Prestige. Cocina saludable con tu distribuidora de confianza en DFW, Texas.">
+<meta name="twitter:image" content="https://lettytrillo.com/og-image.jpeg?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F4;
+    --card:#E9E9E9;
+    --ink:#0C0A05;
+    --stone:#685C45;
+    --hairline:rgba(212,175,55,0.15);
+    --gold:#947619;
+    --gold-text:#957A18;
+    --royal:#947219;
+    --royal-soft:rgba(212,175,55,0.12);
+    --shadow-soft:0 1px 2px rgba(0,0,0,0.16), 0 8px 24px rgba(0,0,0,0.14);
+    --shadow-lift:0 2px 6px rgba(0,0,0,0.17), 0 18px 44px rgba(140,110,31,0.32);
+    --radius:22px;
+    --ease:cubic-bezier(.22,.8,.24,1);
+    --metal:linear-gradient(135deg,#957718 0%,#D4AF37 52%,#8C6E1F 100%);
+    --metal-silver:linear-gradient(135deg,#0E0C08 0%,#695A44 45%,#A69B8B 100%);
+    --silver:#705D3D; --silver-dim:#A69C88;
+    --ink:#0C0A05; --card:#E9E9E9; --stone:#685C45;
+    --gold:#947619; --gold-text:#957A18; --hairline:rgba(212,175,55,0.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  @media(min-width:768px){.wrap{padding:0 40px}}
+
+  .rv{opacity:0;transition:opacity .5s var(--ease)}
+  .rv.in{opacity:1}
+  @media(prefers-reduced-motion:reduce){
+    .rv{opacity:1;transform:none;transition:none}
+    *{animation:none!important;transition:none!important}
+  }
+
+  /* ---------- Tarjeta de bienvenida ---------- */
+  .welcome{
+    margin-top:26px;background:var(--card);border:1px solid var(--hairline);
+    border-radius:var(--radius);padding:26px 24px 28px;box-shadow:var(--shadow-soft);
+    position:relative;overflow:hidden;
+  }
+  @media(min-width:768px){.welcome{margin-top:44px;padding:34px 36px}}
+  .welcome::after{
+    content:"";position:absolute;top:0;left:24px;right:24px;height:2px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    opacity:.55;
+  }
+  .welcome .hi{margin-bottom:14px}
+  .welcome h2{
+    font-family:'Inter Tight',sans-serif;font-weight:700;
+    font-size:clamp(22px,5vw,28px);letter-spacing:-.02em;
+  }
+  .welcome p{margin-top:8px;color:var(--stone);font-size:15.5px;max-width:33.28em}
+
+  header.page{padding:34px 0 6px}
+  @media(min-width:768px){header.page{padding:52px 0 10px}}
+  .eyebrow{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    font-size:17px;color:var(--gold-text);letter-spacing:.01em;margin-bottom:12px;
+  }
+  h1{
+    font-family:'Inter Tight',sans-serif;font-weight:700;
+    font-size:clamp(34px,7.5vw,58px);line-height:1.05;letter-spacing:-.03em;
+  }
+
+  /* ---------- Buscador ---------- */
+  .search-wrap{margin-top:24px;position:relative}
+  .search-wrap svg{
+    position:absolute;left:18px;top:50%;transform:translateY(-50%);
+    color:var(--stone);pointer-events:none;
+  }
+  .search{
+    width:100%;background:var(--card);border:1px solid var(--hairline);
+    border-radius:16px;padding:15px 46px 15px 48px;font:inherit;font-size:16px;
+    color:var(--ink);outline:none;box-shadow:var(--shadow-soft);
+    transition:border-color .25s, box-shadow .25s;
+  }
+  .search::placeholder{color:#8A857C}
+  .search:focus{border-color:rgba(212,175,55,0.15);box-shadow:var(--shadow-lift)}
+  .search-clear{
+    position:absolute;right:10px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border-radius:50%;display:none;
+    align-items:center;justify-content:center;color:var(--stone);
+  }
+  .search-clear.show{display:flex}
+
+  /* ---------- Filtros ---------- */
+  .filters{
+    position:sticky;top:0;z-index:40;
+    background:rgba(246,243,235,0.86);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;transition:border-color .3s;
+    margin-top:14px;
+  }
+  .filters.stuck{border-bottom-color:var(--hairline)}
+  .chip-row{
+    display:flex;gap:8px;overflow-x:auto;padding:14px 20px;
+    scrollbar-width:none;max-width:1120px;margin:0 auto;
+  }
+  .chip-row::-webkit-scrollbar{display:none}
+  @media(min-width:768px){.chip-row{padding:14px 40px;flex-wrap:wrap;overflow:visible}}
+  .chip{
+    flex:0 0 auto;padding:9px 16px;border-radius:999px;
+    border:1px solid var(--hairline);background:var(--card);
+    font-size:14px;font-weight:500;color:var(--stone);
+    transition:all .25s var(--ease);white-space:nowrap;
+  }
+  .chip:active{transform:scale(.96)}
+  .chip.on{background:var(--metal);border-color:var(--ink);color:#000000}
+  @media(hover:hover){.chip:not(.on):hover{border-color:rgba(212,175,55,0.15);color:var(--ink)}}
+
+  /* ---------- Grid ---------- */
+  .grid{display:grid;gap:22px;grid-template-columns:1fr;padding:28px 0 8px}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr;gap:26px}}
+  @media(min-width:1000px){.grid{grid-template-columns:1fr 1fr 1fr;gap:30px;padding:36px 0 12px}}
+
+  .card{
+    display:block;background:var(--card);border-radius:var(--radius);
+    overflow:hidden;box-shadow:var(--shadow-soft);
+    border:1px solid rgba(0,0,0,0.01);
+    transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+    text-align:left;width:100%;position:relative;cursor:pointer;
+  }
+  @media(hover:hover){
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift)}
+    .card:hover .card-img img{transform:scale(1.04)}
+    .card:hover .cta-view{color:var(--ink)}
+    .card:hover .cta-view svg{transform:translateX(3px)}
+  }
+  .card:active{transform:scale(.985)}
+  .card-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#332D1B}
+  .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+  .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:56px}
+  .badge{
+    position:absolute;top:14px;left:14px;
+    background:rgba(246,243,235,0.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600;
+    box-shadow:0 2px 8px rgba(0,0,0,0.03);
+  }
+  .fav-btn{
+    position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;
+    background:rgba(246,243,235,0.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.03);
+    transition:transform .25s var(--ease);z-index:2;
+  }
+  .fav-btn:active{transform:scale(.85)}
+  /* --- Receta destacada de la semana --- */
+  .feat-wrap{max-width:1120px;margin:0 auto;padding:0 20px 4px}
+  @media(min-width:768px){.feat-wrap{padding:0 40px 4px}}
+  .feat{display:block;background:var(--card,var(--card));border:1px solid var(--hairline,rgba(212,175,55,0.15));border-top:4px solid var(--gold,var(--gold));border-radius:22px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,0.01),0 8px 24px rgba(0,0,0,0.02)}
+  .feat-in{display:flex;flex-direction:column}
+  @media(min-width:720px){.feat-in{flex-direction:row;align-items:stretch}}
+  .feat-img{position:relative;aspect-ratio:16/10;background:#332D1B;overflow:hidden;flex:0 0 auto}
+  @media(min-width:720px){.feat-img{width:44%;aspect-ratio:auto;min-height:250px}}
+  .feat-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .feat-tag{position:absolute;left:12px;top:12px;background:var(--gold,var(--metal));color:#000000;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:6px 12px}
+  .feat-body{padding:20px;display:flex;flex-direction:column;flex:1}
+  .feat-eyebrow{font-family:'Fraunces',serif;font-style:italic;font-size:14.5px;color:var(--gold-text,#957A18)}
+  .feat-body h2{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(21px,5vw,27px);letter-spacing:-.02em;line-height:1.15;margin-top:5px}
+  .feat-desc{color:var(--stone,#685C45);font-size:14.5px;line-height:1.55;margin-top:9px}
+  .feat-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;font-size:12.5px;color:var(--stone,#685C45)}
+  .feat-meta span{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,0.04);border-radius:999px;padding:6px 12px}
+  .feat-acts{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:16px}
+  .feat-go{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ink,var(--metal));color:#000000;border:0;border-radius:999px;font:inherit;font-size:15px;font-weight:600;padding:13px 22px;min-height:46px;cursor:pointer}
+  .feat-go:active{transform:scale(.98)}
+  /* --- Botones me gusta y guardar --- */
+  .rx{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;min-width:44px;border:1.5px solid var(--hairline,rgba(212,175,55,0.15));background:var(--card);border-radius:999px;padding:9px 15px;font:inherit;font-size:14px;font-weight:600;color:var(--stone,#685C45);cursor:pointer}
+  .rx svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;transition:all .22s}
+  .rx:active{transform:scale(.95)}
+  .rx.on{border-color:rgba(255,138,138,0.4);color:#FF8A8A}
+  .rx.on svg{fill:#E0455A;stroke:#E0455A}
+  .rx.sv.on{border-color:var(--gold,var(--gold));color:var(--gold-text,#957A18)}
+  .rx.sv.on svg{fill:var(--gold,#B08D4F);stroke:var(--gold,#B08D4F)}
+  .rx .n{font-variant-numeric:tabular-nums}
+  @keyframes rxPop{0%{transform:scale(1)}45%{transform:scale(1.28)}100%{transform:scale(1)}}
+  .rx.pop svg{animation:rxPop .4s var(--ease)}
+  /* Corazón de me gusta sobre la tarjeta de la rejilla */
+  .like-btn{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:6px;background:rgba(246,243,235,0.94);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:0;border-radius:999px;padding:7px 12px;font:inherit;font-size:12.5px;font-weight:700;color:#756339;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.04);min-height:34px}
+  .like-btn svg{width:15px;height:15px;fill:none;stroke:#736E65;stroke-width:2.2;transition:all .22s}
+  .like-btn.on{color:#FF8A8A}
+  .like-btn.on svg{fill:#E0455A;stroke:#E0455A}
+  .like-btn:active{transform:scale(.94)}
+  .like-btn.pop svg{animation:rxPop .4s var(--ease)}
+  .fav-btn svg{width:19px;height:19px;fill:none;stroke:#736E65;stroke-width:2;transition:all .25s}
+  .fav-btn.faved svg{fill:#E0455A;stroke:#E0455A}
+  .fav-btn.pop svg{animation:favPop .4s var(--ease)}
+  @keyframes favPop{0%{transform:scale(1)}45%{transform:scale(1.35)}100%{transform:scale(1)}}
+
+  .card-body{padding:18px 20px 20px}
+  .card h3{
+    font-family:'Inter Tight',sans-serif;font-weight:600;
+    font-size:20px;letter-spacing:-.015em;line-height:1.2;
+  }
+  .meta-line{
+    display:flex;align-items:center;gap:7px;flex-wrap:wrap;
+    margin-top:9px;font-size:13.5px;color:var(--stone);font-weight:500;
+  }
+  .meta-line .dot{width:3px;height:3px;border-radius:50%;background:#332D1B}
+  .utensil{
+    display:inline-flex;align-items:center;gap:6px;
+    margin-top:13px;font-size:13px;font-weight:600;color:var(--royal);
+  }
+  .cta-view{
+    display:flex;align-items:center;gap:6px;justify-content:space-between;
+    margin-top:16px;padding-top:15px;border-top:1px solid var(--hairline);
+    font-size:14.5px;font-weight:600;color:var(--stone);transition:color .25s;
+  }
+  .cta-view svg{transition:transform .3s var(--ease)}
+
+  .empty{
+    grid-column:1/-1;text-align:center;padding:64px 24px;
+    border:1px dashed var(--hairline);border-radius:var(--radius);
+  }
+  .empty p{color:var(--stone);max-width:25.6em;margin:10px auto 0}
+  .empty .big{font-size:40px}
+  .empty h3{font-family:'Inter Tight';font-weight:600;font-size:20px;margin-top:10px}
+  .empty a{font-weight:600;color:var(--ink);border-bottom:1px solid var(--gold)}
+
+  /* ---------- ¿Qué quieres cocinar hoy? ---------- */
+  .mood{padding:46px 0 10px}
+  .mood h2, .soon h2{
+    font-family:'Inter Tight',sans-serif;font-weight:700;
+    font-size:clamp(26px,5.5vw,38px);letter-spacing:-.025em;
+  }
+  .mood-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px;
+  }
+  @media(min-width:640px){.mood-grid{grid-template-columns:repeat(4,1fr);gap:16px}}
+  .mood-card{
+    background:var(--card);border:1px solid var(--hairline);border-radius:18px;
+    padding:22px 14px 20px;text-align:center;box-shadow:var(--shadow-soft);
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  @media(hover:hover){.mood-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}}
+  .mood-card:active{transform:scale(.96)}
+  .mood-card .mi{font-size:34px;line-height:1}
+  .mood-card .ml{margin-top:10px;font-weight:600;font-size:14.5px;letter-spacing:-.01em}
+
+  /* ---------- Próximamente ---------- */
+  .soon{padding:44px 0 20px}
+  .soon .sub{color:var(--stone);margin-top:8px;font-size:15.5px}
+  .soon-row{display:grid;gap:12px;margin-top:22px;grid-template-columns:1fr}
+  @media(min-width:640px){.soon-row{grid-template-columns:repeat(3,1fr);gap:16px}}
+  .soon-card{
+    display:flex;align-items:center;gap:14px;background:var(--card);
+    border:1px dashed rgba(212,175,55,0.15);border-radius:18px;padding:18px 18px;
+    transition:border-color .25s, transform .3s var(--ease);text-align:left;
+  }
+  @media(hover:hover){.soon-card:hover{border-color:var(--gold);transform:translateY(-3px)}}
+  .soon-card .si{font-size:30px}
+  .soon-card .sn{font-weight:600;font-size:15.5px;letter-spacing:-.01em}
+  .soon-card .sq{font-size:12.5px;color:var(--stone);margin-top:2px}
+
+  /* ---------- Vistas ---------- */
+  .view{display:none}
+  .view.active{display:block;animation:viewIn .45s var(--ease)}
+  @keyframes viewIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* ---------- Detalle ---------- */
+  .back{
+    display:inline-flex;align-items:center;gap:8px;
+    margin:26px 0 20px;font-size:14.5px;font-weight:600;color:var(--stone);
+    transition:color .25s;
+  }
+  .back:hover{color:var(--ink)}
+  .hero-img{
+    position:relative;border-radius:var(--radius);overflow:hidden;
+    aspect-ratio:4/3;background:#332D1B;box-shadow:var(--shadow-soft);
+  }
+  @media(min-width:768px){.hero-img{aspect-ratio:16/9}}
+  .hero-img img{width:100%;height:100%;object-fit:cover}
+  .hero-fav{top:14px;right:14px;width:46px;height:46px}
+  .hero-fav svg{width:22px;height:22px}
+
+  .r-head{padding:28px 0 4px}
+  .r-head .eyebrow{margin-bottom:10px}
+  .r-head h2{
+    font-family:'Inter Tight',sans-serif;font-weight:700;
+    font-size:clamp(30px,6.5vw,48px);letter-spacing:-.028em;line-height:1.07;
+  }
+  .r-desc{margin-top:14px;color:var(--stone);font-size:17px;max-width:35.84em}
+
+  .action-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--hairline);background:var(--card);border-radius:999px;
+    padding:11px 17px;font-size:14px;font-weight:600;color:var(--ink);
+    box-shadow:var(--shadow-soft);
+    transition:transform .25s var(--ease), box-shadow .25s, border-color .25s;
+  }
+  @media(hover:hover){.pill:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift)}}
+  .pill:active{transform:scale(.96)}
+  .pill.video{background:var(--metal);border-color:var(--ink);color:#000000}
+  .pill svg{flex:0 0 auto}
+
+  .stats{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--hairline);border:1px solid var(--hairline);
+    border-radius:18px;overflow:hidden;margin:26px 0 8px;
+  }
+  @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--card);padding:16px 18px}
+  .stat .k{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--stone)}
+  .stat .v{margin-top:4px;font-weight:600;font-size:15.5px;letter-spacing:-.01em}
+  .stat .v.royal{color:var(--royal)}
+
+  .r-cols{display:grid;gap:44px;padding:34px 0 10px}
+  @media(min-width:900px){.r-cols{grid-template-columns:340px 1fr;gap:64px;align-items:start}}
+
+  .sec-title{
+    font-family:'Inter Tight',sans-serif;font-weight:600;font-size:22px;
+    letter-spacing:-.015em;margin-bottom:18px;
+  }
+  .ing-list{list-style:none}
+  .ing-list li{
+    display:flex;gap:12px;align-items:baseline;
+    padding:11px 0;border-bottom:1px solid var(--hairline);font-size:15.5px;
+  }
+  .ing-list li::before{
+    content:"";flex:0 0 auto;width:6px;height:6px;border-radius:50%;
+    background:var(--metal);transform:translateY(-2px);
+  }
+  .ing-list .amt{color:var(--stone);margin-left:auto;font-size:14px;white-space:nowrap}
+
+  .steps{list-style:none;counter-reset:paso}
+  .steps li{
+    counter-increment:paso;display:flex;gap:18px;
+    padding:20px 0;border-bottom:1px solid var(--hairline);
+  }
+  .steps li:first-child{padding-top:4px}
+  .steps li::before{
+    content:counter(paso,decimal-leading-zero);
+    font-family:'Inter Tight',sans-serif;font-weight:600;font-size:14px;
+    color:var(--gold-text);letter-spacing:.04em;flex:0 0 auto;padding-top:3px;
+  }
+  .steps p{font-size:16px;line-height:1.65}
+  .steps b{font-weight:600}
+
+  .tip{
+    margin:36px 0 0;background:var(--card);border:1px solid var(--hairline);
+    border-radius:var(--radius);padding:26px 26px 28px;position:relative;
+    box-shadow:var(--shadow-soft);
+  }
+  .tip::before{
+    content:"";position:absolute;top:26px;bottom:28px;left:0;width:2px;
+    background:var(--metal);border-radius:2px;
+  }
+  .tip h4{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:500;
+    font-size:19px;margin-bottom:8px;
+  }
+  .tip p{color:var(--stone);font-size:15.5px}
+  .tip.royal{background:var(--royal-soft);border-color:#796F34;margin-top:16px}
+  .tip.royal::before{background:var(--royal)}
+  .tip.royal h4{font-family:'Inter Tight',sans-serif;font-style:normal;font-weight:600;font-size:16px;color:var(--royal)}
+
+  /* ---------- Relacionadas ---------- */
+  .related{padding:44px 0 20px}
+  .related h3{
+    font-family:'Inter Tight',sans-serif;font-weight:700;
+    font-size:clamp(22px,5vw,30px);letter-spacing:-.02em;margin-bottom:20px;
+  }
+  .rel-row{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:640px){.rel-row{grid-template-columns:repeat(3,1fr);gap:18px}}
+  .rel-card{
+    display:flex;align-items:center;gap:14px;background:var(--card);
+    border:1px solid var(--hairline);border-radius:18px;padding:12px;
+    box-shadow:var(--shadow-soft);text-align:left;
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease);cursor:pointer;
+  }
+  @media(hover:hover){.rel-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}}
+  .rel-card:active{transform:scale(.97)}
+  .rel-thumb{
+    position:relative;flex:0 0 72px;width:72px;height:72px;border-radius:12px;
+    overflow:hidden;background:#332D1B;
+  }
+  .rel-thumb img{width:100%;height:100%;object-fit:cover}
+  .rel-thumb .ph{font-size:30px}
+  .rel-card .rn{font-weight:600;font-size:15px;letter-spacing:-.01em;line-height:1.25}
+  .rel-card .rm{font-size:12.5px;color:var(--stone);margin-top:4px}
+
+  /* ---------- Toast ---------- */
+  .toast{
+    position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));
+    transform:translateX(-50%) translateY(16px);z-index:70;
+    background:var(--metal);color:#000000;border-radius:999px;
+    padding:11px 20px;font-size:14px;font-weight:600;
+    opacity:0;pointer-events:none;transition:opacity .3s var(--ease), transform .3s var(--ease);
+    box-shadow:0 8px 24px rgba(0,0,0,0.09);white-space:nowrap;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ---------- WhatsApp fijo ---------- */
+  .wa-dock{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    display:flex;justify-content:center;pointer-events:none;
+  }
+  .wa-btn{
+    pointer-events:auto;display:inline-flex;align-items:center;gap:10px;
+    background:var(--metal);color:#000000;border-radius:999px;
+    padding:15px 24px;font-size:15px;font-weight:600;letter-spacing:-.01em;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+    max-width:calc(100vw - 32px);
+  }
+  .wa-btn svg{flex:0 0 auto}
+  .wa-btn span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  @media(hover:hover){.wa-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,0.1)}}
+  .wa-btn:active{transform:scale(.97)}
+
+  footer{
+    padding:26px 20px calc(96px + env(safe-area-inset-bottom));
+    text-align:center;color:var(--stone);font-size:13.5px;
+  }
+  footer b{color:var(--ink);font-weight:600}
+
+  .wa-dock{transition:transform .4s var(--ease), opacity .4s var(--ease)}
+  .wa-dock.hidden-dock{transform:translateY(120%);opacity:0}
+
+  /* ---------- Impresión / Guardar PDF ---------- */
+  @media print{
+    .wa-dock,.filters,.back,.action-row,.fav-btn,.related,.toast,footer,
+    #view-grid{display:none!important}
+    #view-recipe{display:block!important}
+    body{background:var(--card)}
+    .hero-img{box-shadow:none;border-radius:12px;aspect-ratio:auto;max-height:340px}
+    .hero-img img{max-height:340px}
+    .stats,.tip{box-shadow:none;break-inside:avoid}
+    .steps li,.ing-list li{break-inside:avoid}
+    .r-cols{grid-template-columns:1fr;gap:24px}
+    .wrap{max-width:100%;padding:0}
+  }
+
+  /* ---------- Iconos 3D ---------- */
+  .icon-3d{
+    position:relative;display:grid;place-items:center;flex:0 0 auto;
+    width:52px;height:52px;border-radius:17px;color:#715F3D;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(246,243,235,0.96), rgba(0,0,0,0.28) 42%, transparent 72%),
+      linear-gradient(145deg,var(--card),#6E5E40);
+    border:1px solid rgba(0,0,0,0.72);
+    box-shadow:
+      inset 2px 2px 5px rgba(0,0,0,0.76),
+      inset -3px -3px 8px rgba(0,0,0,0.02),
+      0 8px 18px rgba(0,0,0,0.03);
+    transform:perspective(600px);
+    transition:transform .35s var(--ease), box-shadow .35s ease;
+  }
+  .icon-3d svg{width:24px;height:24px;filter:drop-shadow(0 2px 2px rgba(0,0,0,0.05))}
+  .icon-3d.sm{width:40px;height:40px;border-radius:13px}
+  .icon-3d.sm svg{width:19px;height:19px}
+  @media(hover:hover){
+    .mood-card:hover .icon-3d{transform:perspective(600px) rotateX(-6deg) rotateY(7deg) translateY(-3px)}
+    .soon-card:hover .icon-3d{transform:perspective(600px) translateY(-2px)}
+  }
+  @media(prefers-reduced-motion:reduce){.icon-3d{transition:none}}
+  .chip{display:inline-flex;align-items:center;gap:7px}
+  .chip svg{width:14px;height:14px;flex:0 0 auto}
+  .mood-card .icon-3d{margin:0 auto}
+  .big svg{width:44px;height:44px;color:#6C665D}
+  .ph::after{
+    content:"";position:absolute;inset:0;
+    background:center/34% no-repeat url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.68)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="m4 8 16-4"/></svg>');
+  }
+  .tip.royal h4{display:flex;align-items:center;gap:8px}
+  .tip.royal h4 svg{width:16px;height:16px;flex:0 0 auto}
+
+  .soon-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px}
+  @media(min-width:620px){.soon-grid{grid-template-columns:1fr 1fr}}
+  .promo-card{display:block;background:var(--card);border:1px solid var(--hairline);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);transition:transform .3s var(--ease),box-shadow .3s var(--ease);text-align:left}
+  .promo-card:active{transform:scale(.98)}
+  @media(hover:hover){.promo-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}}
+  .promo-card .pimg{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#332D1B}
+  .promo-card .pbody{padding:16px 18px}
+  .promo-tipo{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:4px 11px;border-radius:999px;margin-bottom:9px}
+  .promo-card h3{font-size:17px;margin-bottom:5px;line-height:1.25}
+  .promo-card .pdesc{font-size:13.5px;color:var(--stone);line-height:1.5}
+  .promo-card .pcta{margin-top:11px;font-size:13px;font-weight:600;color:var(--gold-text)}
+
+  .back-home{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--stone);padding:9px 14px 9px 10px;margin:4px 0 10px -10px;border-radius:999px;transition:background .2s,color .2s;touch-action:manipulation}
+  .back-home:active{background:#6A5D44;color:var(--ink)}
+  @media(hover:hover){.back-home:hover{background:#15120C;color:var(--ink)}}
+  .back-home svg{pointer-events:none}
+
+  .seo-card{display:block;background:var(--card);border:1px solid rgba(212,175,55,0.15);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ink)}
+  .seo-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+  .seo-card h3{font-size:17px;padding:12px 14px 4px}
+  .seo-card p{font-size:13.5px;color:#685C45;padding:0 14px;line-height:1.45}
+  .seo-card span{display:block;font-size:12px;color:#957A18;font-weight:600;padding:8px 14px 14px}
+
+  /* ---- Paleta morada: capa de fondo compartida con el sitio ---- */
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{position:relative;background:#F4F4F4;color:var(--ink)}
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:#F4F4F4 url('fondo-textura.jpeg') center center / cover no-repeat;opacity:.55;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(212,175,55,0.2), transparent 60%),
+      linear-gradient(180deg, rgba(247,244,237,0.62) 0%, rgba(247,244,237,0.86) 55%, rgba(247,244,237,0.94) 100%);
+  }
+  ::selection{background:rgba(149,113,24,0.32);color:#000000}
+  /* El logotipo "Regala y Gana" tiene tipografia azul marino: se perfila en claro */
+  img[alt="Regala y Gana"], .logo, .ryg-logo, #brandLogo{
+    filter:drop-shadow(0 0 1.6px rgba(0,0,0,0.76)) drop-shadow(0 2px 12px rgba(0,0,0,0.22));
+  }
+  @media print{
+    body{background:#000000!important;color:#EFEFEE!important}
+    body::before,body::after{display:none!important}
+    *{color:#EFEFEE!important;background:transparent!important;box-shadow:none!important;
+      border-color:#302C29!important;-webkit-text-fill-color:#EFEFEE!important;filter:none!important}
+  }
+</style>
+<script defer src="/_vercel/insights/script.js"></script>
+
+<style id="fondo-letty">
+  body::before{opacity:1!important}
+  body::after{background:
+    radial-gradient(120% 80% at 50% 0%, rgba(212,175,55,0.1), transparent 60%),
+    linear-gradient(180deg, rgba(244,244,244,0.18) 0%, rgba(244,244,244,0.3) 55%, rgba(244,244,244,0.4) 100%)!important}
+</style>
+
+<style id="toque-verde">
+  :root{--verde:#267344;--verde-suave:#247543}
+  .eyebrow{color:var(--verde)!important}
+  .eyebrow::before{background:linear-gradient(90deg,var(--verde),transparent)!important}
+  .badge .dot,.t-dot,.hero .dot,.live-dot{background:var(--verde)!important}
+</style>
+
+<style id="tema-claro">
+  html,body{background:#FFFFFF!important;color:#151515!important;color-scheme:light}
+  body::before{opacity:1!important;background:#FFFFFF url('fondo-textura.jpeg') center top / cover no-repeat!important}
+  body::after{background:linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.40) 55%, rgba(255,255,255,.55) 100%)!important}
+  .btn-primary,.btn-solid,.btn.primary,.cta-btn,a[class*="btn-gold"],.prc-btns a:first-child,.nav-cta,.btn-metal{color:#151515!important}
+  .eyebrow{color:#3F7A2A!important}
+  .eyebrow::before{background:linear-gradient(90deg,#3F7A2A,transparent)!important}
+  .badge .dot,.t-dot,.hero .dot,.live-dot{background:#5A9E3A!important}
+  ::selection{background:rgba(212,175,55,.35);color:#111}
+</style>
+</head>
+<body>
+
+<!-- =============== VISTA: GALERÍA =============== -->
+<div class="view active" id="view-grid">
+  <div class="wrap">
+    <a class="back" href="index.html" style="margin-bottom:0">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+      Inicio
+    </a>
+    <section class="welcome rv" aria-label="Bienvenida">
+      <div class="hi"><span class="icon-3d" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21a1 1 0 0 0 1-1v-5.35c1.78-.47 3-2.08 3-3.9a4 4 0 0 0-4-4 4.5 4.5 0 0 0-8 0 4 4 0 0 0-4 4c0 1.82 1.22 3.43 3 3.9V20a1 1 0 0 0 1 1z"/><path d="M6 17h12"/></svg></span></div>
+      <h2 id="welcomeT">¡Hola! Soy Letty Trillo</h2>
+      <p id="welcomeP">Guarda esta página en tus favoritos. Aquí encontrarás recetas, consejos y siempre podrás contactarme cuando necesites ayuda.</p>
+    </section>
+
+    <a class="back-home" href="index.html" aria-label="Volver al inicio">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      Volver al inicio
+    </a>
+    <header class="page">
+      <p class="eyebrow rv">Cocina con tu Royal Prestige</p>
+      <h1 class="rv">Recetas para inspirarte</h1>
+    </header>
+
+    <div class="search-wrap rv">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+      <input class="search" id="searchInput" type="search" placeholder="Buscar receta…" autocomplete="off" aria-label="Buscar receta">
+      <button class="search-clear" id="searchClear" aria-label="Limpiar búsqueda">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="feat-wrap" id="featWrap" style="display:none">
+    <article class="feat" id="featCard"></article>
+  </div>
+
+  <nav class="filters" id="filters" aria-label="Filtrar recetas">
+    <div class="chip-row" id="chipRow"></div>
+  </nav>
+
+  <main class="wrap">
+    <div class="grid" id="grid">
+    <a class="seo-card" href="receta-costillas-bbq.html">
+      <img src="foto-costillas-bbq.jpg" alt="Costillas BBQ en Olla de Presión" loading="lazy">
+      <h3>Costillas BBQ en Olla de Presión</h3>
+      <p>Costillas increíblemente suaves, jugosas y llenas de sabor gracias a la cocción a presión.</p>
+      <span>35 min &middot; Fácil &middot; Olla de Presión Royal Prestige</span>
+    </a>
+    <a class="seo-card" href="receta-tamales-caseros.html">
+      <img src="foto-tamales-caseros.jpg" alt="Tamales Caseros" loading="lazy">
+      <h3>Tamales Caseros</h3>
+      <p>Tamales tradicionales cocinados al vapor con una textura perfecta.</p>
+      <span>1 h 30 min &middot; Media &middot; Tamalera Royal Prestige</span>
+    </a>
+    <a class="seo-card" href="receta-pollo-romero.html">
+      <img src="foto-pollo-romero.jpg" alt="Pollo al Romero con Papas" loading="lazy">
+      <h3>Pollo al Romero con Papas</h3>
+      <p>Una comida completa, saludable y llena de sabor.</p>
+      <span>45 min &middot; Fácil &middot; Olla Royal Prestige</span>
+    </a>
+    <a class="seo-card" href="receta-ribeye-mantequilla.html">
+      <img src="foto-ribeye-mantequilla.jpg" alt="Ribeye Sellado con Mantequilla y Ajo" loading="lazy">
+      <h3>Ribeye Sellado con Mantequilla y Ajo</h3>
+      <p>Un ribeye perfectamente sellado con un exterior dorado y un interior jugoso.</p>
+      <span>12 min &middot; Fácil &middot; Sartén Royal Prestige</span>
+    </a>
+    <a class="seo-card" href="receta-pasta-alfredo.html">
+      <img src="foto-pasta-alfredo.jpg" alt="Pasta Alfredo con Pollo" loading="lazy">
+      <h3>Pasta Alfredo con Pollo</h3>
+      <p>Una receta cremosa ideal para compartir en familia.</p>
+      <span>25 min &middot; Fácil &middot; Olla Royal Prestige</span>
+    </a>
+    <a class="seo-card" href="receta-flan-casero.html">
+      <img src="foto-flan-casero.jpg" alt="Flan Casero" loading="lazy">
+      <h3>Flan Casero</h3>
+      <p>Un flan suave, cremoso y perfecto preparado a baño María.</p>
+      <span>50 min &middot; Media &middot; Olla Royal Prestige</span>
+    </a>
+  </div>
+
+    <section class="mood rv" id="mood">
+      <h2>¿Qué quieres cocinar hoy?</h2>
+      <div class="mood-grid" id="moodGrid"></div>
+    </section>
+
+    <section class="soon rv" id="soon">
+      <h2>Próximamente</h2>
+      <p class="sub">Nuevas recetas, novedades y ofertas especiales. Toca una para escribirme.</p>
+      <div class="soon-grid" id="soonRow"></div>
+    </section>
+  </main>
+</div>
+
+<!-- =============== VISTA: RECETA =============== -->
+<div class="view" id="view-recipe">
+  <main class="wrap">
+    <button class="back" id="backBtn" type="button">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+      Todas las recetas
+    </button>
+    <div id="recipeContent"></div>
+  </main>
+</div>
+
+<footer>
+  <b>Letty Trillo</b> · Distribuidor Royal Prestige
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<div class="wa-dock">
+  <a class="wa-btn" id="waBtn" href="#" target="_blank" rel="noopener">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.55 2 2.1 6.44 2.1 11.93c0 1.76.46 3.47 1.34 4.98L2 22l5.22-1.37a9.9 9.9 0 0 0 4.82 1.23h.01c5.49 0 9.94-4.45 9.94-9.93A9.88 9.88 0 0 0 12.04 2zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.1.81.83-3.02-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.2-8.24 8.2zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+    <span id="waLabel">Pregúntame qué cocinar hoy</span>
+  </a>
+</div>
+
+<script>
+/* =============== DATOS =============== */
+var PHONE = '19726070347';
+
+/* Para activar el botón "Ver preparación" en una receta,
+   reemplaza video:null por el link de tu Reel o video de YouTube.
+   Ejemplo:  video:'https://www.instagram.com/reel/XXXXXXX/'  */
+
+var RECIPES = [
+  {
+    id:'costillas-bbq', name:'Costillas BBQ en Olla de Presión',
+    time:'35 min', servings:'4 porciones', diff:'Fácil',
+    utensil:'Olla de Presión Royal Prestige',
+    cats:['presion','carnes'], badge:'La más preparada',
+    desc:'Costillas increíblemente suaves, jugosas y llenas de sabor gracias a la cocción a presión.',
+    img:'foto-costillas-bbq.jpg',
+    tone:'#3E2B22', video:null,
+    ingredients:[
+      ['Costillas de cerdo','1.5 kg'],['Salsa BBQ','1 taza'],['Dientes de ajo','3'],
+      ['Cebolla','media pieza'],['Paprika','1 cda'],['Caldo de res','1 taza'],
+      ['Sal','al gusto'],['Pimienta','al gusto']
+    ],
+    steps:[
+      'Retira la membrana de la parte trasera de las costillas y córtalas en secciones de 3 a 4 huesos. Sazona por ambos lados con sal, pimienta y paprika.',
+      'Calienta la olla de presión a fuego medio-alto y <b>sella las costillas 2 minutos por lado</b> hasta que doren. Retíralas un momento.',
+      'En la misma olla, sofríe la cebolla y el ajo picados hasta que suelten aroma. Vierte el caldo de res y raspa el fondo para levantar todo el sabor.',
+      'Regresa las costillas, cierra la olla y cocina a presión durante <b>25 minutos</b> desde que empieza a sonar la válvula.',
+      'Libera la presión, barniza las costillas con la salsa BBQ y déjalas 3 minutos a fuego bajo con la olla destapada para que la salsa se concentre.'
+    ],
+    tip:'Si quieres un acabado caramelizado, pasa las costillas ya barnizadas 4 minutos al horno en modo broil. El azúcar de la salsa BBQ hará una costra brillante.',
+    royalTip:'El sello hermético de tu Olla de Presión Royal Prestige concentra el vapor, por eso una sola taza de caldo es suficiente: la carne se cocina en su propio jugo y el sabor no se diluye.'
+  },
+  {
+    id:'tamales-caseros', name:'Tamales Caseros',
+    time:'1 h 30 min', servings:'12 tamales', diff:'Media',
+    utensil:'Tamalera Royal Prestige',
+    cats:['tamalera','tamales'], badge:'Favorita de nuestros clientes',
+    desc:'Tamales tradicionales cocinados al vapor con una textura perfecta.',
+    img:'foto-tamales-caseros.jpg',
+    tone:'#4A3B26', video:null,
+    ingredients:[
+      ['Masa para tamales','1 kg'],['Carne de cerdo o pollo cocida y deshebrada','500 g'],
+      ['Chile guajillo o de tu preferencia','4 piezas'],['Hojas de maíz','16'],
+      ['Caldo de la cocción','1 taza y media'],['Sal','al gusto']
+    ],
+    steps:[
+      'Remoja las hojas de maíz en agua caliente durante 20 minutos hasta que estén flexibles. Escúrrelas bien.',
+      'Hidrata los chiles en agua caliente, licúalos con un poco de caldo y sal, y mezcla esta salsa con la carne deshebrada.',
+      'Bate la masa incorporando el caldo poco a poco hasta que esté suave y esponjosa. <b>Prueba de la bolita:</b> si una porción de masa flota en un vaso de agua, está lista.',
+      'Extiende 2 cucharadas de masa sobre cada hoja, agrega una porción de carne al centro y dobla los costados y la base hacia arriba.',
+      'Coloca agua en la base de la tamalera, acomoda los tamales en vertical con la abertura hacia arriba y cocina al vapor a fuego medio durante <b>1 hora</b>.',
+      'Están listos cuando la masa se despega limpiamente de la hoja. Déjalos reposar 10 minutos antes de servir.'
+    ],
+    tip:'No amontones los tamales: el vapor debe circular entre ellos para una cocción pareja de principio a fin.',
+    royalTip:'Con tu Tamalera Royal Prestige no necesitas fuego alto: la tapa conserva el vapor y mantiene la temperatura estable. Cocinas los mismos tamales gastando menos gas.'
+  },
+  {
+    id:'pollo-romero', name:'Pollo al Romero con Papas',
+    time:'45 min', servings:'4 porciones', diff:'Fácil',
+    utensil:'Olla Royal Prestige',
+    cats:['ollas','carnes','pollo','saludable'], badge:'Recomendada',
+    desc:'Una comida completa, saludable y llena de sabor.',
+    img:'foto-pollo-romero.jpg',
+    tone:'#5A4630', video:null,
+    ingredients:[
+      ['Piezas de pollo','8'],['Papas medianas','4'],['Ramas de romero fresco','3'],
+      ['Dientes de ajo','4'],['Aceite de oliva','2 cdas'],['Sal','al gusto'],['Pimienta','al gusto']
+    ],
+    steps:[
+      'Seca el pollo con papel y sazónalo con sal, pimienta y el ajo picado. Corta las papas en cuartos con todo y piel.',
+      'Calienta la olla a fuego medio con el aceite de oliva y <b>sella el pollo con la piel hacia abajo</b> hasta que dore, unos 5 minutos por lado.',
+      'Agrega las papas y el romero, tapa la olla y baja el fuego a medio-bajo.',
+      'Cocina <b>30 minutos sin destapar</b> — el vapor cocinará las papas con los jugos del pollo, sin necesidad de agregar agua.',
+      'Verifica que el pollo esté cocido al centro, rectifica la sal y sirve directo de la olla.'
+    ],
+    tip:'Resiste la tentación de destapar antes de tiempo: cada vez que abres la olla, escapa el vapor y la cocción se alarga.',
+    royalTip:'Esta receta usa el sistema de cocción sin agua de Royal Prestige: los alimentos se cocinan en sus jugos naturales, conservando vitaminas y sabor que normalmente se pierden en el agua.'
+  },
+  {
+    id:'ribeye-mantequilla', name:'Ribeye Sellado con Mantequilla y Ajo',
+    time:'12 min', servings:'2 porciones', diff:'Fácil',
+    utensil:'Sartén Royal Prestige',
+    cats:['sartenes','carnes'], badge:'Lista en menos de 30 minutos',
+    desc:'Un ribeye perfectamente sellado con un exterior dorado y un interior jugoso.',
+    img:'foto-ribeye-mantequilla.jpg',
+    tone:'#38221C', video:null,
+    ingredients:[
+      ['Ribeye de 3 cm de grosor','2 piezas'],['Mantequilla','60 g'],['Dientes de ajo machacados','3'],
+      ['Ramas de romero','2'],['Sal gruesa','al gusto'],['Pimienta recién molida','al gusto']
+    ],
+    steps:[
+      'Saca el ribeye del refrigerador <b>30 minutos antes</b> de cocinar. Sécalo muy bien con papel y sazona generosamente con sal gruesa y pimienta.',
+      'Calienta el sartén a fuego medio-alto, en seco, hasta que una gota de agua baile sobre la superficie. Esa es la señal de que está listo.',
+      'Coloca el ribeye y <b>no lo muevas durante 3 minutos</b>. Voltéalo una sola vez y cocina 3 minutos más para término medio.',
+      'Baja el fuego, agrega la mantequilla, el ajo y el romero. Inclina el sartén y baña la carne con la mantequilla espumosa durante 1 minuto por lado.',
+      'Retira el ribeye a una tabla y <b>déjalo reposar 5 minutos</b> antes de cortar, para que los jugos se redistribuyan.'
+    ],
+    tip:'La sal gruesa antes de cocinar y el reposo después de cocinar: esos dos hábitos separan un buen corte de uno perfecto.',
+    royalTip:'El acero de tu Sartén Royal Prestige distribuye el calor de manera uniforme y lo retiene: no necesitas fuego máximo ni exceso de aceite para lograr una costra dorada perfecta.'
+  },
+  {
+    id:'pasta-alfredo', name:'Pasta Alfredo con Pollo',
+    time:'25 min', servings:'4 porciones', diff:'Fácil',
+    utensil:'Olla Royal Prestige',
+    cats:['ollas','pastas','pollo'], badge:'Lista en menos de 30 minutos',
+    desc:'Una receta cremosa ideal para compartir en familia.',
+    img:'foto-pasta-alfredo.jpg',
+    tone:'#5C5138', video:null,
+    ingredients:[
+      ['Pasta fettuccine','400 g'],['Pechugas de pollo, cortadas en tiras','2'],['Crema para batir','1 taza y media'],
+      ['Queso parmesano rallado','1 taza'],['Mantequilla','40 g'],['Dientes de ajo','2'],
+      ['Sal y pimienta','al gusto']
+    ],
+    steps:[
+      'Cocina la pasta en agua con sal siguiendo el tiempo del paquete. Antes de escurrir, <b>reserva 1 taza del agua de cocción</b>.',
+      'Mientras, sazona el pollo con sal y pimienta y dóralo en la olla con la mitad de la mantequilla, unos 6 minutos. Retíralo.',
+      'En la misma olla, derrite el resto de la mantequilla y sofríe el ajo picado 30 segundos, sin que dore.',
+      'Vierte la crema, baja el fuego y agrega el parmesano en dos tandas, moviendo hasta que la salsa esté sedosa.',
+      'Regresa el pollo, incorpora la pasta y mezcla. Si la salsa espesa de más, suéltala con un poco del agua reservada. Sirve con parmesano extra.'
+    ],
+    tip:'El agua de la pasta es el secreto de los restaurantes: su almidón une la salsa con la pasta y le da brillo. Nunca la tires antes de terminar el platillo.',
+    royalTip:'El fondo multicapa ayuda a distribuir el calor de manera uniforme, facilitando que la salsa se cocine a fuego bajo sin pegarse.'
+  },
+  {
+    id:'flan-casero', name:'Flan Casero',
+    time:'50 min', servings:'8 porciones', diff:'Media',
+    utensil:'Olla Royal Prestige',
+    cats:['ollas','postres'], badge:'Fácil para principiantes',
+    desc:'Un flan suave, cremoso y perfecto preparado a baño María.',
+    img:'foto-flan-casero.jpg',
+    tone:'#6B4A22', video:null,
+    ingredients:[
+      ['Leche condensada','1 lata'],['Leche evaporada','1 lata'],['Huevos','4'],
+      ['Vainilla','1 cda'],['Azúcar (para el caramelo)','media taza']
+    ],
+    steps:[
+      'Derrite el azúcar en un molde a fuego bajo, moviéndolo con cuidado, hasta obtener un caramelo dorado. Cubre el fondo y deja enfriar.',
+      'Licúa la leche condensada, la leche evaporada, los huevos y la vainilla durante 1 minuto, hasta integrar por completo.',
+      'Vierte la mezcla sobre el caramelo y cubre el molde con papel aluminio bien ajustado.',
+      'Coloca el molde dentro de tu olla con <b>agua hasta la mitad del molde</b> (baño María). Tapa y cocina a fuego bajo durante <b>40 minutos</b>.',
+      'Está listo cuando un cuchillo insertado al centro sale limpio. Refrigera <b>mínimo 4 horas</b> antes de desmoldar.',
+      'Para desmoldar, pasa un cuchillo por la orilla, coloca un plato encima y voltea con un movimiento firme.'
+    ],
+    tip:'La paciencia hace el flan: fuego bajo y refrigeración completa. Si lo desmoldas tibio, se rompe. Frío de un día para otro queda aún mejor.',
+    royalTip:'La tapa de tu olla Royal Prestige sella el calor y mantiene el baño María a temperatura constante — el secreto de un flan sin burbujas, con textura sedosa de principio a fin.'
+  }
+];
+
+var FILTERS = [
+  {id:'todas', label:'Todas'},
+  {id:'favoritos', label:'Favoritos'},
+  {id:'ollas', label:'Ollas'},
+  {id:'sartenes', label:'Sartenes'},
+  {id:'presion', label:'Olla de Presión'},
+  {id:'tamalera', label:'Tamalera'},
+  {id:'sopas', label:'Sopas'},
+  {id:'carnes', label:'Carnes'},
+  {id:'pollo', label:'Pollo'},
+  {id:'pastas', label:'Pastas'},
+  {id:'postres', label:'Postres'},
+  {id:'saludable', label:'Saludable'},
+  {id:'desayunos', label:'Desayunos'}
+];
+
+var CHIP_IC = {todas:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>', favoritos:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/></svg>', ollas:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20"/><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="m4 8 16-4"/></svg>', sartenes:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="12" r="7"/><path d="M17 12h5"/></svg>',presion:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>', tamalera:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-6z"/><path d="M2 11h20"/><path d="M8 3c0 1.5-1 1.5-1 3"/><path d="M12.5 3c0 1.5-1 1.5-1 3"/><path d="M17 3c0 1.5-1 1.5-1 3"/></svg>', tamales:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-6z"/><path d="M2 11h20"/><path d="M8 3c0 1.5-1 1.5-1 3"/><path d="M12.5 3c0 1.5-1 1.5-1 3"/><path d="M17 3c0 1.5-1 1.5-1 3"/></svg>', sopas:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9z"/><path d="M7 21h10"/><path d="m19.5 12 2.5-6"/></svg>',carnes:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12.5" cy="8.5" r="2.5"/><path d="M12.5 2a6.5 6.5 0 0 0-6.22 4.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.3A6.5 6.5 0 0 0 12.5 2z"/><path d="m18.5 6 2.19 4.5a6.48 6.48 0 0 1 .31 2 6.49 6.49 0 0 1-2.6 5.2C15.4 20.2 11 22 7 22a3 3 0 0 1-2.68-1.66"/></svg>', pollo:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.4 15.63a7.875 6 135 1 1 6.23-6.23 4.5 3.43 135 0 0-6.23 6.23"/><path d="m8.29 12.71-2.6 2.6a2.5 2.5 0 1 0-1.65 4.65A2.5 2.5 0 1 0 8.7 18.3l2.59-2.59"/></svg>', pastas:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3z"/><path d="M21 15v7"/></svg>', postres:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg>',saludable:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>', desayunos:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11.5" cy="12.5" r="3.5"/><path d="M3 8c0-3.5 2.5-6 6.5-6 5 0 4.83 3 7.5 5s5 2 5 6c0 4.5-2.5 6.5-7 6.5-2.5 0-2.5 2.5-6 2.5s-7-2-7-5.5c0-3 1.5-3 1.5-5C3.5 10 3 9 3 8z"/></svg>'};
+
+var MOODS = [
+  {id:'carnes', label:'Carnes'},
+  {id:'pollo', label:'Pollo'},
+  {id:'pastas', label:'Pastas'},
+  {id:'sopas', label:'Sopas'},
+  {id:'postres', label:'Postres'},
+  {id:'saludable', label:'Saludable'},
+  {id:'tamales', label:'Tamales'},
+  {id:'desayunos', label:'Desayunos'}
+];
+
+var SOON = [
+  {name:'Pizza casera'},
+  {name:'Paella'},
+  {name:'Pan casero'}
+];
+
+var CAT_NAMES = {
+  ollas:'ollas', sartenes:'sartén', presion:'olla de presión', tamalera:'tamalera',
+  sopas:'sopas', carnes:'carnes', pollo:'pollo', pastas:'pastas', postres:'postres',
+  saludable:'cocina saludable', desayunos:'desayunos', tamales:'tamales'
+};
+
+/* =============== HELPERS =============== */
+function $(s){ return document.querySelector(s); }
+var potIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-6z"/><path d="M2 10h20M8 6c0-1.5 8-1.5 8 0"/></svg>';
+var arrow = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>';
+var heartSvg = '<svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.4 2.6 4.6 6.4 4.6c2.2 0 3.9 1.2 5.6 3.3 1.7-2.1 3.4-3.3 5.6-3.3 3.8 0 6 3.8 4.4 7.1C19.5 16.4 12 21 12 21z"/></svg>';
+var markSvg = '<svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>';
+
+function wa(msg){ return 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(msg); }
+
+function normalize(s){
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+
+function imgTag(r, cls){
+  return '<img src="' + r.img + '" alt="' + r.name + '" loading="lazy" ' +
+    'onerror="this.remove();this.closest(\'.' + cls + '\').insertAdjacentHTML(\'beforeend\',\'<div class=ph style=background:' + r.tone + '>' + '' + '</div>\')">';
+}
+
+/* --- Favoritos (localStorage con respaldo en memoria) --- */
+var memFavs = [];
+function getFavs(){
+  try{ return JSON.parse(localStorage.getItem('tf_favs') || '[]'); }
+  catch(e){ return memFavs; }
+}
+function setFavs(list){
+  memFavs = list;
+  try{ localStorage.setItem('tf_favs', JSON.stringify(list)); }catch(e){}
+}
+function isFav(id){ return getFavs().indexOf(id) !== -1; }
+function toggleFav(id){
+  var favs = getFavs();
+  var i = favs.indexOf(id);
+  var added = i === -1;
+  if(added){ favs.push(id); } else { favs.splice(i,1); }
+  setFavs(favs);
+  return added;
+}
+
+/* --- Me gusta (marca anónima por navegador + contador en la nube) --- */
+var memLikes = [];
+var RSTATS = {};          /* {recetaId: {likes, saves}} */
+function getLikes(){
+  try{ return JSON.parse(localStorage.getItem('tf_likes') || '[]'); }
+  catch(e){ return memLikes; }
+}
+function setLikes(list){
+  memLikes = list;
+  try{ localStorage.setItem('tf_likes', JSON.stringify(list)); }catch(e){}
+}
+function isLiked(id){ return getLikes().indexOf(id) !== -1; }
+function statOf(id, campo){
+  var r = RSTATS[id];
+  return (r && typeof r[campo] === 'number' && r[campo] > 0) ? r[campo] : 0;
+}
+function paintLike(btn, id){
+  var on = isLiked(id);
+  btn.classList.toggle('on', on);
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  var n = btn.querySelector('.n');
+  if(n){ var v = statOf(id,'likes'); n.textContent = v > 0 ? v : ''; }
+}
+function paintSave(btn, id){
+  var on = isFav(id);
+  btn.classList.toggle('on', on);
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+}
+/* Suma o resta de uno en uno en la nube; si falla, la página sigue funcionando */
+function bumpStat(id, campo, delta){
+  if(!window.__rxBump) return;
+  window.__rxBump(id, campo, delta);
+}
+function toggleLike(id){
+  var likes = getLikes();
+  var i = likes.indexOf(id);
+  var added = i === -1;
+  if(added){ likes.push(id); } else { likes.splice(i,1); }
+  setLikes(likes);
+  if(!RSTATS[id]) RSTATS[id] = {likes:0, saves:0};
+  RSTATS[id].likes = Math.max(0, (RSTATS[id].likes||0) + (added?1:-1));
+  bumpStat(id, 'likes', added?1:-1);
+  if(window.trackEvent) window.trackEvent((added?'Receta me gusta: ':'Receta quita me gusta: ') + id);
+  return added;
+}
+
+/* --- Toast --- */
+var toastTimer;
+function toast(msg){
+  var t = $('#toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 2200);
+}
+
+/* =============== FILTROS + BÚSQUEDA =============== */
+var activeFilter = 'todas';
+var searchTerm = '';
+
+var chipRow = $('#chipRow');
+FILTERS.forEach(function(f){
+  var b = document.createElement('button');
+  b.className = 'chip' + (f.id === 'todas' ? ' on' : '');
+  b.innerHTML = (CHIP_IC[f.id] || '') + f.label;
+  b.dataset.filter = f.id;
+  b.addEventListener('click', function(){ setFilter(f.id); });
+  chipRow.appendChild(b);
+});
+
+function setFilter(id){
+  activeFilter = id;
+  var chips = chipRow.querySelectorAll('.chip');
+  for(var i=0;i<chips.length;i++){
+    chips[i].classList.toggle('on', chips[i].dataset.filter === id);
+  }
+  renderGrid();
+}
+
+var searchInput = $('#searchInput');
+var searchClear = $('#searchClear');
+searchInput.addEventListener('input', function(){
+  searchTerm = normalize(searchInput.value.trim());
+  searchClear.classList.toggle('show', searchTerm.length > 0);
+  renderGrid();
+});
+searchClear.addEventListener('click', function(){
+  searchInput.value = ''; searchTerm = '';
+  searchClear.classList.remove('show');
+  renderGrid(); searchInput.focus();
+});
+
+/* =============== GALERÍA =============== */
+function matchesSearch(r){
+  if(!searchTerm) return true;
+  var hay = normalize(r.name + ' ' + r.desc + ' ' + r.utensil + ' ' +
+    r.ingredients.map(function(x){return x[0];}).join(' '));
+  return hay.indexOf(searchTerm) !== -1;
+}
+
+function renderGrid(){
+  var grid = $('#grid');
+  var list;
+  if(activeFilter === 'todas'){ list = RECIPES.slice(); }
+  else if(activeFilter === 'favoritos'){ list = RECIPES.filter(function(r){ return isFav(r.id); }); }
+  else{ list = RECIPES.filter(function(r){ return r.cats.indexOf(activeFilter) !== -1; }); }
+  list = list.filter(matchesSearch);
+
+  if(!list.length){
+    var html;
+    if(activeFilter === 'favoritos' && !searchTerm){
+      html = '<div class="empty rv in"><div class="big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/></svg></div>' +
+        '<h3>Tu colección está vacía</h3>' +
+        '<p>Toca el corazón en cualquier receta para guardarla aquí y tener tu propio recetario personal.</p></div>';
+    } else if(searchTerm){
+      html = '<div class="empty rv in"><div class="big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></div>' +
+        '<h3>No encontré esa receta</h3>' +
+        '<p>Prueba con otra palabra, o <a href="' + wa('Hola Letty 👋, busqué "' + searchInput.value.trim() + '" en tus recetas. ¿Me ayudas con esa receta?') + '" target="_blank" rel="noopener">pídemela por WhatsApp</a> y la preparo para ti.</p></div>';
+    } else {
+      var label = CAT_NAMES[activeFilter] || 'eso';
+      html = '<div class="empty rv in"><div class="big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21a1 1 0 0 0 1-1v-5.35c1.78-.47 3-2.08 3-3.9a4 4 0 0 0-4-4 4.5 4.5 0 0 0-8 0 4 4 0 0 0-4 4c0 1.82 1.22 3.43 3 3.9V20a1 1 0 0 0 1 1z"/><path d="M6 17h12"/></svg></div>' +
+        '<h3>Muy pronto</h3>' +
+        '<p>Estoy preparando recetas de ' + label + '. ¿Tienes una en mente? <a href="' + wa('Hola Letty 👋, ¿me recomiendas una receta de' + label + ' para mi Royal Prestige?') + '" target="_blank" rel="noopener">Pídemela por WhatsApp</a> y la agrego.</p></div>';
+    }
+    grid.innerHTML = html;
+    return;
+  }
+
+  grid.innerHTML = list.map(function(r,i){
+    return '<div class="card rv" style="transition-delay:' + Math.min(i*60,240) + 'ms" data-recipe="' + r.id + '" role="button" tabindex="0" aria-label="' + r.name + '">' +
+      '<div class="card-img">' + imgTag(r,'card-img') +
+        '<span class="badge">' + r.badge + '</span>' +
+        '<button class="fav-btn' + (isFav(r.id)?' faved':'') + '" data-fav="' + r.id + '" aria-label="Guardar receta" aria-pressed="' + (isFav(r.id)?'true':'false') + '">' + markSvg + '</button>' +
+        '<button class="like-btn' + (isLiked(r.id)?' on':'') + '" data-like="' + r.id + '" aria-label="Me gusta" aria-pressed="' + (isLiked(r.id)?'true':'false') + '">' + heartSvg + '<span class="n">' + (statOf(r.id,'likes')||'') + '</span></button>' +
+      '</div>' +
+      '<div class="card-body">' +
+        '<h3>' + r.name + '</h3>' +
+        '<div class="meta-line"><span>' + r.time + '</span><span class="dot"></span><span>' + r.diff + '</span></div>' +
+        '<span class="utensil">' + potIcon + r.utensil + '</span>' +
+        '<span class="cta-view">Ver receta ' + arrow + '</span>' +
+      '</div></div>';
+  }).join('');
+
+  var cards = grid.querySelectorAll('[data-recipe]');
+  for(var i=0;i<cards.length;i++){
+    (function(el){
+      el.addEventListener('click', function(e){
+        if(e.target.closest('[data-fav]') || e.target.closest('[data-like]')) return;
+        location.hash = '#/receta/' + el.dataset.recipe;
+      });
+      el.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); location.hash = '#/receta/' + el.dataset.recipe; }
+      });
+    })(cards[i]);
+  }
+  bindFavButtons(grid);
+  bindLikeButtons(grid);
+  observeReveals();
+}
+
+function bindFavButtons(root){
+  var btns = root.querySelectorAll('[data-fav]');
+  for(var i=0;i<btns.length;i++){
+    (function(b){
+      b.addEventListener('click', function(e){
+        e.stopPropagation();
+        var added = toggleFav(b.dataset.fav);
+        var all = document.querySelectorAll('[data-fav="' + b.dataset.fav + '"]');
+        for(var j=0;j<all.length;j++){ all[j].classList.toggle('faved', added); }
+        b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
+        toast(added ? 'Receta guardada en favoritos' : 'Receta eliminada de favoritos');
+        if(!RSTATS[b.dataset.fav]) RSTATS[b.dataset.fav] = {likes:0, saves:0};
+        RSTATS[b.dataset.fav].saves = Math.max(0, (RSTATS[b.dataset.fav].saves||0) + (added?1:-1));
+        bumpStat(b.dataset.fav, 'saves', added?1:-1);
+        if(window.trackEvent) window.trackEvent((added?'Receta guardada: ':'Receta quita guardado: ') + b.dataset.fav);
+        if(activeFilter === 'favoritos' && !added){ renderGrid(); }
+      });
+    })(btns[i]);
+  }
+}
+
+function bindLikeButtons(root){
+  var btns = root.querySelectorAll('[data-like]');
+  for(var i=0;i<btns.length;i++){
+    (function(b){
+      b.addEventListener('click', function(e){
+        e.stopPropagation();
+        var id = b.dataset.like;
+        var added = toggleLike(id);
+        var all = document.querySelectorAll('[data-like="' + id + '"]');
+        for(var j=0;j<all.length;j++){
+          all[j].classList.toggle('on', added);
+          all[j].setAttribute('aria-pressed', added ? 'true' : 'false');
+          var n = all[j].querySelector('.n');
+          if(n){ var v = statOf(id,'likes'); n.textContent = v > 0 ? v : ''; }
+        }
+        b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
+        toast(added ? '¡Gracias! Te gustó esta receta' : 'Quitaste tu me gusta');
+      });
+    })(btns[i]);
+  }
+}
+
+/* =============== RECETA DESTACADA DE LA SEMANA =============== */
+var FEATURED = null;   /* { id, modo } */
+
+/* Número de semana ISO: cambia cada lunes */
+function semanaISO(d){
+  var f = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  var dia = f.getUTCDay() || 7;
+  f.setUTCDate(f.getUTCDate() + 4 - dia);
+  var ini = new Date(Date.UTC(f.getUTCFullYear(), 0, 1));
+  return { semana: Math.ceil(((f - ini) / 86400000 + 1) / 7), anio: f.getUTCFullYear() };
+}
+
+/* Prioridad: manual vigente > rotación automática por semana */
+function resolverDestacada(cfg){
+  var lista = (window.RECIPES || []).slice();
+  if(!lista.length) return null;
+  if(cfg && cfg.mode === 'manual' && cfg.recipeId){
+    var existe = lista.filter(function(r){ return r.id === cfg.recipeId; })[0];
+    var hoy = new Date(); hoy.setHours(0,0,0,0);
+    var desde = cfg.from ? new Date(cfg.from + 'T00:00:00') : null;
+    var hasta = cfg.to   ? new Date(cfg.to   + 'T23:59:59') : null;
+    var vigente = (!desde || hoy >= desde) && (!hasta || new Date() <= hasta);
+    if(existe && vigente) return { id: existe.id, modo: 'manual' };
+  }
+  var s = semanaISO(new Date());
+  var idx = (s.anio * 53 + s.semana) % lista.length;
+  return { id: lista[idx].id, modo: 'auto' };
+}
+
+function renderFeatured(){
+  var wrap = document.getElementById('featWrap');
+  var card = document.getElementById('featCard');
+  if(!wrap || !card || !FEATURED) return;
+  var r = (window.RECIPES || []).filter(function(x){ return x.id === FEATURED.id; })[0];
+  if(!r){ wrap.style.display = 'none'; return; }
+
+  var img = r.img
+    ? '<img src="' + r.img + '" alt="' + r.name + '" loading="lazy">'
+    : '<div style="width:100%;height:100%;background:' + (r.tone||'#5A4630') + '"></div>';
+  var meta = '';
+  if(r.time)    meta += '<span>' + r.time + '</span>';
+  if(r.diff)    meta += '<span>' + r.diff + '</span>';
+  if(r.utensil) meta += '<span>' + potIcon + ' ' + r.utensil + '</span>';
+
+  card.innerHTML =
+    '<div class="feat-in">' +
+      '<div class="feat-img">' + img + '<span class="feat-tag">Destacada esta semana</span></div>' +
+      '<div class="feat-body">' +
+        '<span class="feat-eyebrow">Receta destacada de la semana</span>' +
+        '<h2>' + r.name + '</h2>' +
+        (r.desc ? '<p class="feat-desc">' + r.desc + '</p>' : '') +
+        (meta ? '<div class="feat-meta">' + meta + '</div>' : '') +
+        '<div class="feat-acts">' +
+          '<button class="feat-go" type="button" data-featgo="' + r.id + '">Ver receta completa ' + arrow + '</button>' +
+          '<button class="rx' + (isLiked(r.id)?' on':'') + '" data-like="' + r.id + '" aria-label="Me gusta" aria-pressed="' + (isLiked(r.id)?'true':'false') + '">' + heartSvg + '<span class="n">' + (statOf(r.id,'likes')||'') + '</span></button>' +
+          '<button class="rx sv' + (isFav(r.id)?' on':'') + '" data-fav="' + r.id + '" aria-label="Guardar receta" aria-pressed="' + (isFav(r.id)?'true':'false') + '">' + markSvg + '<span>Guardar</span></button>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+  var go = card.querySelector('[data-featgo]');
+  if(go) go.addEventListener('click', function(){
+    if(window.trackEvent) window.trackEvent('Receta destacada abierta: ' + r.id);
+    location.hash = '#/receta/' + r.id;
+  });
+  bindFavButtons(card);
+  bindLikeButtons(card);
+  wrap.style.display = 'block';
+  if(!renderFeatured._visto){
+    renderFeatured._visto = true;
+    if(window.trackEvent) window.trackEvent('Receta destacada vista: ' + r.id + ' (' + FEATURED.modo + ')');
+  }
+}
+window.renderFeatured = renderFeatured;
+window.resolverDestacada = resolverDestacada;
+
+/* =============== MOOD + PRÓXIMAMENTE =============== */
+$('#moodGrid').innerHTML = MOODS.map(function(m){
+  return '<button class="mood-card" data-mood="' + m.id + '">' +
+    '<span class="icon-3d" aria-hidden="true">' + (CHIP_IC[m.id] || CHIP_IC.ollas) + '</span><div class="ml">' + m.label + '</div></button>';
+}).join('');
+(function(){
+  var mbtns = document.querySelectorAll('[data-mood]');
+  for(var i=0;i<mbtns.length;i++){
+    (function(b){
+      b.addEventListener('click', function(){
+        setFilter(b.dataset.mood);
+        var top = $('#filters').getBoundingClientRect().top + window.pageYOffset - 4;
+        window.scrollTo({top:top, behavior:'smooth'});
+      });
+    })(mbtns[i]);
+  }
+})();
+
+function renderSoonRow(){
+var TIPOS = {
+  receta:  {label:'Nueva receta',    color:'#957A18', bg:'rgba(212,175,55,0.18)'},
+  novedad: {label:'Novedad',         color:'#867B3F', bg:'rgba(149,113,24,0.18)'},
+  oferta:  {label:'Oferta especial', color:'#9C3524', bg:'rgba(255,138,138,0.16)'}
+};
+$('#soonRow').innerHTML = SOON.map(function(s){
+  var t = TIPOS[s.tipo] || TIPOS.receta;
+  var msg = s.tipo==='oferta'
+    ? ('Hola Letty 👋 Me interesa tu oferta: ' + s.name)
+    : (s.tipo==='novedad'
+        ? ('Hola Letty 👋 Quiero saber más sobre: ' + s.name)
+        : ('Hola Letty 👋 Avísame cuando esté lista tu receta de ' + s.name.toLowerCase() + ' 🙌'));
+  var cta = s.tipo==='oferta' ? 'Quiero esta oferta ›' : (s.tipo==='novedad' ? 'Saber más ›' : 'Que me avise ›');
+  return '<a class="promo-card" href="' + wa(msg) + '" target="_blank" rel="noopener">' +
+    (s.img ? '<img class="pimg" src="' + s.img + '" alt="" loading="lazy">' : '') +
+    '<div class="pbody">' +
+      '<span class="promo-tipo" style="background:' + t.bg + ';color:' + t.color + '">' + t.label + '</span>' +
+      '<h3>' + s.name + '</h3>' +
+      (s.desc ? '<p class="pdesc">' + s.desc + '</p>' : '') +
+      '<div class="pcta">' + cta + '</div>' +
+    '</div></a>';
+}).join('');
+}renderSoonRow();
+
+/* =============== DETALLE =============== */
+function related(r){
+  var same = RECIPES.filter(function(x){
+    if(x.id === r.id) return false;
+    return x.cats.some(function(c){ return r.cats.indexOf(c) !== -1; });
+  });
+  var rest = RECIPES.filter(function(x){
+    return x.id !== r.id && same.indexOf(x) === -1;
+  });
+  return same.concat(rest).slice(0,3);
+}
+
+function relThumb(r){
+  return '<div class="rel-thumb"><img src="' + r.img + '" alt="" loading="lazy" ' +
+    'onerror="this.remove();this.closest(\'.rel-thumb\').insertAdjacentHTML(\'beforeend\',\'<div class=ph style=background:' + r.tone + '>' + '' + '</div>\')"></div>';
+}
+
+function renderRecipe(r){
+  var rel = related(r);
+  var videoBtn = r.video
+    ? '<a class="pill video" href="' + r.video + '" target="_blank" rel="noopener">' +
+      '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>Ver preparación</a>'
+    : '';
+
+  $('#recipeContent').innerHTML =
+    '<div class="hero-img">' + imgTag(r,'hero-img') +
+      '<button class="fav-btn hero-fav' + (isFav(r.id)?' faved':'') + '" data-fav="' + r.id + '" aria-label="Guardar en favoritos">' + heartSvg + '</button>' +
+    '</div>' +
+    '<div class="r-head">' +
+      '<p class="eyebrow">Receta Royal Prestige</p>' +
+      '<h2>' + r.name + '</h2>' +
+      '<p class="r-desc">' + r.desc + '</p>' +
+      '<div class="action-row">' + videoBtn +
+        '<button class="pill" id="shareWa"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.55 2 2.1 6.44 2.1 11.93c0 1.76.46 3.47 1.34 4.98L2 22l5.22-1.37a9.9 9.9 0 0 0 4.82 1.23h.01c5.49 0 9.94-4.45 9.94-9.93A9.88 9.88 0 0 0 12.04 2z"/></svg>Compartir</button>' +
+        '<button class="pill" id="shareNative"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v13"/></svg>Enviar</button>' +
+        '<button class="pill" id="copyLink"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>Copiar enlace</button>' +
+        '<button class="pill" id="printBtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>Guardar PDF</button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="stats">' +
+      '<div class="stat"><div class="k">Tiempo</div><div class="v">' + r.time + '</div></div>' +
+      '<div class="stat"><div class="k">Porciones</div><div class="v">' + r.servings + '</div></div>' +
+      '<div class="stat"><div class="k">Dificultad</div><div class="v">' + r.diff + '</div></div>' +
+      '<div class="stat"><div class="k">Utensilio</div><div class="v royal">' + r.utensil + '</div></div>' +
+    '</div>' +
+    '<div class="r-cols">' +
+      '<section><h3 class="sec-title">Ingredientes</h3><ul class="ing-list">' +
+        r.ingredients.map(function(x){ return '<li><span>' + x[0] + '</span><span class="amt">' + x[1] + '</span></li>'; }).join('') +
+      '</ul></section>' +
+      '<section><h3 class="sec-title">Preparación</h3><ol class="steps">' +
+        r.steps.map(function(s){ return '<li><p>' + s + '</p></li>'; }).join('') +
+      '</ol>' +
+      '<div class="tip"><h4>Consejo del Chef</h4><p>' + r.tip + '</p></div>' +
+      '<div class="tip royal"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5A5.5 5.5 0 0 0 18 7.5 6 6 0 0 0 6 7.5c0 1.6.6 2.9 1.5 4 .8.8 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>Tip Royal Prestige</h4><p>' + r.royalTip + '</p></div>' +
+      '</section>' +
+    '</div>' +
+    '<section class="related"><h3>También te puede gustar</h3><div class="rel-row">' +
+      rel.map(function(x){
+        return '<button class="rel-card" data-goto="' + x.id + '">' + relThumb(x) +
+          '<span><span class="rn">' + x.name + '</span><br><span class="rm">' + x.time + ' · ' + x.diff + '</span></span></button>';
+      }).join('') +
+    '</div></section>';
+
+  bindFavButtons($('#recipeContent'));
+
+  var pageUrl = location.href.split('#')[0] + '#/receta/' + r.id;
+
+  $('#shareWa').addEventListener('click', function(){
+    window.open('https://wa.me/?text=' + encodeURIComponent('Mira esta receta de ' + r.name + ' para Royal Prestige 😋\n' + pageUrl), '_blank');
+  });
+
+  $('#shareNative').addEventListener('click', function(){
+    if(window.trackEvent) window.trackEvent('Receta compartida');
+    if(navigator.share){
+      navigator.share({ title:r.name, text:'Mira esta receta de ' + r.name + ' 😋', url:pageUrl }).catch(function(){});
+    } else {
+      copyText(pageUrl);
+    }
+  });
+
+  $('#copyLink').addEventListener('click', function(){ if(window.trackEvent) window.trackEvent('Receta: copia enlace'); copyText(pageUrl); });
+
+  $('#printBtn').addEventListener('click', function(){ if(window.trackEvent) window.trackEvent('Receta: guarda PDF'); window.print(); });
+
+  var gotos = document.querySelectorAll('[data-goto]');
+  for(var i=0;i<gotos.length;i++){
+    (function(b){
+      b.addEventListener('click', function(){ location.hash = '#/receta/' + b.dataset.goto; });
+    })(gotos[i]);
+  }
+}
+
+function copyText(txt){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){ toast('Enlace copiado'); }, function(){ fallbackCopy(txt); });
+  } else { fallbackCopy(txt); }
+}
+function fallbackCopy(txt){
+  var ta = document.createElement('textarea');
+  ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); toast('Enlace copiado'); }
+  catch(e){ toast('No se pudo copiar'); }
+  ta.remove();
+}
+
+/* =============== ROUTER =============== */
+function route(){
+  var m = location.hash.match(/^#\/receta\/(.+)$/);
+  var r = m && RECIPES.filter(function(x){ return x.id === m[1]; })[0];
+  if(r){
+    if(window.trackEvent) window.trackEvent('Receta abierta: ' + r.name);
+    renderRecipe(r);
+    $('#view-grid').classList.remove('active');
+    $('#view-recipe').classList.add('active');
+    $('#waLabel').textContent = 'Pregúntame cómo preparar esta receta';
+    $('#waBtn').href = wa('Hola Letty 👋 ¿Me ayudas con la receta "' + r.name + '"?');
+    $('#waBtn').setAttribute('data-tr','WhatsApp desde receta');
+    document.title = r.name + ' — Recetas · Letty Trillo';
+  } else {
+    $('#view-recipe').classList.remove('active');
+    $('#view-grid').classList.add('active');
+    $('#waLabel').textContent = 'Pregúntame qué cocinar hoy';
+    $('#waBtn').href = wa('Hola Letty 👋 ¿Qué me recomiendas cocinar hoy con mi Royal Prestige?');
+    $('#waBtn').removeAttribute('data-tr');
+    document.title = 'Recetas para Inspirarte — Letty Trillo · Royal Prestige';
+  }
+  window.scrollTo({top:0, behavior:'instant'});
+}
+window.addEventListener('hashchange', route);
+$('#backBtn').addEventListener('click', function(){ location.hash = ''; });
+
+/* =============== REVEAL & STICKY =============== */
+var io;
+function observeReveals(){
+  if(io) io.disconnect();
+  io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.12});
+  var els = document.querySelectorAll('.rv:not(.in)');
+  for(var i=0;i<els.length;i++){ io.observe(els[i]); }
+}
+var filtersEl = $('#filters');
+new IntersectionObserver(function(entries){
+  filtersEl.classList.toggle('stuck', entries[0].intersectionRatio < 1);
+},{threshold:[1]}).observe(filtersEl);
+
+/* --- Dock: se oculta al hacer scroll hacia abajo y reaparece al detenerse --- */
+var dockEl = document.querySelector('.wa-dock');
+var lastY = window.pageYOffset;
+var scrollStop;
+window.addEventListener('scroll', function(){
+  var y = window.pageYOffset;
+  if(y > lastY + 6 && y > 260){ dockEl.classList.add('hidden-dock'); }
+  else if(y < lastY - 6){ dockEl.classList.remove('hidden-dock'); }
+  lastY = y;
+  clearTimeout(scrollStop);
+  scrollStop = setTimeout(function(){ dockEl.classList.remove('hidden-dock'); }, 320);
+},{passive:true});
+
+/* =============== INIT =============== */
+window.RECIPES = RECIPES;
+window.SOON = SOON;
+window.renderGrid = renderGrid;
+window.renderSoonRow = (typeof renderSoonRow==="function") ? renderSoonRow : function(){};
+window.route = route;
+renderGrid();
+if(typeof renderSoonRow==="function") renderSoonRow();
+observeReveals();
+route();
+</script>
+
+<script type="module">
+/* ETAPA 4 — El recetario lee de la nube (Firestore). Si algo falla, usa el contenido integrado. */
+try{
+  const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+  const { getFirestore, collection, getDocs, getDoc, doc, query, where, setDoc, deleteDoc, increment } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+  const app = initializeApp(window.OFICINA.firebase);
+  const db = getFirestore(app);
+
+  // Fotos de respaldo (mientras las imágenes no estén en Storage — Etapa 5)
+  const IMG_BACKUP = {"costillas-bbq": "foto-costillas-bbq.jpg", "tamales-caseros": "foto-tamales-caseros.jpg", "pollo-romero": "foto-pollo-romero.jpg", "ribeye-mantequilla": "foto-ribeye-mantequilla.jpg", "pasta-alfredo": "foto-pasta-alfredo.jpg", "flan-casero": "foto-flan-casero.jpg"};
+
+  const pub = (c)=> query(collection(db,c), where("status","==","published"), where("visible","==",true));
+  const [st, rs, us, fe, sta] = await Promise.all([
+    getDoc(doc(db,"settings","public")),
+    getDocs(pub("recipes")),
+    getDocs(pub("upcoming")),
+    getDoc(doc(db,"settings","featured")).catch(()=>null),
+    getDocs(collection(db,"recipeStats")).catch(()=>null)
+  ]);
+
+  /* Contadores públicos de me gusta y guardados */
+  if(sta){
+    sta.docs.forEach(d=>{
+      const x = d.data() || {};
+      window.RSTATS[d.id] = { likes: x.likes||0, saves: x.saves||0 };
+    });
+  }
+
+  /* Suma o resta de uno en uno. Una marca anónima evita contar dos veces
+     desde el mismo navegador. Si algo falla, la página sigue funcionando. */
+  window.__rxBump = async function(id, campo, delta){
+    try{
+      let vid = "";
+      try{ vid = localStorage.getItem("_vid") || ""; }catch(e){}
+      if(campo === "likes" && vid){
+        const marca = doc(db, "recipeLikes", id + "__" + vid);
+        if(delta > 0){
+          const y = await getDoc(marca);
+          if(y.exists()) return;            /* este navegador ya dio me gusta */
+          await setDoc(marca, { recipeId: id });
+        }else{
+          await deleteDoc(marca).catch(()=>{});
+        }
+      }
+      await setDoc(doc(db, "recipeStats", id), { [campo]: increment(delta) }, { merge:true });
+    }catch(e){ /* el contador local ya se actualizó; no se interrumpe al usuario */ }
+  };
+
+  // Recetas desde la nube (texto), con foto de respaldo por id
+  const rlist = rs.docs.map(d=>{
+    const x = d.data();
+    return {
+      id: d.id, name: x.name, time: x.time, servings: x.servings, diff: x.diff,
+      utensil: x.utensil, cats: x.cats||[], badge: x.badge||"", desc: x.desc||"",
+      img: (x.img && x.img.indexOf("http")===0) ? x.img : (IMG_BACKUP[d.id] || x.img || ""),
+      tone: x.tone||"#5A4630", video: x.video||"",
+      ingredients: (x.ingredients||[]).map(it => Array.isArray(it) ? it : [it.name, it.amount]),
+      steps: x.steps||[],
+      tip: x.tip||"", royalTip: x.royalTip||"",
+      order: x.order||0
+    };
+  }).sort((a,b)=>a.order-b.order);
+  if(rlist.length){ window.RECIPES = rlist; }
+
+  // Próximamente desde la nube (con tipo, descripción y foto)
+  const ulist = us.docs.map(d=>{ const x=d.data(); return {name:x.name, tipo:x.tipo||"receta", desc:x.desc||"", img:x.img||"", order:x.order||0}; }).sort((a,b)=>a.order-b.order);
+  if(ulist.length){ window.SOON = ulist; }
+
+  // Textos desde settings/public
+  if(st.exists()){
+    const S = st.data();
+    const T = S.texts || {};
+    const wt = document.getElementById("welcomeT");
+    const wp = document.getElementById("welcomeP");
+    // (los textos del recetario se mantienen; aquí sólo actualizamos si existen esos nodos)
+  }
+
+  if(rlist.length || ulist.length){
+    window.renderGrid();
+    if(window.renderSoonRow) window.renderSoonRow();
+    window.route();
+  }
+
+  /* Receta destacada: manual vigente si existe, si no rotación semanal */
+  try{
+    const cfg = (fe && fe.exists()) ? fe.data() : null;
+    window.FEATURED = window.resolverDestacada(cfg);
+    if(window.FEATURED) window.renderFeatured();
+  }catch(e){}
+}catch(e){ /* sin conexión o sin datos: se muestra el contenido integrado */ }
+</script>
+<script>
+(function(){
+  var VKEY='_vid', SKEY='_sid';
+  function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,9); }
+  var vid='', sid='';
+  try{
+    vid = localStorage.getItem(VKEY)||''; if(!vid){ vid=uid(); localStorage.setItem(VKEY,vid); }
+    sid = sessionStorage.getItem(SKEY)||''; if(!sid){ sid=uid(); sessionStorage.setItem(SKEY,sid); }
+  }catch(e){ vid=vid||uid(); sid=sid||uid(); }
+
+  function fuente(){
+    var p=new URLSearchParams(location.search), u=(p.get('utm_source')||'').toLowerCase();
+    if(u){
+      if(u.indexOf('qr')>=0) return 'QR';
+      if(u.indexOf('insta')>=0||u==='ig') return 'Instagram';
+      if(u.indexOf('tiktok')>=0) return 'TikTok';
+      if(u.indexOf('whats')>=0||u==='wa') return 'WhatsApp';
+      return u.charAt(0).toUpperCase()+u.slice(1);
+    }
+    var r=(document.referrer||'').toLowerCase();
+    if(!r) return 'Directo';
+    if(r.indexOf('instagram')>=0) return 'Instagram';
+    if(r.indexOf('tiktok')>=0) return 'TikTok';
+    if(r.indexOf('whatsapp')>=0||r.indexOf('wa.me')>=0) return 'WhatsApp';
+    if(r.indexOf('google')>=0) return 'Google';
+    if(r.indexOf('lettytrillo.com')>=0||r.indexOf('oficina-digital-letty')>=0) return 'Interno';
+    try{ return new URL(document.referrer).hostname.replace(/^www\./,''); }catch(_){ return 'Otro'; }
+  }
+  function device(){
+    var u=navigator.userAgent;
+    if(/iPad/i.test(u)) return 'iPad';
+    if(/iPhone|iPod/i.test(u)) return 'iPhone';
+    if(/Android/i.test(u)) return /Mobile/i.test(u)?'Android':'Tablet Android';
+    return 'Computadora';
+  }
+  var SRC=fuente(), DEV=device(), Q=[], DB=null, ADD=null, COL=null, TS=null;
+
+  (async function(){
+    try{
+      var CFG=window.OFICINA.firebase;
+      var a = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+      var f = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+      var app = (a.getApps && a.getApps().length) ? a.getApps()[0] : a.initializeApp(CFG);
+      DB = f.getFirestore(app); ADD = f.addDoc; COL = f.collection; TS = f.serverTimestamp;
+      flush();
+    }catch(e){}
+  })();
+
+  function flush(){
+    if(!(DB&&ADD&&COL&&TS)) return;
+    while(Q.length){
+      var ev=Q.shift();
+      try{ ADD(COL(DB,'analytics_clicks'), {
+        label:ev.label, action:'click', createdAt:TS(),
+        vid:ev.vid, sid:ev.sid, src:ev.src, dev:ev.dev, page:ev.page, referrer:ev.referrer
+      }).catch(function(){}); }catch(_){}
+    }
+  }
+  function track(label){
+    if(!label) return;
+    label = String(label).slice(0,90);
+    Q.push({ label:label, vid:vid, sid:sid, src:SRC, dev:DEV, page:'recetas',
+      referrer:(document.referrer||'').slice(0,100) });
+    flush();
+  }
+  window.trackEvent = track;
+  track('Visita');
+})();
+</script>
+<script>
+document.addEventListener('click', function(e){
+  var b = e.target.closest('#waBtn, a[href*="wa.me"]');
+  if(b && window.trackEvent) window.trackEvent(b.getAttribute('data-tr') || 'WhatsApp');
+}, true);
+</script>
+</body>
+</html>

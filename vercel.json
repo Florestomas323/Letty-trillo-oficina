@@ -1,0 +1,5 @@
+{
+  "buildCommand": "node validar.js",
+  "outputDirectory": ".",
+  "framework": null
+}

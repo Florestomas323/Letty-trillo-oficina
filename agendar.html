@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script src="config.js"></script>
+<title>Reserva tu demostración — Letty Trillo</title>
+<meta name="description" content="Reserva tu demostración de cocina sin costo. Elige el tema que te interesa, el día y la hora que mejor te venga.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lettytrillo.com/agendar.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reserva tu demostración sin costo">
+<meta property="og:description" content="Elige el tema que te interesa, el día y la hora. Sin costo y sin obligación de compra.">
+<meta property="og:url" content="https://lettytrillo.com/agendar.html">
+<meta property="og:image" content="https://lettytrillo.com/og-image.jpeg?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lettytrillo.com/og-image.jpeg?v=2">
+<meta name="theme-color" content="#F4F4F4">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<link rel="icon" type="image/png" href="favicon-oficina.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F4; --card:#E9E9E9; --ink:#0C0A05; --stone:#685C45;
+    --hairline:rgba(212,175,55,0.15); --gold:#947619; --gold-text:#957A18;
+    --shadow-soft:0 1px 2px rgba(0,0,0,0.16), 0 8px 24px rgba(0,0,0,0.14);
+    --ease:cubic-bezier(.22,.8,.24,1);
+    --metal:linear-gradient(135deg,#957718 0%,#D4AF37 52%,#8C6E1F 100%);
+    --metal-silver:linear-gradient(135deg,#0E0C08 0%,#695A44 45%,#A69B8B 100%);
+    --silver:#705D3D; --silver-dim:#A69C88;
+    --ink:#0C0A05; --card:#E9E9E9; --stone:#685C45;
+    --gold:#947619; --gold-text:#957A18; --hairline:rgba(212,175,55,0.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.5;padding-bottom:env(safe-area-inset-bottom)}
+  .wrap{max-width:560px;margin:0 auto;padding:0 20px 40px}
+
+  .top{padding:18px 0 6px}
+  .back{display:inline-flex;align-items:center;gap:7px;color:var(--gold-text);
+    font-size:14px;font-weight:600;text-decoration:none;min-height:44px}
+  .eyebrow{font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--gold-text);display:block}
+  h1{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(25px,6.4vw,33px);
+    letter-spacing:-.028em;line-height:1.12;margin-top:5px}
+  .lead{color:var(--stone);font-size:15.5px;line-height:1.6;margin-top:10px;max-width:28.16em}
+
+  /* Pasos */
+  .pasos{display:flex;gap:7px;margin:22px 0 18px}
+  .paso{flex:1;height:4px;border-radius:99px;background:var(--hairline);transition:background .3s var(--ease)}
+  .paso.on{background:var(--metal)}
+  .paso-txt{font-size:12px;font-weight:700;color:var(--gold-text);letter-spacing:.05em;
+    text-transform:uppercase;margin-bottom:10px}
+
+  .card{background:var(--card);border:1px solid var(--hairline);border-radius:20px;
+    padding:18px;box-shadow:var(--shadow-soft);margin-bottom:12px}
+
+  /* Temas */
+  .tema{display:flex;align-items:center;gap:14px;width:100%;text-align:left;
+    background:var(--card);border:1.5px solid var(--hairline);border-radius:16px;
+    padding:15px;min-height:66px;font:inherit;font-size:15.5px;font-weight:600;
+    color:var(--ink);cursor:pointer;margin-bottom:9px}
+  .tema:active{transform:scale(.99);background:rgba(0,0,0,0.04)}
+  .tema.on{border-color:var(--gold);background:rgba(0,0,0,0.04);box-shadow:0 0 0 3px rgba(212,175,55,0.13)}
+  .tema .ic{flex:0 0 44px;width:44px;height:44px;border-radius:13px;background:var(--paper);
+    border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;color:var(--gold-text)}
+  .tema .ar{margin-left:auto;color:#938975;flex:0 0 auto}
+
+  /* Días y horas */
+  .dias{display:flex;gap:9px;overflow-x:auto;padding:2px 0 8px;-webkit-overflow-scrolling:touch}
+  .dias::-webkit-scrollbar{display:none}
+  .dia{flex:0 0 auto;min-width:76px;background:var(--card);border:1.5px solid var(--hairline);
+    border-radius:15px;padding:11px 8px;text-align:center;font:inherit;cursor:pointer}
+  .dia:active{transform:scale(.97)}
+  .dia.on{border-color:var(--gold);background:rgba(0,0,0,0.04);box-shadow:0 0 0 3px rgba(212,175,55,0.13)}
+  .dia .sem{font-size:11.5px;font-weight:600;color:var(--stone);text-transform:capitalize}
+  .dia .num{font-family:'Inter Tight',sans-serif;font-size:22px;font-weight:700;line-height:1.1;margin-top:2px}
+  .dia .mes{font-size:11px;color:var(--stone);text-transform:capitalize}
+  .horas{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:9px;margin-top:14px}
+  .hora{background:var(--card);border:1.5px solid var(--hairline);border-radius:13px;
+    padding:13px 6px;font:inherit;font-size:15px;font-weight:600;color:var(--ink);
+    min-height:50px;cursor:pointer;text-align:center}
+  .hora:active{transform:scale(.97)}
+  .hora.on{border-color:var(--gold);background:var(--metal);color:#000000}
+
+  /* Formulario */
+  label{display:block;font-size:12.5px;font-weight:600;color:var(--stone);margin:14px 0 6px}
+  .opt{font-weight:400;color:#A69C88;font-size:11.5px}
+  input[type=text],input[type=tel],select,textarea{width:100%;background:var(--card);
+    border:1px solid var(--hairline);border-radius:12px;padding:13px 14px;
+    font:inherit;font-size:16px;color:inherit;min-height:48px}
+  textarea{min-height:84px;resize:vertical}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:439px){.row2{grid-template-columns:1fr;gap:0}}
+  .cons{display:flex;gap:11px;align-items:flex-start;margin-top:16px;cursor:pointer;
+    font-size:13.5px;line-height:1.5}
+  .cons input{margin-top:2px;width:20px;height:20px;flex:0 0 20px;accent-color:var(--gold-text)}
+  .err{color:#FF8A8A;font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+  .err.show{display:block}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;
+    background:var(--metal);color:#000000;border:0;border-radius:15px;font:inherit;
+    font-size:16px;font-weight:600;padding:16px;min-height:54px;cursor:pointer;text-decoration:none}
+  .btn:active{transform:scale(.99)}
+  .btn[disabled]{opacity:.55}
+  .btn-line{background:transparent;color:var(--ink);border:1.5px solid var(--hairline)}
+  .btn-gold{background:var(--metal);color:#000000}
+  .volver{display:inline-flex;align-items:center;gap:7px;background:none;border:0;
+    color:var(--gold-text);font:inherit;font-size:14px;font-weight:600;
+    padding:12px 4px;min-height:44px;cursor:pointer;margin-top:4px}
+
+  .resumen{background:rgba(0,0,0,0.04);border:1px solid rgba(149,117,24,0.28);border-radius:14px;padding:14px;margin-bottom:14px}
+  .resumen b{font-size:14.5px;display:block}
+  .resumen span{font-size:13.5px;color:var(--stone);display:block;margin-top:3px}
+
+  .aviso{background:rgba(0,0,0,0.04);border-radius:12px;padding:12px 14px;font-size:13px;
+    line-height:1.55;color:var(--stone);margin-top:14px}
+
+  /* Confirmación */
+  .ok{text-align:center;padding:12px 0}
+  .ok .big{font-size:52px;margin-bottom:14px}
+  .ok h2{font-family:'Inter Tight',sans-serif;font-size:23px;letter-spacing:-.02em;margin-bottom:12px}
+  .ok p{color:var(--stone);font-size:15px;line-height:1.6;max-width:25.6em;margin:0 auto}
+  .codigo{display:inline-block;background:rgba(0,0,0,0.04);border:1px solid rgba(149,117,24,0.28);border-radius:12px;
+    padding:11px 20px;margin-top:16px;font-family:'Inter Tight',sans-serif;
+    font-size:21px;font-weight:700;letter-spacing:.09em;color:var(--gold-text)}
+
+  .cargando{text-align:center;padding:34px 0;color:var(--stone);font-size:14.5px}
+  .vacio{text-align:center;padding:26px 16px;color:var(--stone);font-size:14.5px;line-height:1.6}
+
+  .pie{text-align:center;font-size:12.5px;color:#A69C88;line-height:1.7;margin-top:26px}
+  .pie a{color:var(--gold-text);text-decoration:none}
+
+  /* ---- Paleta morada: capa de fondo compartida con el sitio ---- */
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{position:relative;background:#F4F4F4;color:var(--ink)}
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:#F4F4F4 url('fondo-textura.jpeg') center center / cover no-repeat;opacity:.55;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(212,175,55,0.2), transparent 60%),
+      linear-gradient(180deg, rgba(247,244,237,0.62) 0%, rgba(247,244,237,0.86) 55%, rgba(247,244,237,0.94) 100%);
+  }
+  ::selection{background:rgba(149,113,24,0.32);color:#000000}
+  /* El logotipo "Regala y Gana" tiene tipografia azul marino: se perfila en claro */
+  img[alt="Regala y Gana"], .logo, .ryg-logo, #brandLogo{
+    filter:drop-shadow(0 0 1.6px rgba(0,0,0,0.76)) drop-shadow(0 2px 12px rgba(0,0,0,0.22));
+  }
+  @media print{
+    body{background:#000000!important;color:#EFEFEE!important}
+    body::before,body::after{display:none!important}
+    *{color:#EFEFEE!important;background:transparent!important;box-shadow:none!important;
+      border-color:#302C29!important;-webkit-text-fill-color:#EFEFEE!important;filter:none!important}
+  }
+</style>
+
+<style id="fondo-letty">
+  body::before{opacity:1!important}
+  body::after{background:
+    radial-gradient(120% 80% at 50% 0%, rgba(212,175,55,0.1), transparent 60%),
+    linear-gradient(180deg, rgba(244,244,244,0.18) 0%, rgba(244,244,244,0.3) 55%, rgba(244,244,244,0.4) 100%)!important}
+</style>
+
+<style id="toque-verde">
+  :root{--verde:#267344;--verde-suave:#247543}
+  .eyebrow{color:var(--verde)!important}
+  .eyebrow::before{background:linear-gradient(90deg,var(--verde),transparent)!important}
+  .badge .dot,.t-dot,.hero .dot,.live-dot{background:var(--verde)!important}
+</style>
+
+<style id="tema-claro">
+  html,body{background:#FFFFFF!important;color:#151515!important;color-scheme:light}
+  body::before{opacity:1!important;background:#FFFFFF url('fondo-textura.jpeg') center top / cover no-repeat!important}
+  body::after{background:linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.40) 55%, rgba(255,255,255,.55) 100%)!important}
+  .btn-primary,.btn-solid,.btn.primary,.cta-btn,a[class*="btn-gold"],.prc-btns a:first-child,.nav-cta,.btn-metal{color:#151515!important}
+  .eyebrow{color:#3F7A2A!important}
+  .eyebrow::before{background:linear-gradient(90deg,#3F7A2A,transparent)!important}
+  .badge .dot,.t-dot,.hero .dot,.live-dot{background:#5A9E3A!important}
+  ::selection{background:rgba(212,175,55,.35);color:#111}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="index.html">&#8592; Volver al inicio</a></div>
+  <span class="eyebrow">Sin costo y sin compromiso</span>
+  <h1 id="tit">Reserva tu demostración</h1>
+  <p class="lead" id="sub">Cocinamos juntos en tu casa. Elige qué te interesa, el día y la hora que mejor te venga.</p>
+
+  <div class="pasos" id="pasos" aria-hidden="true">
+    <span class="paso on"></span><span class="paso"></span><span class="paso"></span>
+  </div>
+
+  <div id="zona"><div class="cargando">Cargando horarios disponibles…</div></div>
+
+  <p class="pie" id="pie"></p>
+</div>
+
+<script type="module">
+const O = window.OFICINA || {};
+const TEMAS = [
+  { n:"Ollas y sartenes",       d:"Cocinar con poca agua y casi nada de aceite",
+    i:'<path d="M4 11h16v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M20 12h2M2 12h2"/><path d="M9 7V5M12 7V4M15 7V5"/>' },
+  { n:"Filtración de agua",     d:"Agua más limpia para toda la casa",
+    i:'<path d="M12 2.7s6 6.5 6 10.6a6 6 0 0 1-12 0C6 9.2 12 2.7 12 2.7z"/>' },
+  { n:"Licuadora y extractor",  d:"Jugos, salsas y recetas en minutos",
+    i:'<path d="M7 3h10l-1.4 10.5a2 2 0 0 1-2 1.7h-3.2a2 2 0 0 1-2-1.7z"/><path d="M9.5 19h5M12 15.2V19"/>' },
+  { n:"Purificador de aire",    d:"Aire más limpio donde vive tu familia",
+    i:'<path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 13h15a3 3 0 1 1-3 3"/><path d="M3 18h8"/>' },
+  { n:"Cuchillos y accesorios", d:"Precisión que agiliza tu día",
+    i:'<path d="M4 18 18 4l2 2L6 20z"/><path d="m14 8 2 2"/>' }
+];
+
+let CFG = null, OCUP = [], PASO = 1, SEL = { tema:"", fecha:"", hora:"" }, enviando = false;
+
+const $ = id => document.getElementById(id);
+const esc = t => String(t==null?"":t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const aMin = h => { const p = String(h||"0:0").split(":"); return (+p[0])*60 + (+p[1]); };
+const aHora = m => { const h=Math.floor(m/60), mm=m%60; return (h<10?"0":"")+h+":"+(mm<10?"0":"")+mm; };
+const hora12 = h => { const m=aMin(h), hh=Math.floor(m/60), mm=m%60;
+  const ap = hh>=12 ? "pm":"am"; let x = hh%12; if(!x) x=12;
+  return x + (mm ? ":"+(mm<10?"0":"")+mm : "") + " " + ap; };
+const iso = d => { const m=d.getMonth()+1, dd=d.getDate();
+  return d.getFullYear()+"-"+(m<10?"0":"")+m+"-"+(dd<10?"0":"")+dd; };
+const ev = n => { try{ if(window.trackAg) window.trackAg(n); }catch(e){} };
+
+const DEF = { duracion:60, traslado:30, maxDia:6, anticipo:24, ventana:30,
+  dias:{ "1":["10:00","20:00"],"2":["10:00","20:00"],"3":["10:00","20:00"],
+         "4":["10:00","20:00"],"5":["10:00","20:00"],"6":["09:00","18:00"],"0":[] },
+  bloqueados:[] };
+
+/* Los mismos cálculos que usa el panel, para que nunca discrepen */
+function huecosDelDia(fecha){
+  const d = new Date(fecha+"T12:00:00");
+  const f = (CFG.dias || {})[String(d.getDay())];
+  if(!f || f.length < 2) return [];
+  if((CFG.bloqueados||[]).indexOf(fecha) >= 0) return [];
+  const paso = CFG.duracion + CFG.traslado;
+  const out = [];
+  for(let t = aMin(f[0]); t + CFG.duracion <= aMin(f[1]); t += paso) out.push(aHora(t));
+  return out;
+}
+function huecosLibres(fecha, ahora){
+  ahora = ahora || new Date();
+  const todos = huecosDelDia(fecha);
+  if(!todos.length) return [];
+  const delDia = OCUP.filter(o => o.fecha === fecha);
+  if(delDia.length >= CFG.maxDia) return [];
+  const limite = new Date(ahora.getTime() + CFG.anticipo*3600000);
+  const tope   = new Date(ahora.getTime() + CFG.ventana*86400000);
+  return todos.filter(h => {
+    const cuando = new Date(fecha+"T"+h+":00");
+    if(cuando < limite || cuando > tope) return false;
+    const t = aMin(h);
+    for(const o of delDia){
+      if(Math.abs(t - aMin(o.hora)) < CFG.duracion + CFG.traslado) return false;
+    }
+    return true;
+  });
+}
+function diasConHueco(cuantos){
+  const ahora = new Date(), out = [];
+  for(let i = 0; i <= CFG.ventana && out.length < (cuantos||14); i++){
+    const f = iso(new Date(ahora.getTime() + i*86400000));
+    const libres = huecosLibres(f, ahora);
+    if(libres.length) out.push({ fecha:f, horas:libres });
+  }
+  return out;
+}
+
+function marcarPasos(n){
+  const p = $("pasos").children;
+  for(let i=0;i<p.length;i++) p[i].classList.toggle("on", i < n);
+}
+
+/* ---------- Paso 1: el tema ---------- */
+function pintarTemas(){
+  PASO = 1; marcarPasos(1);
+  $("tit").textContent = "Reserva tu demostración";
+  $("sub").textContent = "Cocinamos juntos en tu casa. Elige qué te interesa, el día y la hora que mejor te venga.";
+  let h = '<div class="paso-txt">Paso 1 de 3 · ¿Qué te interesa?</div>';
+  TEMAS.forEach((t,i) => {
+    h += '<button class="tema'+(SEL.tema===t.n?" on":"")+'" type="button" data-tema="'+i+'">'+
+      '<span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+t.i+'</svg></span>'+
+      '<span><span style="display:block">'+esc(t.n)+'</span>'+
+      '<small style="font-size:12.5px;color:var(--stone);font-weight:500">'+esc(t.d)+'</small></span>'+
+      '<svg class="ar" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>';
+  });
+  h += '<p class="aviso">La demostración dura alrededor de una hora, no tiene costo y no implica ninguna obligación de compra.</p>';
+  $("zona").innerHTML = h;
+}
+
+/* ---------- Paso 2: día y hora ---------- */
+function pintarFechas(){
+  PASO = 2; marcarPasos(2);
+  $("tit").textContent = "¿Cuándo te viene bien?";
+  $("sub").textContent = "Estos son los días con espacio disponible.";
+  const dias = diasConHueco(14);
+  if(!dias.length){
+    $("zona").innerHTML = '<div class="paso-txt">Paso 2 de 3 · Elige día y hora</div>'+
+      '<div class="card"><div class="vacio">Ahora mismo no hay horarios disponibles.<br>'+
+      'Escríbeme por WhatsApp y lo coordinamos.</div>'+
+      '<a class="btn btn-gold" href="'+(O.wa ? O.wa("Hola "+(O.nombreCorto||"")+", quiero reservar una demostración") : "#")+'" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>'+
+      '<button class="volver" type="button" data-volver="1">&#8592; Cambiar de tema</button>';
+    return;
+  }
+  if(!SEL.fecha || !dias.some(d=>d.fecha===SEL.fecha)) SEL.fecha = dias[0].fecha;
+  const act = dias.find(d=>d.fecha===SEL.fecha) || dias[0];
+
+  let h = '<div class="paso-txt">Paso 2 de 3 · Elige día y hora</div>';
+  h += '<div class="resumen"><b>'+esc(SEL.tema)+'</b><span>Alrededor de 1 hora, sin costo</span></div>';
+  h += '<div class="dias">';
+  dias.forEach(d => {
+    const f = new Date(d.fecha+"T12:00:00");
+    h += '<button class="dia'+(d.fecha===SEL.fecha?" on":"")+'" type="button" data-dia="'+d.fecha+'">'+
+      '<span class="sem">'+f.toLocaleDateString("es-MX",{weekday:"short"}).replace(".","")+'</span>'+
+      '<span class="num">'+f.getDate()+'</span>'+
+      '<span class="mes">'+f.toLocaleDateString("es-MX",{month:"short"}).replace(".","")+'</span></button>';
+  });
+  h += '</div>';
+  h += '<div class="horas">';
+  act.horas.forEach(x => {
+    h += '<button class="hora'+(SEL.hora===x&&SEL.fecha===act.fecha?" on":"")+'" type="button" data-hora="'+x+'">'+hora12(x)+'</button>';
+  });
+  h += '</div>';
+  h += '<button class="btn" type="button" id="irDatos" style="margin-top:18px" '+(SEL.hora?'':'disabled')+'>Continuar</button>';
+  h += '<button class="volver" type="button" data-volver="1">&#8592; Cambiar de tema</button>';
+  $("zona").innerHTML = h;
+}
+
+/* ---------- Paso 3: datos ---------- */
+function pintarDatos(){
+  PASO = 3; marcarPasos(3);
+  $("tit").textContent = "Últimos datos";
+  $("sub").textContent = "Para confirmar tu cita y saber a dónde llegar.";
+  const f = new Date(SEL.fecha+"T12:00:00");
+  let h = '<div class="paso-txt">Paso 3 de 3 · Tus datos</div>';
+  h += '<div class="resumen"><b>'+esc(SEL.tema)+'</b>'+
+       '<span>'+f.toLocaleDateString("es-MX",{weekday:"long",day:"numeric",month:"long"})+' · '+hora12(SEL.hora)+'</span></div>';
+  h += '<div class="card">';
+  h += '<div class="row2"><div><label for="agNombre">Nombre</label><input id="agNombre" type="text" autocomplete="given-name"></div>'+
+       '<div><label for="agApellido">Apellido</label><input id="agApellido" type="text" autocomplete="family-name"></div></div>';
+  h += '<label for="agTel">Teléfono</label><input id="agTel" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ej. 972 555 1234">';
+  h += '<label for="agDir1">Dirección</label><input id="agDir1" type="text" autocomplete="address-line1" placeholder="Calle y número">';
+  h += '<label for="agDir2">Apartamento, unidad o referencia <span class="opt">(opcional)</span></label><input id="agDir2" type="text" autocomplete="address-line2">';
+  h += '<div class="row2"><div><label for="agCiudad">Ciudad</label><input id="agCiudad" type="text" autocomplete="address-level2"></div>'+
+       '<div><label for="agEstado">Estado</label><input id="agEstado" type="text" autocomplete="address-level1" placeholder="TX" maxlength="20"></div></div>';
+  h += '<label for="agCP">Código postal</label><input id="agCP" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10">';
+  h += '<label for="agMedio">¿Cómo prefieres que te contactemos?</label><select id="agMedio">'+
+       '<option value="WhatsApp">WhatsApp</option><option value="Llamada">Llamada</option>'+
+       '<option value="Mensaje de texto">Mensaje de texto</option></select>';
+  h += '<label for="agNotas">Algo que deba saber <span class="opt">(opcional)</span></label>'+
+       '<textarea id="agNotas" placeholder="Cuántas personas serán, si hay escaleras, dónde estacionar…"></textarea>';
+  h += '<label class="cons" for="agCons"><input id="agCons" type="checkbox">'+
+       '<span>Autorizo que me contacten por el medio que elegí para confirmar esta demostración.</span></label>';
+  h += '<label class="cons" for="agNews"><input id="agNews" type="checkbox">'+
+       '<span>Deseo recibir recetas, beneficios y novedades. <span class="opt">(opcional)</span></span></label>';
+  h += '<div class="err" id="agErr"></div>';
+  h += '<p style="font-size:12.5px;line-height:1.55;color:var(--stone);margin-top:14px">'+
+       'Usaremos estos datos únicamente para coordinar tu demostración. '+
+       '<a href="privacidad.html" target="_blank" rel="noopener" style="color:var(--gold-text);font-weight:600">Consulta la Política de Privacidad</a>.</p>';
+  h += '<button class="btn" type="button" id="agEnviar" style="margin-top:14px">Solicitar mi demostración</button>';
+  h += '</div>';
+  h += '<button class="volver" type="button" data-volver="2">&#8592; Cambiar día u hora</button>';
+  $("zona").innerHTML = h;
+}
+
+/* ---------- Confirmación ---------- */
+function pintarOk(codigo){
+  marcarPasos(3);
+  $("pasos").style.display = "none";
+  $("tit").textContent = "¡Listo!";
+  $("sub").textContent = "";
+  const f = new Date(SEL.fecha+"T12:00:00");
+  const cuando = f.toLocaleDateString("es-MX",{weekday:"long",day:"numeric",month:"long"})+" a las "+hora12(SEL.hora);
+  const nom = O.nombreCorto || "Tu distribuidora";
+  let h = '<div class="card"><div class="ok"><div class="big">&#128197;</div>'+
+    '<h2>Solicitud recibida</h2>'+
+    '<p><b>'+esc(nom)+'</b> revisará tu solicitud y te confirmará la cita por el medio que elegiste, '+
+    'dentro de un máximo de 3 días hábiles.</p>'+
+    '<div class="codigo">'+esc(codigo)+'</div>'+
+    '<p style="margin-top:12px;font-size:13.5px">Guarda este número por si necesitas mencionarlo.</p>'+
+    '</div>'+
+    '<div class="resumen" style="margin-top:16px"><b>'+esc(SEL.tema)+'</b><span>'+cuando+'</span></div>'+
+    '<a class="btn btn-gold" id="agIcs" download="demostracion.ics" href="#">Agregar a mi calendario</a>'+
+    '<a class="btn btn-line" style="margin-top:9px" href="index.html">Volver al inicio</a>'+
+    '</div>'+
+    '<p class="aviso">La hora queda apartada para ti mientras se confirma. Si necesitas cambiarla, '+
+    'escríbenos y lo ajustamos.</p>';
+  $("zona").innerHTML = h;
+
+  /* Archivo de calendario, generado aquí mismo */
+  const ini = SEL.fecha.replace(/-/g,"") + "T" + SEL.hora.replace(":","") + "00";
+  const finM = aMin(SEL.hora) + (CFG.duracion||60);
+  const fin = SEL.fecha.replace(/-/g,"") + "T" + aHora(finM).replace(":","") + "00";
+  const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Oficina Digital//ES","BEGIN:VEVENT",
+    "UID:"+codigo+"@demostracion","DTSTART:"+ini,"DTEND:"+fin,
+    "SUMMARY:Demostración de cocina con "+nom,
+    "DESCRIPTION:"+SEL.tema+". Código "+codigo+".",
+    "END:VEVENT","END:VCALENDAR"].join("\r\n");
+  const a = $("agIcs");
+  if(a) a.href = "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
+  ev("Agendar: confirmada");
+}
+
+/* ---------- Envío ---------- */
+async function enviar(){
+  if(enviando) return;
+  const err = $("agErr");
+  const val = id => ($(id) ? String($(id).value||"").trim() : "");
+  const req = [["agNombre","tu nombre"],["agApellido","tu apellido"],["agTel","tu teléfono"],
+               ["agDir1","tu dirección"],["agCiudad","tu ciudad"],["agEstado","tu estado"]];
+  for(const [id, etq] of req){
+    if(!val(id)){
+      err.textContent = "Falta "+etq+".";
+      err.classList.add("show");
+      $(id).focus(); $(id).scrollIntoView({block:"center",behavior:"smooth"});
+      return;
+    }
+  }
+  const tel = val("agTel").replace(/\D/g,"");
+  if(tel.length < 10){ err.textContent = "Revisa tu teléfono: faltan dígitos."; err.classList.add("show"); $("agTel").focus(); return; }
+  if(!$("agCons").checked){ err.textContent = "Necesitamos tu autorización para poder confirmarte la cita."; err.classList.add("show"); return; }
+  err.classList.remove("show");
+
+  enviando = true;
+  const btn = $("agEnviar");
+  btn.disabled = true; btn.textContent = "Enviando…";
+
+  try{
+    const fb = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+    const fs = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+    const app = (fb.getApps && fb.getApps().length) ? fb.getApps()[0] : fb.initializeApp(O.firebase);
+    const db = fs.getFirestore(app);
+
+    /* Apartar el hueco. El nombre del documento es la fecha y hora,
+       así que si alguien se adelantó, esto falla y no se duplica la cita. */
+    const slotId = SEL.fecha + "_" + SEL.hora.replace(":","-");
+    try{
+      await fs.setDoc(fs.doc(db,"busySlots",slotId), { fecha:SEL.fecha, hora:SEL.hora, tipo:"demostracion" });
+    }catch(e){
+      enviando = false; btn.disabled = false; btn.textContent = "Solicitar mi demostración";
+      err.textContent = "Alguien acaba de tomar ese horario. Elige otro, por favor.";
+      err.classList.add("show");
+      OCUP.push({ fecha:SEL.fecha, hora:SEL.hora });
+      SEL.hora = "";
+      setTimeout(pintarFechas, 1400);
+      return;
+    }
+
+    const CH = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    let cod = "";
+    try{ const r = new Uint8Array(5); crypto.getRandomValues(r);
+      for(let i=0;i<5;i++) cod += CH[r[i] % CH.length];
+    }catch(_){ for(let i=0;i<5;i++) cod += CH[Math.floor(Math.random()*CH.length)]; }
+
+    const datos = {
+      tipo:"demostracion", code:cod, tema:SEL.tema, fecha:SEL.fecha, hora:SEL.hora,
+      nombre:val("agNombre"), apellido:val("agApellido"), phone:val("agTel"),
+      dir1:val("agDir1"), dir2:val("agDir2"), ciudad:val("agCiudad"),
+      estado:val("agEstado"), cp:val("agCP"),
+      medio:val("agMedio") || "WhatsApp", notas:val("agNotas"),
+      consent:true, news:!!$("agNews").checked,
+      status:"solicitada", notasAdmin:"", createdAt: fs.serverTimestamp()
+    };
+    Object.keys(datos).forEach(k => { if(datos[k] === "") delete datos[k]; });
+
+    try{
+      await fs.addDoc(fs.collection(db,"appointments"), datos);
+    }catch(e){
+      /* Si falla, devolver el hueco para no dejarlo bloqueado a nadie */
+      try{ await fs.deleteDoc(fs.doc(db,"busySlots",slotId)); }catch(_){}
+      throw e;
+    }
+    ev("Agendar: enviada · " + SEL.tema);
+    pintarOk(cod);
+  }catch(e){
+    console.error("Agendar:", e);
+    enviando = false; btn.disabled = false; btn.textContent = "Solicitar mi demostración";
+    if(e && e.code === "permission-denied") err.textContent = "La nube rechazó la solicitud. Avísale a "+(O.nombreCorto||"tu distribuidora")+".";
+    else if(e && (e.code === "unavailable" || /network|failed to fetch/i.test(String(e.message)))) err.textContent = "No hay conexión. Revisa tu internet e inténtalo de nuevo.";
+    else err.textContent = "No se pudo enviar. Inténtalo de nuevo en un momento.";
+    err.classList.add("show");
+  }
+}
+
+/* ---------- Enlaces ---------- */
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-tema]");
+  if(t){ SEL.tema = TEMAS[+t.dataset.tema].n; SEL.hora = ""; ev("Agendar: tema · "+SEL.tema); pintarFechas(); window.scrollTo({top:0,behavior:"smooth"}); return; }
+  const d = e.target.closest("[data-dia]");
+  if(d){ SEL.fecha = d.dataset.dia; SEL.hora = ""; pintarFechas(); return; }
+  const h = e.target.closest("[data-hora]");
+  if(h){ SEL.hora = h.dataset.hora; ev("Agendar: elige hora"); pintarFechas(); return; }
+  if(e.target.closest("#irDatos")){ pintarDatos(); window.scrollTo({top:0,behavior:"smooth"}); return; }
+  const v = e.target.closest("[data-volver]");
+  if(v){ (v.dataset.volver === "1" ? pintarTemas : pintarFechas)(); window.scrollTo({top:0,behavior:"smooth"}); return; }
+  if(e.target.closest("#agEnviar")){ enviar(); return; }
+});
+
+/* ---------- Arranque ---------- */
+(async function(){
+  $("pie").innerHTML = esc(O.nombre || "") + " &middot; Distribuidora autorizada Royal Prestige<br>"+
+    '<a href="terminos.html">Términos</a> &middot; <a href="privacidad.html">Privacidad</a>';
+  try{
+    const fb = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+    const fs = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+    const app = (fb.getApps && fb.getApps().length) ? fb.getApps()[0] : fb.initializeApp(O.firebase);
+    const db = fs.getFirestore(app);
+    const [c, s] = await Promise.all([
+      fs.getDoc(fs.doc(db,"settings","agenda")).catch(()=>null),
+      fs.getDocs(fs.collection(db,"busySlots")).catch(()=>null)
+    ]);
+    CFG = (c && c.exists()) ? Object.assign({}, DEF, c.data()) : Object.assign({}, DEF);
+    if(!CFG.dias) CFG.dias = DEF.dias;
+    if(!CFG.bloqueados) CFG.bloqueados = [];
+    OCUP = s ? s.docs.map(d => d.data()).filter(x => x && x.fecha && x.hora) : [];
+  }catch(e){
+    CFG = Object.assign({}, DEF); OCUP = [];
+  }
+  ev("Agendar: abre");
+  pintarTemas();
+})();
+</script>
+
+<script>
+/* Analítica: mismos eventos y mismo destino que el resto del sitio */
+(function(){
+  var O = window.OFICINA || {};
+  var vid = "", sid = "";
+  try{
+    vid = localStorage.getItem("_vid") || "";
+    if(!vid){ vid = Date.now().toString(36)+Math.random().toString(36).slice(2,9); localStorage.setItem("_vid", vid); }
+    sid = sessionStorage.getItem("_sid") || "";
+    if(!sid){ sid = Date.now().toString(36)+Math.random().toString(36).slice(2,9); sessionStorage.setItem("_sid", sid); }
+  }catch(e){}
+  function dispositivo(){
+    var u = navigator.userAgent || "";
+    if(/iPhone|iPod/.test(u)) return "iPhone";
+    if(/iPad|Tablet/.test(u)) return "Tablet";
+    if(/Android/i.test(u))    return "Android";
+    return "Computadora";
+  }
+  function origen(){
+    try{
+      var p = new URLSearchParams(location.search).get("utm_source") || "";
+      if(p){ p = p.toLowerCase();
+        if(p.indexOf("qr")>=0) return "QR";
+        if(p.indexOf("insta")>=0) return "Instagram";
+        if(p.indexOf("tiktok")>=0) return "TikTok";
+        if(p.indexOf("face")>=0) return "Facebook";
+        return p; }
+      var r = (document.referrer||"").toLowerCase();
+      if(!r) return "Directo";
+      if(r.indexOf("lettytrillo")>=0 || r.indexOf("oficina-digital-letty")>=0) return "Interno";
+      if(r.indexOf("whatsapp")>=0 || r.indexOf("wa.me")>=0) return "WhatsApp";
+      if(r.indexOf("instagram")>=0) return "Instagram";
+      if(r.indexOf("facebook")>=0 || r.indexOf("fb.")>=0) return "Facebook";
+      if(r.indexOf("tiktok")>=0) return "TikTok";
+      if(r.indexOf("google")>=0) return "Google";
+      return "Otro";
+    }catch(e){ return "Directo"; }
+  }
+  var enviados = {};
+  window.trackAg = async function(etiqueta){
+    var ahora = Date.now();
+    if(enviados[etiqueta] && ahora - enviados[etiqueta] < 900) return;   /* evita dobles toques */
+    enviados[etiqueta] = ahora;
+    try{
+      var fb = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+      var fs = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+      var app = (fb.getApps && fb.getApps().length) ? fb.getApps()[0] : fb.initializeApp(O.firebase);
+      await fs.addDoc(fs.collection(fs.getFirestore(app), "analytics_clicks"), {
+        label: etiqueta, action: "click", vid: vid, sid: sid,
+        src: origen(), dev: dispositivo(), page: "agendar",
+        referrer: (document.referrer||"").slice(0,180),
+        createdAt: fs.serverTimestamp()
+      });
+    }catch(e){}
+  };
+  window.trackAg("Visita");
+})();
+</script>
+</body>
+</html>
