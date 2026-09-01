@@ -1606,6 +1606,7 @@
   @media(min-width:768px){ .hero h1{width:min(38vw,440px);height:calc(min(38vw,440px)*0.474)} }
 </style>
 
+<link rel="stylesheet" media="(max-width:767px)" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap">
 <style id="hero-movil">
 /* ============================================================
    HERO — AJUSTE FINO SOLO EN MOVIL (hasta 767px)
@@ -1648,8 +1649,19 @@
   .hero .sub{
     margin-top:0;
     font-size:clamp(19px,5.3vw,24px); line-height:1.18; letter-spacing:-.021em;
-    font-weight:700; color:#141009; max-width:14.5em;
+    font-weight:700; color:#141009; max-width:15.5em; text-wrap:balance;
     text-shadow:0 1px 12px rgba(255,253,247,.85);
+  }
+
+  /* 4b. TITULAR EN DOS VOCES: serif dorada + sans firme */
+  .hero .sub{ color:#181816; }
+  .hero .sub .sub-serif{
+    display:block;
+    font-family:'Cormorant Garamond','Fraunces',Georgia,serif;
+    font-weight:600; font-style:normal;
+    color:#A88624;
+    font-size:1.26em; line-height:1.02; letter-spacing:0;
+    margin-bottom:1px; text-shadow:none;
   }
 
   /* 5. SUBTITULO: pegado al titular, gris calido */
@@ -1885,7 +1897,7 @@
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="hero-content">
     <h1 class="rv in">Letty Trillo</h1>
-    <p class="sub rv in" id="heroSub">Cocina m&aacute;s r&aacute;pido, m&aacute;s saludable y con mejor sabor.</p>
+    <p class="sub rv in" id="heroSub"><span class="sub-serif">Cocina m&aacute;s r&aacute;pido,</span> m&aacute;s saludable y con mejor sabor.</p>
     <p class="hero-desc rv in">Haz de cada comida un momento m&aacute;s f&aacute;cil para tu familia.</p>
 <div class="hero-cta rv in">
       <button class="btn btn-solid btn-hero" data-cal type="button">Reservar demostración</button>
