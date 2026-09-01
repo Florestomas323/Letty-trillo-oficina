@@ -1589,10 +1589,11 @@
 <style id="logo-nombre">
   /* La foto nueva ya trae fondo claro: aligeramos el velo para que no la borre */
   @media(min-width:768px){
+    /* La foto ya trae el fondo geométrico del sitio: casi no hace falta velo */
     .hero-veil{background:
-      linear-gradient(to right, rgba(255,255,255,.96) 0%, rgba(255,255,255,.86) 26%, rgba(255,255,255,.55) 42%, rgba(255,255,255,.18) 58%, rgba(255,255,255,0) 72%),
-      linear-gradient(to bottom, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 22%, rgba(255,255,255,0) 62%, rgba(255,255,255,.55) 88%, rgba(255,255,255,.95) 100%)!important}
-    .hero-glow{opacity:.45!important}
+      linear-gradient(to right, rgba(255,255,255,.42) 0%, rgba(255,255,255,.30) 34%, rgba(255,255,255,.10) 55%, rgba(255,255,255,0) 70%),
+      linear-gradient(to bottom, rgba(255,255,255,.12) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 70%, rgba(255,255,255,.35) 92%, rgba(255,255,255,.75) 100%)!important}
+    .hero-glow{opacity:.22!important}
   }
   /* El h1 sigue diciendo "Letty Trillo" para buscadores y lectores de pantalla;
      visualmente se sustituye por el logotipo. */
@@ -1603,6 +1604,92 @@
     text-indent:-9999px;overflow:hidden;margin-bottom:14px!important;
   }
   @media(min-width:768px){ .hero h1{width:min(38vw,440px);height:calc(min(38vw,440px)*0.474)} }
+</style>
+
+<style id="hero-movil">
+/* ============================================================
+   HERO — AJUSTE FINO SOLO EN MOVIL (hasta 767px)
+   Nada de esto se aplica en tablet (>=768px) ni en escritorio.
+   No cambia marcado, enlaces, textos ni otras secciones.
+   ============================================================ */
+@media (max-width:767px){
+
+  /* --- Escala de espaciado del hero --- */
+  .hero{ --e1:8px; --e2:14px; --e3:20px; --e4:28px; }
+
+  /* 1. FOTOGRAFIA: mismo archivo, un poco mas de aire arriba */
+  .hero-photo img{ object-position:50% 3%; }
+
+  /* Transicion foto -> contenido: muy suave, sin borde visible */
+  .hero-veil{
+    background:linear-gradient(to bottom,
+      rgba(255,253,247,.42) 0%,
+      rgba(255,253,247,.06) 12%,
+      rgba(255,253,247,0) 30%,
+      rgba(255,253,247,0) 52%,
+      rgba(255,253,247,.10) 63%,
+      rgba(255,253,247,.34) 74%,
+      rgba(255,253,247,.72) 85%,
+      rgba(255,253,247,.93) 100%)!important;
+  }
+
+  /* 2. CREDENCIAL: presente pero secundaria (-12%) */
+  .hero-badge{ top:calc(env(safe-area-inset-top) + 18px); left:20px; opacity:.92; }
+  .hero-badge .hb-l1{ font-size:9.7px; letter-spacing:.2em; line-height:1.32; }
+  .hero-badge .hb-l2{ font-size:15.8px; margin-top:1px; }
+
+  /* 3. FIRMA "LETTY TRILLO": -17%, con aire por debajo */
+  .hero h1{
+    width:min(58vw,296px); height:calc(min(58vw,296px)*0.449);
+    margin:0 0 var(--e2)!important;
+  }
+
+  /* 4. TITULAR */
+  .hero .sub{
+    margin-top:0;
+    font-size:clamp(19px,5.3vw,24px); line-height:1.18; letter-spacing:-.021em;
+    font-weight:700; color:#141009; max-width:14.5em;
+    text-shadow:0 1px 12px rgba(255,253,247,.85);
+  }
+
+  /* 5. SUBTITULO: pegado al titular, gris calido */
+  .hero-desc{
+    margin-top:var(--e1); color:#786852;
+    font-size:clamp(13.5px,3.75vw,15.5px); line-height:1.5; font-weight:450;
+    max-width:21em; text-shadow:0 1px 10px rgba(255,253,247,.8);
+  }
+
+  /* 6. CTA PRINCIPAL: dorado champan, acabado sobrio */
+  .hero-cta{ gap:var(--e1); margin-top:var(--e3); }
+  .hero .btn-hero{
+    flex:1 1 100%; min-height:56px; border-radius:16px;
+    font-size:16px; font-weight:600; letter-spacing:-.005em; color:#1A1408;
+    background:linear-gradient(135deg,#B8922E 0%,#D6B84C 52%,#C6A13A 100%)!important;
+    border:1px solid rgba(184,146,46,.42)!important;
+    box-shadow:0 6px 18px rgba(150,120,40,.20), inset 0 1px 0 rgba(255,255,255,.22)!important;
+  }
+  .hero .btn-hero:active{ transform:scale(.985); box-shadow:0 3px 10px rgba(150,120,40,.18)!important; }
+
+  /* 7. SECUNDARIOS: crema, borde dorado apenas insinuado, sin sombra */
+  .hero .btn-ghost,.hero-save{
+    min-height:46px; border-radius:13px; font-size:12.8px; font-weight:600;
+    background:rgba(255,255,255,.66)!important;
+    border:1px solid rgba(184,146,46,.26)!important;
+    box-shadow:none!important; color:#2A2318!important;
+    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  }
+  .hero .btn-ghost svg,.hero-save svg{ width:14px; height:14px; opacity:.62; }
+  .hero .btn-ghost:active,.hero-save:active{ transform:scale(.985); }
+
+  /* 8. RESPIRO GENERAL */
+  .hero-content{ padding:0 22px calc(var(--e4) + env(safe-area-inset-bottom)); }
+}
+
+/* Pantallas estrechas (iPhone SE / mini): sin desbordes */
+@media (max-width:379px){
+  .hero h1{ width:min(66vw,250px); height:calc(min(66vw,250px)*0.449); }
+  .hero .btn-ghost,.hero-save{ font-size:12.2px; padding:0 6px; }
+}
 </style>
 </head>
 <body>
