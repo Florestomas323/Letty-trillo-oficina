@@ -37,10 +37,10 @@ window.OFICINA = {
 
   /* ---------- Redes sociales (solo el usuario, sin @) ---------- */
   redes: {
-    instagram: "alfasuramerica",
+    instagram: "letty_trillodiaz",
     tiktok:    "SIN-TIKTOK",
     facebook:  "https://www.facebook.com/share/1PYXHzLX2a/",
-    threads:   "alfasuramerica"
+    threads:   "letty_trillodiaz"
   },
 
   /* ---------- Proyecto de Firebase propio ----------
